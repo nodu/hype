@@ -28,3 +28,28 @@
   content: "";
   padding: 0;
 }
+
+
+.angular-leaflet-map {
+  height: 100%; 
+  width: 100%; 
+  position: absolute;
+  z-index: 1;
+
+}
+
+@media screen and (min-width: 320px) {
+
+}
+
+.showme {
+  background-color: black;
+  color: white;
+  position: absolute;
+  z-index: 2;
+
+}
+
+.displayNone {
+  display: none;
+}

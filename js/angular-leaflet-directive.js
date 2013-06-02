@@ -3,8 +3,9 @@ var leafletDirective = angular.module("leaflet-directive", []);
 leafletDirective.directive("leaflet", ["$http", "$log", function ($http, $log) {
 
     var defaults = {
-        maxZoom: 14,
+        maxZoom: 11,
         tileLayer: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+
         icon: {
             url: 'http://cdn.leafletjs.com/leaflet-0.5.1/images/marker-icon.png',
             retinaUrl: 'http://cdn.leafletjs.com/leaflet-0.5.1/images/marker-icon@2x.png',
@@ -22,6 +23,10 @@ leafletDirective.directive("leaflet", ["$http", "$log", function ($http, $log) {
             weight: 10,
             opacity: 1
         }
+    };
+
+    var center = {
+
     };
 
     return {
@@ -42,8 +47,12 @@ leafletDirective.directive("leaflet", ["$http", "$log", function ($http, $log) {
             $scope.leaflet = {};
             $scope.leaflet.map = !!attrs.testing ? map : 'Add testing="testing" to <leaflet> tag to inspect this object';
             $scope.leaflet.maxZoom = !!(attrs.defaults && $scope.defaults.maxZoom) ? parseInt($scope.defaults.maxZoom, 10) : defaults.maxZoom;
+            $scope.leaflet.minZoom = !!(attrs.defaults && $scope.defaults.minZoom) ? parseInt($scope.defaults.minZoom, 10) : defaults.minZoom;
+            $scope.leaflet.key = !!(attrs.defaults && $scope.defaults.key) ? $scope.defaults.key : defaults.key;
+            $scope.leaflet.style = !!(attrs.defaults && $scope.defaults.style) ? $scope.defaults.style : defaults.style;
+            $scope.leaflet.attribution = !!(attrs.defaults && $scope.defaults.attribution) ? $scope.defaults.attribution : defaults.attribution;
             $scope.leaflet.tileLayer = !!(attrs.defaults && $scope.defaults.tileLayer) ? $scope.defaults.tileLayer : defaults.tileLayer;
-            L.tileLayer($scope.leaflet.tileLayer, { maxZoom: $scope.leaflet.maxZoom }).addTo(map);
+            L.tileLayer($scope.leaflet.tileLayer, {key: $scope.leaflet.key, maxZoom: $scope.leaflet.maxZoom, minZoom: $scope.leaflet.minZoom, style: $scope.leaflet.style, attribution: $scope.leaflet.attribution }).addTo(map);
 
             setupCenter();
             setupMarkers();
