@@ -2,28 +2,63 @@
 <html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>HYPE!</title>
   <link rel="stylesheet" href="css/bootstrap.css"/>
   <link rel="stylesheet" href="css/leaflet.css"/>
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body ng-controller="appController">
-<leaflet defaults="defaults" center="center"></leaflet>
-<div class="showme" ng-hide="truthy">
-  <p>This is shown!</p>
-</div>
+  <leaflet defaults="defaults" center="center"></leaflet>
+  
+
+  <div class="showme" ng-hide="truthy">
+    <p>This is shown!</p>
+  </div>
+
+
+  <nav>   
+   <accordion close-others="oneAtATime">
+    <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:query" ng-click="onContentHeaderClick()"> -->
+    <!-- {{group.properties.address}} -->
+    <accordion-group heading="Cow Shit" title="Title Number 1">Content</accordion-group>
+    <accordion-group heading="Cow Shit" title="Title Number 1">Content</accordion-group>
+    <accordion-group heading="Cow Shit" title="Title Number 1">Content</accordion-group>
+  </accordion>
+</nav>
+
+<div class="sidebar"></div>
+<footer>
+
+    
+    <button id="credits" class="btn btn-small" ng-click="open()">Credits</button>
+    <div modal="shouldBeOpen" close="close()" options="opts">
+        <div class="modal-header">
+            <h4>Credits</h4>
+        </div>
+        <div class="modal-body">
+          <p>Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,
+          <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
+          Imagery &copy; <a href="http://cloudmade.com">CloudMade</a></p>
+          <p>Code by: Matt</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-warning cancel" ng-click="close()">Ok!</button>
+        </div>
+    </div>
+
+</footer>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
-  -->
-  <script src="lib/angular/angular.js"></script>
-  <script src="js/ui-bootstrap-tpls-0.3.0.js"></script>
-  <script src="js/leaflet-src.js"></script>
-  <script src="js/angular-leaflet-directive.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
+-->
+<script src="lib/angular/angular.js"></script>
+<script src="js/ui-bootstrap-tpls-0.3.0.js"></script>
+<script src="js/leaflet-src.js"></script>
+<script src="js/angular-leaflet-directive.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
 </body>
 </html>

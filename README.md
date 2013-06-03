@@ -30,3 +30,10 @@ $scope.truthy = false; // In controller
 <div class="showme" ng-hide="truthy">
 angular.element($0).scope().truthy = false;
 angular.element($0).scope().$apply()
+
+
+For Now, changed L.Control.Zoom to 'bottomleft' in leaflet.src
+Need to find a way to include that in my code...
+
+
+JS, if max width lt 625, add button class "mini" to buttons

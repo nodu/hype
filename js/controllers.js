@@ -5,6 +5,17 @@
 app.controller("appController", [ "$scope", function($scope) {
 	window.my_scope = $scope 
 	$scope.truthy = true;
+	$scope.oneAtATime = true;
+	$scope.open = function () {
+		$scope.shouldBeOpen = true;
+	};
+	$scope.close = function () {
+		$scope.shouldBeOpen = false;
+	};
+	$scope.opts = {
+		backdropFade: true,
+		dialogFade: true
+	};
 
 	angular.extend($scope, {
 		center: {
@@ -18,7 +29,7 @@ app.controller("appController", [ "$scope", function($scope) {
 			minZoom: 11,
         	style: 97679, // added corresponding value in leaflet directive
         	key: 'BC9A493B41014CAABB98F0471D759707', // added corresponding value in leaflet directive
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://cloudmade.com">CloudMade</a>',
 
         }
     });
