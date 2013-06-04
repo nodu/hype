@@ -62,8 +62,9 @@
 }
 
 .leaflet-control-attribution {
-  display: none;
+  /*display: none;*/
 }
+
 .leaflet-control-zoom {
   /*display: none;*/
 }
@@ -105,6 +106,7 @@ nav {
 .accordion-inner {
   background: rgba(255,255,255,1);
   border-radius: 3px;
+  /*background-color: blue;*/
 }
 
 
@@ -124,5 +126,63 @@ nav {
   /*background: rgba(255,255,255,0.8);*/
 }
 
+.content_toggle {
+  position: absolute;
+  top: .5%;
+  right: .5%;
+  z-index: 2;
+  display: none;
+}
+
+.nav_toggle {
+  position: absolute;
+  top: .5%;
+  left: .5%;
+  z-index: 2;
+  display: none;
+}
 
 
+@media (max-width: 625px) {
+  .sidebar{
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .content_toggle {
+    display: inline;
+    position: absolute;
+    top: .5%;
+    right: .5%;
+    z-index: 3;
+  }
+
+  .nav_toggle {
+    display: inline;
+    position: absolute;
+    top: .5%;
+    left: .5%;
+    z-index: 3;
+  }
+
+
+}
+
+
+.modal {
+  width: 40%;
+  margin: 0 auto;
+  left: 30%;
+  border-radius: 3px;
+
+}
+
+
+.mobile_nav {
+  display: inline;
+  width: 80%;
+
+}

@@ -26,6 +26,11 @@ angular.element(document.querySelector('.leaflet-control-attribution')).css('dis
 angular.element(document.querySelector('.leaflet-control-attribution')).removeClass('displayNone')
 
 
+
+<div class="showme" ng-hide="truthy">
+    <p>This is shown!</p>
+  </div>
+  
 $scope.truthy = false; // In controller
 <div class="showme" ng-hide="truthy">
 angular.element($0).scope().truthy = false;

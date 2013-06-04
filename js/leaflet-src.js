@@ -7273,7 +7273,7 @@ L.Map.include({
 
 L.Control.Zoom = L.Control.extend({
 	options: {
-		position: 'bottomleft'
+		position: 'topleft'
 	},
 
 	onAdd: function (map) {

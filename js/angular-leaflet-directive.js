@@ -41,7 +41,8 @@ leafletDirective.directive("leaflet", ["$http", "$log", function ($http, $log) {
         },
         template: '<div class="angular-leaflet-map"></div>',
         link: function ($scope, element, attrs /*, ctrl */) {
-            var map = new L.Map(element[0]);
+            // added zoomControl: false
+            var map = new L.Map(element[0], {zoomControl: false, attributionControl:false});
             map.setView([0, 0], 1);
 
             $scope.leaflet = {};
@@ -53,6 +54,9 @@ leafletDirective.directive("leaflet", ["$http", "$log", function ($http, $log) {
             $scope.leaflet.attribution = !!(attrs.defaults && $scope.defaults.attribution) ? $scope.defaults.attribution : defaults.attribution;
             $scope.leaflet.tileLayer = !!(attrs.defaults && $scope.defaults.tileLayer) ? $scope.defaults.tileLayer : defaults.tileLayer;
             L.tileLayer($scope.leaflet.tileLayer, {key: $scope.leaflet.key, maxZoom: $scope.leaflet.maxZoom, minZoom: $scope.leaflet.minZoom, style: $scope.leaflet.style, attribution: $scope.leaflet.attribution }).addTo(map);
+
+            // This adds the zoom control back with bottomleft position
+            map.addControl(L.control.zoom({position: "bottomleft"}));
 
             setupCenter();
             setupMarkers();
@@ -170,37 +174,37 @@ leafletDirective.directive("leaflet", ["$http", "$log", function ($http, $log) {
                         }
                     }
                 }, true);
-                return marker;
-            }
+return marker;
+}
 
-            function buildMarker(name, data) {
-                var marker = new L.marker($scope.markers[name],
-                        {
-                            icon: buildIcon(),
-                            draggable: data.draggable ? true : false
-                        }
-                );
-                if (data.message) {
-                    marker.bindPopup(data.message);
-                }
-                return marker;
-            }
+function buildMarker(name, data) {
+    var marker = new L.marker($scope.markers[name],
+    {
+        icon: buildIcon(),
+        draggable: data.draggable ? true : false
+    }
+    );
+    if (data.message) {
+        marker.bindPopup(data.message);
+    }
+    return marker;
+}
 
-            function buildIcon() {
-                return L.icon({
-                    iconUrl: defaults.icon.url,
-                    iconRetinaUrl: defaults.icon.retinaUrl,
-                    iconSize: defaults.icon.size,
-                    iconAnchor: defaults.icon.anchor,
-                    popupAnchor: defaults.icon.popup,
-                    shadowUrl: defaults.icon.shadow.url,
-                    shadowRetinaUrl: defaults.icon.shadow.retinaUrl,
-                    shadowSize: defaults.icon.shadow.size,
-                    shadowAnchor: defaults.icon.shadow.anchor
-                });
-            }
+function buildIcon() {
+    return L.icon({
+        iconUrl: defaults.icon.url,
+        iconRetinaUrl: defaults.icon.retinaUrl,
+        iconSize: defaults.icon.size,
+        iconAnchor: defaults.icon.anchor,
+        popupAnchor: defaults.icon.popup,
+        shadowUrl: defaults.icon.shadow.url,
+        shadowRetinaUrl: defaults.icon.shadow.retinaUrl,
+        shadowSize: defaults.icon.shadow.size,
+        shadowAnchor: defaults.icon.shadow.anchor
+    });
+}
 
-            function setupPath() {
+function setupPath() {
                 // TODO Create as many polylines as paths defined in model
                 // TODO Manage opacity changes with another $watch block
                 if (!$scope.path) {
@@ -216,12 +220,12 @@ leafletDirective.directive("leaflet", ["$http", "$log", function ($http, $log) {
 
                 $scope.$watch("path.latlngs", function (latlngs) {
                     var leafletLatLngs = latlngs
-                            .filter(function (latlng) {
-                                return !!latlng.lat && !!latlng.lng;
-                            })
-                            .map(function (latlng) {
-                                return new L.LatLng(latlng.lat, latlng.lng);
-                            });
+                    .filter(function (latlng) {
+                        return !!latlng.lat && !!latlng.lng;
+                    })
+                    .map(function (latlng) {
+                        return new L.LatLng(latlng.lat, latlng.lng);
+                    });
                     polyline.setLatLngs(leafletLatLngs);
                 }, true);
 

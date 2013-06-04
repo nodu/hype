@@ -9,48 +9,47 @@
 </head>
 <body ng-controller="appController">
   <leaflet defaults="defaults" center="center"></leaflet>
-  
 
-  <div class="showme" ng-hide="truthy">
-    <p>This is shown!</p>
-  </div>
+<button class="nav_toggle btn" ng-click="navOpen()" animate="up">Filter</button> 
 
 
-  <nav>   
+  <nav>  
    <accordion close-others="oneAtATime">
     <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:query" ng-click="onContentHeaderClick()"> -->
     <!-- {{group.properties.address}} -->
     <accordion-group heading="Cow Shit" title="Title Number 1">Content</accordion-group>
-    <accordion-group heading="Cow Shit" title="Title Number 1">Content</accordion-group>
-    <accordion-group heading="Cow Shit" title="Title Number 1">Content</accordion-group>
+    <accordion-group heading="Cow Wee" title="Title Number 1">Content</accordion-group>
+    <accordion-group heading="Cow Lorem Ipsum" title="Title Number 1">Content</accordion-group>
   </accordion>
 </nav>
+<button class="content_toggle btn" ng-click="contentOpen()" animate="down">Content</button> 
 
 <div class="sidebar"></div>
 <footer>
 
-    
-    <button id="credits" class="btn btn-small" ng-click="open()">Credits</button>
-    <div modal="shouldBeOpen" close="close()" options="opts">
-        <div class="modal-header">
-            <h4>Credits</h4>
-        </div>
-        <div class="modal-body">
-          <p>Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,
-          <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
-          Imagery &copy; <a href="http://cloudmade.com">CloudMade</a></p>
-          <p>Code by: Matt</p>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-warning cancel" ng-click="close()">Ok!</button>
-        </div>
+
+  <button id="credits" class="btn btn-small" ng-click="open()">Credits</button>
+  <div modal="shouldBeOpen" close="close()" options="opts">
+    <div class="modal-header">
+      <h4>Credits</h4>
+    </div>
+    <div class="modal-body">
+      <p>Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,
+        <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
+        Imagery &copy; <a href="http://cloudmade.com">CloudMade</a></p>
+        <p>Code by: Matt</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-info" ng-click="close()">Ok!</button>
+      </div>
     </div>
 
-</footer>
+  </footer>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
 -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="lib/angular/angular.js"></script>
 <script src="js/ui-bootstrap-tpls-0.3.0.js"></script>
 <script src="js/leaflet-src.js"></script>
