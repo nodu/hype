@@ -69,9 +69,10 @@
   /*display: none;*/
 }
 
-
+/*******************************************************/
 /*Class for created control (right content control box)*/
-.sidebar {
+/*******************************************************/
+.content {
   position: absolute;  /*better would be fixed positon*/
   top: 1%;
   right: .5%;
@@ -84,8 +85,9 @@
   border-radius: 3px;
   height: 80%;
   width: 25%;
+  overflow: auto;
 }
-.sidebar h4 {
+.content h4 {
   margin: 0 0 5px;
   color: #777;
 }
@@ -142,9 +144,18 @@ nav {
   display: none;
 }
 
+.modal {
+  width: 40%;
+  margin: 0 auto;
+  left: 30%;
+  border-radius: 3px;
+}
 
-@media (max-width: 625px) {
-  .sidebar{
+/**************************/
+/****** Mobile View *******/
+/**************************/
+@media (max-width: 720px) {
+  .content{
     display: none;
   }
 
@@ -168,21 +179,19 @@ nav {
     z-index: 3;
   }
 
+  .leaflet-control-zoom {
+    display: none;
+  }
 
 }
 
 
-.modal {
-  width: 40%;
-  margin: 0 auto;
-  left: 30%;
-  border-radius: 3px;
 
-}
 
 
 .mobile_nav {
   display: inline;
-  width: 80%;
+  width: 85%;
+  height: 85%;
 
 }

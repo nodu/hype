@@ -20,15 +20,28 @@ app.controller("appController", [ "$scope", function($scope) {
 		backdropFade: true,
 		dialogFade: true
 	};
+
 	// For showing/hiding the mobile version's containers/navs
 	$scope.navOpen = function() {
-		// alert("heyOHHHH NAV");
-		// angular.element('nav').addClass('.mobile_nav');
+		var content = angular.element(document.getElementsByClassName("content"));
+		var nav = angular.element(document.getElementsByClassName("nav"));
+
+		if (content.hasClass("mobile_nav")){
+			content.removeClass('mobile_nav')
+		};
+		nav.toggleClass('mobile_nav');
 
 	};
 	$scope.contentOpen = function() {
-		// alert("heyOHHHH CONTENT");
+		var content = angular.element(document.getElementsByClassName("content"));
+		var nav = angular.element(document.getElementsByClassName("nav"));
+		if (nav.hasClass("mobile_nav")){
+			nav.removeClass('mobile_nav')
+		};
+		content.toggleClass('mobile_nav');
+
 	};
+
 
 	// For angular-leaflet-directive
 	angular.extend($scope, {
@@ -49,4 +62,50 @@ app.controller("appController", [ "$scope", function($scope) {
     });
 
 }]);
+
+
+
+	// Should I separate this into a different controller?
+	app.controller("getJSON_HTTP_Request", function($scope, $http, $filter){
+		$http.get("data/featureDB.json")
+		.then(function(dataResponse) {
+			$scope.featDB = dataResponse.data;
+		});
+		// Enables using the scope from within the accordion directive
+		// Changed the ng-model, filter, and savedJSON filter to opt.query 
+		$scope.opt = {};
+		
+		var markerLayer = L.layerGroup(); 
+		// Need this global layer to be able to clear the layer before 
+		//adding a new layer, removed dublicate markers
+		// In future, need a way of checking if x in layer
+		
+		$scope.save = function() {
+			$scope.savedJSON = $filter('filter')($scope.featDB, $scope.opt.query);
+			var markerList = [];
+
+			for (var obj in $scope.savedJSON){
+				var marker = L.marker([$scope.savedJSON[obj].geometry.coordinates[1], 
+					$scope.savedJSON[obj].geometry.coordinates[0]])
+				.bindPopup($scope.savedJSON[obj].properties.name)
+				.openPopup();
+				// Add other wanted properties here, popups, mouseover effects...
+				markerList.push(marker);
+			console.log(marker);
+		};
+		markerLayer.clearLayers();
+		markerLayer = L.layerGroup(markerList)
+
+		markerLayer.addTo(map);
+	};
+
+	$scope.clear = function() {
+		markerLayer.clearLayers()
+				//declare markerLayer as a global varible and this will work
+			};
+		});
+
+
+
+
 

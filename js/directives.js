@@ -22,7 +22,7 @@ angular.module('myApp.directives', [])
 			
 		};
 
-		element.on('click', animations[attrs.animate]);
+		// element.on('click', animations[attrs.animate]);
 
 	};
 	return {
@@ -32,11 +32,7 @@ angular.module('myApp.directives', [])
 
 	};
 });
-// angular.module('myApp.directives', []).
-//   directive('appVersion', ['version', function(version) {
-//     return function(scope, elm, attrs) {
-//       elm.text(version);
-//     };
-//   }]);
 
-
+// app.directive('contentOpen', function(){
+	
+// });

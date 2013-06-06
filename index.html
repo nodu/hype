@@ -7,28 +7,46 @@
   <link rel="stylesheet" href="css/leaflet.css"/>
   <link rel="stylesheet" href="css/app.css"/>
 </head>
-<body ng-controller="appController">
+<body ng-controller="appController"> 
+  <!-- This doesn't seem pretty, not sure how to correctly add 2 app wide controllers -->
+  <div ng-controller="getJSON_HTTP_Request">
   <leaflet defaults="defaults" center="center"></leaflet>
 
-<button class="nav_toggle btn" ng-click="navOpen()" animate="up">Filter</button> 
+  <button class="nav_toggle btn" ng-click="navOpen()" animate="up">Filter</button> 
+  <!-- remove animate?  switch ng-click to directives? -->
 
+<nav class="nav">  
 
-  <nav>  
    <accordion close-others="oneAtATime">
-    <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:query" ng-click="onContentHeaderClick()"> -->
-    <!-- {{group.properties.address}} -->
-    <accordion-group heading="Cow Shit" title="Title Number 1">Content</accordion-group>
-    <accordion-group heading="Cow Wee" title="Title Number 1">Content</accordion-group>
-    <accordion-group heading="Cow Lorem Ipsum" title="Title Number 1">Content</accordion-group>
+    <accordion-group heading="Cow Shit" title="Title Number 1">
+   <input ng-model="opt.query" placeholder="Search" style="width: 78%;"> 
+      
+      <!-- <input type="checkbox" ng-model="opt.query"> -->
+
+      <a href="#" ng-click="save()"><i class="icon-fixed-width icon-plus"></i></a> 
+    </accordion-group>
+    
+    <accordion-group heading="Cow Wee" title="Title Number 1">
+    Content
+    </accordion-group>
+
+    <accordion-group heading="Cow Lorem Ipsum" title="Title Number 1">Content
+    </accordion-group>
   </accordion>
 </nav>
 <button class="content_toggle btn" ng-click="contentOpen()" animate="down">Content</button> 
 
-<div class="sidebar"></div>
+<div class="content">
+  <accordion close-others="oneAtATime">
+    <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()">
+    {{group.properties.address}}
+  </accordion-group>
+</accordion>
+</div>
 <footer>
 
 
-  <button id="credits" class="btn btn-small" ng-click="open()">Credits</button>
+  <button id="credits" class="btn btn-medium" ng-click="open()">Credits</button>
   <div modal="shouldBeOpen" close="close()" options="opts">
     <div class="modal-header">
       <h4>Credits</h4>
@@ -49,7 +67,7 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
 -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 <script src="lib/angular/angular.js"></script>
 <script src="js/ui-bootstrap-tpls-0.3.0.js"></script>
 <script src="js/leaflet-src.js"></script>
@@ -59,5 +77,6 @@
 <script src="js/controllers.js"></script>
 <script src="js/filters.js"></script>
 <script src="js/directives.js"></script>
+</div>
 </body>
 </html>
