@@ -39,7 +39,10 @@
 <div class="content">
   <accordion close-others="oneAtATime">
     <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()">
-    {{group.properties.address}}
+    <p>{{group.properties.address}}</p>
+    <p>{{group.properties.phone}}</p>
+    <p>{{group.properties.email}}</p>
+    <p>{{group.properties.about}}</p>
   </accordion-group>
 </accordion>
 </div>

@@ -48,12 +48,15 @@ app.controller("appController", [ "$scope", function($scope) {
 		center: {
 			lat: 22.25018,
 			lng: 114.18571,
-			zoom: 13
+			zoom: 10
+			// zoom: 13
 		},
 		defaults: {
 			tileLayer: 'http://{s}.tile.cloudmade.com/{key}/{style}/256/{z}/{x}/{y}.png',
-			maxZoom: 16,
-			minZoom: 11,
+			// maxZoom: 16,
+			maxZoom: 18,
+			// minZoom: 11,
+			minZoom: 8,
         	style: 97679, // added corresponding style in leaflet directive
         	key: 'BC9A493B41014CAABB98F0471D759707', // added corresponding key in leaflet directive
         	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://cloudmade.com">CloudMade</a>',
@@ -67,7 +70,7 @@ app.controller("appController", [ "$scope", function($scope) {
 
 	// Should I separate this into a different controller?
 	app.controller("getJSON_HTTP_Request", function($scope, $http, $filter){
-		$http.get("data/featureDB.json")
+		$http.get("data/newDB.js")
 		.then(function(dataResponse) {
 			$scope.featDB = dataResponse.data;
 		});

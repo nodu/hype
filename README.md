@@ -42,3 +42,13 @@ Need to find a way to include that in my code...
 
 
 JS, if max width lt 625, add button class "mini" to buttons
+
+
+TO DO
+Make geojson data with lat/long, name, id, content, address, 
+	page load "what's hot" list, to be cleared on checkbox submit
+	events, restaurants, cinemas/movies on, bars, 
+Marker on click add class to content div to show in mobile
+	add marker's content to new tab
+
+Add the filters for the different data types

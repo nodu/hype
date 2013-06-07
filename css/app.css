@@ -192,6 +192,13 @@ nav {
 .mobile_nav {
   display: inline;
   width: 85%;
+  /*height: 85%;*/
+  /*Changed height, was blocking map interaction*/
+
+}
+.mobile_content {
+  display: inline;
+  width: 85%;
   height: 85%;
 
 }
