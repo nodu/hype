@@ -1,12 +1,15 @@
 'use strict';
 
-/* Controllers */
 
+
+/* Controllers */
 app.controller("appController", [ "$scope", function($scope) {
 	window.my_scope = $scope 
-	
 	// For ng-show/ng-hide
 	$scope.truthy = true;
+	
+
+
 	// For accordion:
 	$scope.oneAtATime = true;
 	
@@ -19,6 +22,21 @@ app.controller("appController", [ "$scope", function($scope) {
 	$scope.opts = {
 		backdropFade: true,
 		dialogFade: true
+	};
+
+	// Select
+	$scope.districts = ["Central", "Wan Chai", "Eastern", "Western", "Southern"];
+
+	// Checkboxes
+	$scope.club = function() {
+		// Need a function/varible to be set here that allows for 
+		// filtering of savedJSON to be displayed in contentContainer
+		// and to be added on map...
+	};
+	$scope.pub = function() {
+		// Need a function/varible to be set here that allows for 
+		// filtering of savedJSON to be displayed in contentContainer
+		// and to be added on map...
 	};
 
 	// For showing/hiding the mobile version's containers/navs
@@ -70,7 +88,7 @@ app.controller("appController", [ "$scope", function($scope) {
 
 	// Should I separate this into a different controller?
 	app.controller("getJSON_HTTP_Request", function($scope, $http, $filter){
-		$http.get("data/newDB.js")
+		$http.get("data/barsDB.js")
 		.then(function(dataResponse) {
 			$scope.featDB = dataResponse.data;
 		});
@@ -90,7 +108,7 @@ app.controller("appController", [ "$scope", function($scope) {
 			for (var obj in $scope.savedJSON){
 				var marker = L.marker([$scope.savedJSON[obj].geometry.coordinates[1], 
 					$scope.savedJSON[obj].geometry.coordinates[0]])
-				.bindPopup($scope.savedJSON[obj].properties.name)
+				.bindPopup($scope.savedJSON[obj].properties.name, $scope.savedJSON[obj].properties.category)
 				.openPopup();
 				// Add other wanted properties here, popups, mouseover effects...
 				markerList.push(marker);

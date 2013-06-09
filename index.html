@@ -9,40 +9,59 @@
 </head>
 <body ng-controller="appController"> 
   <!-- This doesn't seem pretty, not sure how to correctly add 2 app wide controllers -->
+  <!-- Putting them in the same ctrl doesn't seem modular, service for http? -->
   <div ng-controller="getJSON_HTTP_Request">
-  <leaflet defaults="defaults" center="center"></leaflet>
+    <leaflet defaults="defaults" center="center"></leaflet>
 
-  <button class="nav_toggle btn" ng-click="navOpen()" animate="up">Filter</button> 
-  <!-- remove animate?  switch ng-click to directives? -->
+    <button class="nav_toggle btn" ng-click="navOpen()" animate="up">Filter</button> 
+    <!-- remove animate?  switch ng-click to directives? -->
 
-<nav class="nav">  
+    <nav class="nav">  
 
-   <accordion close-others="oneAtATime">
-    <accordion-group heading="Cow Shit" title="Title Number 1">
-   <input ng-model="opt.query" placeholder="Search" style="width: 78%;"> 
-      
-      <!-- <input type="checkbox" ng-model="opt.query"> -->
-
-      <a href="#" ng-click="save()"><i class="icon-fixed-width icon-plus"></i></a> 
-    </accordion-group>
+     <accordion close-others="oneAtATime">
+      <accordion-group id="navTop" heading="Opener /w Logo" >
+        <input ng-model="opt.query" placeholder="Search" style="width: 78%;"> 
+        <!-- <input type="checkbox" ng-model="opt.query"> -->
+        <a href="#" ng-click="save()"><i class="icon-fixed-width icon-plus"></i></a> 
+      </accordion-group>
     
-    <accordion-group heading="Cow Wee" title="Title Number 1">
-    Content
-    </accordion-group>
+      <accordion-group heading="Bars" is-open="true">
+        <form name="myForm">
+          <select id="district-select" ng-model="districtSelect" ng-options="district for district in districts">
+            <option value="">District</option>
+          </select><br>
+          Club: <input type="checkbox" ng-model="club"> Club: {{club}}<br>
+          Pub: <input type="checkbox" ng-model="pub">  Pub: {{pub}}<br>
+          Pub: <input type="checkbox" ng-model="disco">  Disco: {{disco}}<br>
+          Pub: <input type="checkbox" ng-model="sports">  Sports: {{sports}}
+          <input type="button" class="btn small" value="Submit" style="position: absolute; bottom:5px; right:5px;">
+        </form>
+      </accordion-group>
 
-    <accordion-group heading="Cow Lorem Ipsum" title="Title Number 1">Content
-    </accordion-group>
-  </accordion>
+      <accordion-group id="navBottom" heading="Cow Lorem Ipsum">
+        Content
+      </accordion-group>
+</accordion>
+
 </nav>
 <button class="content_toggle btn" ng-click="contentOpen()" animate="down">Content</button> 
 
+
+
+
+
+
 <div class="content">
+ 
   <accordion close-others="oneAtATime">
     <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()">
-    <p>{{group.properties.address}}</p>
-    <p>{{group.properties.phone}}</p>
-    <p>{{group.properties.email}}</p>
-    <p>{{group.properties.about}}</p>
+    <div class="ng-cloak"> 
+      <p>{{group.properties.address}}</p>
+      <p>{{group.properties.phone}}</p>
+      <p>{{group.properties.email}}</p>
+      <p>{{group.properties.about}}</p>
+      <p>{{group.properties.district}}</p>
+    </div>
   </accordion-group>
 </accordion>
 </div>
@@ -58,7 +77,6 @@
       <p>Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,
         <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
         Imagery &copy; <a href="http://cloudmade.com">CloudMade</a></p>
-        <p>Code by: Matt</p>
       </div>
       <div class="modal-footer">
         <button class="btn btn-info" ng-click="close()">Ok!</button>

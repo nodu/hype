@@ -42,7 +42,7 @@
 
 }
 
-.displayNone {
+.display-none {
   display: none;
 }
 
@@ -185,7 +185,10 @@ nav {
 
 }
 
-
+/*#navTop {
+  border-radius: 20px;
+}
+*/
 
 
 
@@ -201,4 +204,9 @@ nav {
   width: 85%;
   height: 85%;
 
+}
+
+/*Dropdown district select in nav*/
+#district-select {
+   width: 60%;
 }
