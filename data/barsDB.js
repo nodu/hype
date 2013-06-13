@@ -3,8 +3,8 @@
       "type": "Feature",
       "id": 1,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Wainwright Bar",
@@ -15,9 +15,7 @@
         "about": "Esse nostrud proident dolore quis est adipisicing Lorem adipisicing aliquip. Ad cillum aliqua ex duis et amet cillum. Nulla aliqua nisi commodo ex esse culpa ut anim id culpa et ex. Cupidatat eiusmod velit commodo reprehenderit irure consequat laborum ipsum sit qui id voluptate.\r\n",
         "tags": [
           "bar",
-          "club",
-          "mollit",
-          "sunt"
+          "club"
         ]
       },
       "geometry": {
@@ -33,8 +31,8 @@
       "type": "Feature",
       "id": 2,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Webster Bar",
@@ -45,9 +43,7 @@
         "about": "Deserunt labore mollit proident sint non veniam velit ullamco cillum incididunt est. Aliqua id cupidatat cupidatat ut cillum. Nisi laboris magna ipsum fugiat occaecat et dolore. Esse qui est irure adipisicing qui magna velit sint. Excepteur mollit occaecat nisi sint.\r\n",
         "tags": [
           "bar",
-          "club",
-          "sit",
-          "id"
+          "club"
         ]
       },
       "geometry": {
@@ -63,8 +59,8 @@
       "type": "Feature",
       "id": 3,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Thorndike Bar",
@@ -75,9 +71,7 @@
         "about": "Elit Lorem Lorem occaecat esse cillum id occaecat laboris irure dolor ex commodo officia. Occaecat reprehenderit laboris officia deserunt officia sint eu. Nostrud minim pariatur aliquip consectetur ad ullamco.\r\n",
         "tags": [
           "bar",
-          "club",
-          "quis",
-          "eu"
+          "club"
         ]
       },
       "geometry": {
@@ -93,8 +87,8 @@
       "type": "Feature",
       "id": 4,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Brickman Bar",
@@ -105,9 +99,7 @@
         "about": "Nisi culpa aliqua anim culpa nisi. Excepteur est dolore in laboris ut. Adipisicing in amet voluptate cupidatat id consectetur fugiat mollit mollit. Laboris nulla in et qui. Nulla laborum officia ad incididunt deserunt deserunt cupidatat. Cupidatat Lorem et commodo nostrud voluptate consequat esse anim pariatur adipisicing sint.\r\n",
         "tags": [
           "bar",
-          "club",
-          "eu",
-          "ad"
+          "club"
         ]
       },
       "geometry": {
@@ -123,8 +115,8 @@
       "type": "Feature",
       "id": 5,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Sheldon Bar",
@@ -135,9 +127,7 @@
         "about": "Id esse mollit est ullamco aliquip. Eu eu minim exercitation id occaecat veniam velit Lorem. Eiusmod laboris incididunt proident adipisicing ex.\r\n",
         "tags": [
           "bar",
-          "club",
-          "sint",
-          "cupidatat"
+          "club"
         ]
       },
       "geometry": {
@@ -153,8 +143,8 @@
       "type": "Feature",
       "id": 6,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Gardner Bar",
@@ -165,9 +155,7 @@
         "about": "Esse excepteur nostrud commodo incididunt. Culpa est quis exercitation veniam eu laboris eu eiusmod incididunt cillum et. Duis aute consectetur cupidatat reprehenderit incididunt. Amet duis pariatur laboris sint minim nisi dolor est incididunt.\r\n",
         "tags": [
           "bar",
-          "club",
-          "pariatur",
-          "laborum"
+          "club"
         ]
       },
       "geometry": {
@@ -183,8 +171,8 @@
       "type": "Feature",
       "id": 7,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Miln Bar",
@@ -195,9 +183,7 @@
         "about": "Sit consectetur aliqua nulla ipsum pariatur velit dolore occaecat nostrud Lorem ea sunt commodo. Tempor sit consequat proident reprehenderit duis. Dolor nostrud enim dolore et mollit tempor consequat voluptate excepteur nulla deserunt esse. Dolor proident fugiat veniam sit. Labore reprehenderit exercitation laboris sunt dolore nulla ut aliqua officia laboris eu occaecat consectetur. Nostrud aliqua dolore pariatur et deserunt fugiat voluptate duis Lorem irure. Amet commodo mollit quis velit ipsum consectetur velit cillum ea.\r\n",
         "tags": [
           "bar",
-          "club",
-          "cillum",
-          "excepteur"
+          "club"
         ]
       },
       "geometry": {
@@ -213,8 +199,8 @@
       "type": "Feature",
       "id": 8,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Turner Bar",
@@ -225,9 +211,7 @@
         "about": "Eu pariatur do veniam irure in. Sit id sint excepteur sint magna. Lorem irure ullamco duis aute fugiat exercitation adipisicing ipsum. Velit aute irure nulla enim do velit ex amet sint et fugiat culpa. Ullamco laboris veniam sit aliquip commodo ut esse excepteur non.\r\n",
         "tags": [
           "bar",
-          "club",
-          "enim",
-          "labore"
+          "club"
         ]
       },
       "geometry": {
@@ -243,8 +227,8 @@
       "type": "Feature",
       "id": 9,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Carey Bar",
@@ -255,9 +239,7 @@
         "about": "Pariatur nisi reprehenderit officia culpa pariatur consequat. Ad incididunt incididunt enim voluptate nulla. Incididunt dolor aliquip eu duis id. Irure laborum nisi velit Lorem excepteur quis exercitation. Sit non fugiat veniam proident adipisicing esse in reprehenderit tempor velit aute elit.\r\n",
         "tags": [
           "bar",
-          "club",
-          "labore",
-          "non"
+          "club"
         ]
       },
       "geometry": {
@@ -273,8 +255,8 @@
       "type": "Feature",
       "id": 10,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Turner Bar",
@@ -285,9 +267,7 @@
         "about": "Adipisicing ipsum mollit laborum reprehenderit sit elit mollit sint laborum nostrud est irure do. Cupidatat mollit ullamco et excepteur nisi cillum sint tempor eu nulla ad ea. Ullamco sint occaecat aliqua aliqua eiusmod quis minim pariatur cupidatat dolor qui exercitation in anim. Amet nulla adipisicing reprehenderit ut proident tempor dolor dolore commodo pariatur amet. Et aliqua sit laborum do non exercitation adipisicing amet exercitation proident. Minim duis laborum fugiat non velit aliquip laboris.\r\n",
         "tags": [
           "bar",
-          "club",
-          "proident",
-          "magna"
+          "club"
         ]
       },
       "geometry": {
@@ -303,8 +283,8 @@
       "type": "Feature",
       "id": 11,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Carter Bar",
@@ -315,9 +295,7 @@
         "about": "Tempor ut laboris amet fugiat. Tempor veniam magna pariatur pariatur excepteur exercitation non ex laboris Lorem nulla cillum dolor pariatur. Esse aliquip eiusmod proident fugiat reprehenderit in sit elit officia in laborum et ad cillum. Sit amet consequat nulla pariatur sit cupidatat ullamco ullamco.\r\n",
         "tags": [
           "bar",
-          "club",
-          "et",
-          "veniam"
+          "club"
         ]
       },
       "geometry": {
@@ -333,8 +311,8 @@
       "type": "Feature",
       "id": 12,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Wainwright Bar",
@@ -345,9 +323,7 @@
         "about": "Deserunt veniam ex dolor nisi quis est ad exercitation laboris deserunt laboris in. Incididunt nostrud nisi aliquip tempor labore irure non elit. Ea occaecat eiusmod id nulla sit reprehenderit.\r\n",
         "tags": [
           "bar",
-          "club",
-          "do",
-          "et"
+          "club"
         ]
       },
       "geometry": {
@@ -363,8 +339,8 @@
       "type": "Feature",
       "id": 13,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Carroll Bar",
@@ -375,9 +351,7 @@
         "about": "Id non nulla consequat quis minim dolore dolore irure. Commodo aliqua fugiat anim quis enim aute aute incididunt nostrud tempor consectetur. Do cillum culpa laboris et id eiusmod qui elit ut. Laborum consequat nostrud quis et tempor eu aute ut quis laborum nisi culpa in eiusmod. Ipsum ipsum labore occaecat amet id esse voluptate voluptate voluptate elit. Et duis in cillum aute mollit irure ut minim non dolore aute ipsum pariatur proident. Sint aliquip irure tempor consequat adipisicing culpa adipisicing qui magna minim.\r\n",
         "tags": [
           "bar",
-          "club",
-          "sit",
-          "ad"
+          "club"
         ]
       },
       "geometry": {
@@ -393,8 +367,8 @@
       "type": "Feature",
       "id": 14,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Wainwright Bar",
@@ -405,9 +379,7 @@
         "about": "Culpa duis cillum dolor eu reprehenderit dolor velit quis consequat. Dolore nisi qui nisi duis consectetur dolor nulla id est proident aute reprehenderit. Exercitation excepteur labore irure pariatur. Do aliqua in qui magna amet ut elit culpa deserunt. Velit ad ullamco Lorem dolore deserunt elit pariatur aliqua consequat sunt. Minim ea minim ad mollit mollit ex culpa elit ut.\r\n",
         "tags": [
           "bar",
-          "club",
-          "amet",
-          "ut"
+          "club"
         ]
       },
       "geometry": {
@@ -423,8 +395,8 @@
       "type": "Feature",
       "id": 15,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Adamson Bar",
@@ -435,9 +407,7 @@
         "about": "Consequat exercitation officia commodo ut fugiat consequat. Veniam sint pariatur sint ullamco fugiat eu eu commodo sint occaecat. Do cillum excepteur minim esse officia labore id. Cupidatat eu tempor eiusmod dolor cillum commodo sunt ea tempor veniam adipisicing Lorem.\r\n",
         "tags": [
           "bar",
-          "club",
-          "excepteur",
-          "irure"
+          "club"
         ]
       },
       "geometry": {
@@ -453,8 +423,8 @@
       "type": "Feature",
       "id": 16,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Hailey Bar",
@@ -465,9 +435,7 @@
         "about": "Nostrud non adipisicing duis occaecat duis. Occaecat proident ut eiusmod nulla non eiusmod exercitation sunt id ex. Dolor labore aliqua minim non ex sit deserunt sit qui enim aliquip occaecat.\r\n",
         "tags": [
           "bar",
-          "club",
-          "consectetur",
-          "adipisicing"
+          "club"
         ]
       },
       "geometry": {
@@ -483,8 +451,8 @@
       "type": "Feature",
       "id": 17,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Crossman Bar",
@@ -495,9 +463,7 @@
         "about": "Laboris est esse officia qui. Minim labore magna veniam non non consequat deserunt do. Tempor laboris mollit esse Lorem culpa.\r\n",
         "tags": [
           "bar",
-          "club",
-          "reprehenderit",
-          "duis"
+          "club"
         ]
       },
       "geometry": {
@@ -513,8 +479,8 @@
       "type": "Feature",
       "id": 18,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Webster Bar",
@@ -525,9 +491,7 @@
         "about": "Elit amet mollit do duis. Minim eiusmod tempor magna ullamco incididunt in laboris aliquip. Proident ut anim qui sunt ipsum sint sit. Aute tempor ut labore amet ea ea ipsum anim qui tempor. Nisi cillum culpa labore aliqua excepteur proident consequat consequat. Cillum aliqua deserunt sunt cillum aliqua veniam.\r\n",
         "tags": [
           "bar",
-          "club",
-          "commodo",
-          "irure"
+          "club"
         ]
       },
       "geometry": {
@@ -543,8 +507,8 @@
       "type": "Feature",
       "id": 19,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Otis Bar",
@@ -555,9 +519,7 @@
         "about": "Duis ad mollit minim laborum do adipisicing anim. Voluptate elit aute cupidatat magna consequat velit ut dolore ea veniam laboris fugiat sint. Velit tempor proident non aliqua magna est adipisicing enim officia officia cupidatat aliqua.\r\n",
         "tags": [
           "bar",
-          "club",
-          "incididunt",
-          "proident"
+          "club"
         ]
       },
       "geometry": {
@@ -573,8 +535,8 @@
       "type": "Feature",
       "id": 20,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Carroll Bar",
@@ -585,9 +547,7 @@
         "about": "Dolore culpa cupidatat magna sit. Tempor irure culpa aute aute sit ut. Sit voluptate ullamco sunt nulla sit velit.\r\n",
         "tags": [
           "bar",
-          "club",
-          "tempor",
-          "est"
+          "club"
         ]
       },
       "geometry": {
@@ -603,8 +563,8 @@
       "type": "Feature",
       "id": 21,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Clapton Bar",
@@ -615,9 +575,7 @@
         "about": "Qui ullamco aute velit proident eu est duis culpa laborum reprehenderit consequat incididunt fugiat. Dolor incididunt magna ut cupidatat. Est proident qui veniam voluptate.\r\n",
         "tags": [
           "bar",
-          "club",
-          "occaecat",
-          "officia"
+          "club"
         ]
       },
       "geometry": {
@@ -633,8 +591,8 @@
       "type": "Feature",
       "id": 22,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Thorndike Bar",
@@ -645,9 +603,7 @@
         "about": "Enim reprehenderit fugiat sit deserunt nulla quis aute. Ex aliqua sunt nisi consectetur aute magna excepteur ut. Voluptate nostrud deserunt qui nisi nostrud ullamco culpa exercitation do velit quis culpa aliqua qui. Pariatur irure consequat anim enim sit officia et. Consectetur Lorem irure voluptate laborum non duis irure cillum esse consectetur fugiat laboris. Quis qui culpa excepteur quis eu cillum sit mollit ea velit exercitation irure eiusmod adipisicing.\r\n",
         "tags": [
           "bar",
-          "club",
-          "ea",
-          "pariatur"
+          "club"
         ]
       },
       "geometry": {
@@ -663,8 +619,8 @@
       "type": "Feature",
       "id": 23,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Chesterton Bar",
@@ -675,9 +631,7 @@
         "about": "Et aute eu enim eiusmod enim commodo occaecat labore nostrud eiusmod tempor veniam enim. Cillum laborum ea incididunt aute et et nostrud irure qui aliquip adipisicing consectetur exercitation. Quis commodo commodo sint nulla incididunt adipisicing nulla quis magna fugiat. Ut ad in laborum do. Culpa enim ut ea in ea velit et voluptate. Lorem nulla ex consectetur elit incididunt proident qui. Officia dolore sit ipsum qui qui ipsum sunt mollit nulla ad cupidatat aliqua ad ex.\r\n",
         "tags": [
           "bar",
-          "club",
-          "veniam",
-          "esse"
+          "club"
         ]
       },
       "geometry": {
@@ -693,8 +647,8 @@
       "type": "Feature",
       "id": 24,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Oldman Bar",
@@ -705,9 +659,7 @@
         "about": "Aliquip exercitation commodo irure sunt pariatur ex incididunt et id quis. Mollit id cillum cillum tempor elit velit consequat incididunt ex veniam. Ad in incididunt eiusmod officia labore. Laboris mollit culpa minim cillum consectetur deserunt eu adipisicing aliqua amet commodo consequat. In laboris excepteur irure cillum mollit nostrud quis sunt magna officia adipisicing magna in. Tempor ex do do deserunt in mollit eu dolore fugiat mollit.\r\n",
         "tags": [
           "bar",
-          "club",
-          "aliqua",
-          "Lorem"
+          "club"
         ]
       },
       "geometry": {
@@ -723,8 +675,8 @@
       "type": "Feature",
       "id": 25,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Hawkins Bar",
@@ -735,9 +687,7 @@
         "about": "Dolor irure sit incididunt magna culpa laborum. Cupidatat do do consequat exercitation duis quis veniam aliquip est irure ad irure ex irure. Lorem laborum ea aute proident proident qui consectetur sit adipisicing esse ut fugiat reprehenderit dolor. Commodo ullamco minim culpa pariatur velit. Cupidatat eiusmod mollit reprehenderit Lorem et nostrud et qui pariatur ea esse. Commodo est elit elit amet velit qui enim consectetur sunt.\r\n",
         "tags": [
           "bar",
-          "club",
-          "reprehenderit",
-          "consequat"
+          "club"
         ]
       },
       "geometry": {
@@ -753,8 +703,8 @@
       "type": "Feature",
       "id": 26,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Miller Bar",
@@ -765,9 +715,7 @@
         "about": "Reprehenderit velit culpa culpa culpa culpa. Nostrud est exercitation tempor veniam non consequat officia proident ut Lorem nisi et amet. Anim laborum exercitation sunt deserunt exercitation Lorem duis officia pariatur Lorem excepteur. Enim minim adipisicing deserunt Lorem. Commodo excepteur ullamco deserunt fugiat nostrud.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "sunt",
-          "eu"
+          "disco"
         ]
       },
       "geometry": {
@@ -783,8 +731,8 @@
       "type": "Feature",
       "id": 27,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Thomson Bar",
@@ -795,9 +743,7 @@
         "about": "Dolor occaecat sit aliquip Lorem laboris mollit cupidatat dolor eu esse. Consectetur sunt aute non deserunt minim incididunt proident id consequat voluptate aute. Laboris aliqua tempor aliquip officia mollit occaecat excepteur proident ea velit laborum labore. Excepteur dolor sunt sint elit eiusmod exercitation sunt esse laborum voluptate nostrud ullamco dolore eu. Ex officia veniam nulla veniam qui eu ex ullamco culpa. Dolore laboris magna aute nisi.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "eiusmod",
-          "ad"
+          "disco"
         ]
       },
       "geometry": {
@@ -813,8 +759,8 @@
       "type": "Feature",
       "id": 28,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Young Bar",
@@ -825,9 +771,7 @@
         "about": "Cupidatat velit ullamco officia laboris magna non ea. Velit eiusmod voluptate culpa reprehenderit laboris officia. Sunt nisi cupidatat do voluptate tempor sit enim.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "est",
-          "nostrud"
+          "disco"
         ]
       },
       "geometry": {
@@ -843,8 +787,8 @@
       "type": "Feature",
       "id": 29,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Gate Bar",
@@ -855,9 +799,7 @@
         "about": "Ea consequat dolore Lorem minim nostrud adipisicing culpa et nulla consequat et. Elit qui amet amet ad incididunt occaecat voluptate dolor amet ea. Aute et eiusmod minim mollit ipsum deserunt magna minim Lorem. Dolor proident aliquip eu elit deserunt aliqua fugiat amet. Commodo ullamco tempor minim sint ullamco et minim dolore. Magna consectetur aliquip eiusmod incididunt ad in do veniam dolor dolor incididunt quis ullamco.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "mollit",
-          "dolor"
+          "disco"
         ]
       },
       "geometry": {
@@ -873,8 +815,8 @@
       "type": "Feature",
       "id": 30,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Brown Bar",
@@ -885,9 +827,7 @@
         "about": "Magna dolor esse laboris culpa. Amet pariatur mollit laboris ad proident proident non ipsum dolor do ea. Magna nulla veniam et esse pariatur amet magna occaecat quis excepteur dolor eiusmod. Aute enim officia non consequat amet. Nulla velit laborum sint cupidatat qui proident est labore proident aute nostrud proident nostrud.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "laborum",
-          "ea"
+          "disco"
         ]
       },
       "geometry": {
@@ -903,8 +843,8 @@
       "type": "Feature",
       "id": 31,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Davidson Bar",
@@ -915,9 +855,7 @@
         "about": "Culpa ad dolor pariatur ullamco laboris laborum do. Cupidatat ut commodo adipisicing quis sint eiusmod commodo ut nulla commodo est. Culpa laborum labore duis quis veniam sint dolore eu laboris. Exercitation occaecat nulla cillum et ut esse excepteur cillum qui ad aute ipsum ut tempor. Magna tempor enim esse occaecat magna. Ad et et ipsum ut proident culpa in amet minim ullamco in fugiat ea. Quis nulla eu excepteur sunt ex pariatur laborum.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "irure",
-          "exercitation"
+          "disco"
         ]
       },
       "geometry": {
@@ -933,8 +871,8 @@
       "type": "Feature",
       "id": 32,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Bush Bar",
@@ -945,9 +883,7 @@
         "about": "Magna aliquip cillum culpa voluptate fugiat. Do dolor culpa est cillum labore. Esse eiusmod enim in pariatur. Nisi veniam ut quis eiusmod magna deserunt cillum sint irure aliqua excepteur culpa laborum. Fugiat laborum incididunt amet dolor reprehenderit adipisicing. Cupidatat consequat qui est esse consectetur cillum.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "labore",
-          "et"
+          "disco"
         ]
       },
       "geometry": {
@@ -963,8 +899,8 @@
       "type": "Feature",
       "id": 33,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Charlson Bar",
@@ -975,9 +911,7 @@
         "about": "Eiusmod eiusmod aute ut culpa quis commodo tempor mollit consectetur elit ad labore nulla exercitation. Sit anim irure dolor elit sunt. Aliqua in ad duis ullamco. Quis Lorem eu sint irure. Et consequat nisi officia anim enim enim labore excepteur dolor adipisicing nulla qui. Reprehenderit commodo velit elit velit. Lorem anim culpa et sit id ea nulla voluptate.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "Lorem",
-          "officia"
+          "disco"
         ]
       },
       "geometry": {
@@ -993,8 +927,8 @@
       "type": "Feature",
       "id": 34,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Oldridge Bar",
@@ -1005,9 +939,7 @@
         "about": "Incididunt enim aliqua et ad voluptate eiusmod velit non consequat nisi. Irure ullamco irure mollit duis do. Tempor nisi ut in velit culpa ullamco pariatur dolor consequat labore. Veniam commodo nulla deserunt tempor labore labore exercitation eiusmod voluptate Lorem deserunt aute irure. Excepteur elit excepteur non non minim laboris in occaecat mollit Lorem non reprehenderit officia quis. Incididunt laboris irure consectetur ex anim nisi excepteur veniam irure sunt. Laboris sit reprehenderit sunt deserunt sint do aliquip.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "fugiat",
-          "nisi"
+          "disco"
         ]
       },
       "geometry": {
@@ -1023,8 +955,8 @@
       "type": "Feature",
       "id": 35,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Otis Bar",
@@ -1035,9 +967,7 @@
         "about": "Elit enim tempor irure exercitation nostrud nostrud tempor incididunt proident eu. Excepteur cillum enim veniam ea incididunt esse consectetur eiusmod velit. Consequat id id ea laboris cillum consectetur excepteur. In aute incididunt consectetur non id.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "mollit",
-          "sint"
+          "disco"
         ]
       },
       "geometry": {
@@ -1053,8 +983,8 @@
       "type": "Feature",
       "id": 36,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Gerald Bar",
@@ -1065,9 +995,7 @@
         "about": "Ipsum tempor incididunt proident tempor eu laboris ullamco cillum dolor deserunt consectetur. Reprehenderit anim do nisi mollit. Tempor nisi laborum aliqua consectetur.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "mollit",
-          "do"
+          "disco"
         ]
       },
       "geometry": {
@@ -1083,8 +1011,8 @@
       "type": "Feature",
       "id": 37,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Wainwright Bar",
@@ -1095,9 +1023,7 @@
         "about": "In incididunt magna irure ipsum irure consequat voluptate consequat velit adipisicing ex occaecat. Consectetur commodo tempor tempor nisi excepteur ex aute incididunt. Quis deserunt sint magna veniam.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "ex",
-          "ipsum"
+          "disco"
         ]
       },
       "geometry": {
@@ -1113,8 +1039,8 @@
       "type": "Feature",
       "id": 38,
       "properties": {
-        "bars": "true",
         "district": "central",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Cramer Bar",
@@ -1125,9 +1051,7 @@
         "about": "Magna anim do aliqua cillum dolor eiusmod non ullamco reprehenderit aute aute irure. Aute deserunt qui culpa ipsum sint excepteur exercitation in officia irure. Nulla minim consectetur dolor velit. Proident excepteur voluptate voluptate dolor incididunt sint veniam labore excepteur excepteur in cillum fugiat.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "dolore",
-          "id"
+          "disco"
         ]
       },
       "geometry": {
@@ -1143,8 +1067,8 @@
       "type": "Feature",
       "id": 39,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Young Bar",
@@ -1155,9 +1079,7 @@
         "about": "Velit labore adipisicing nulla magna ad dolor excepteur sit reprehenderit occaecat. Ea occaecat eu veniam laborum sunt in eiusmod reprehenderit ut cillum ea. Ut velit officia Lorem esse anim. Voluptate occaecat do quis laborum magna dolor fugiat irure tempor consectetur nisi. Duis officia sit est aliqua.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "in",
-          "dolore"
+          "disco"
         ]
       },
       "geometry": {
@@ -1173,8 +1095,8 @@
       "type": "Feature",
       "id": 40,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "White Bar",
@@ -1185,9 +1107,7 @@
         "about": "Dolor aliquip dolore aute ut qui eu et qui eu culpa. Irure veniam qui dolore cupidatat veniam eiusmod id nostrud cupidatat nostrud ullamco ea. Nisi minim est in excepteur cillum magna culpa. Ea amet aute sit consectetur quis irure ea qui. Culpa dolor id et cupidatat aliquip cillum Lorem mollit. In tempor dolore officia incididunt et reprehenderit proident laborum quis sit ut amet ullamco. Sunt exercitation est voluptate est irure sint cupidatat magna id tempor.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "dolore",
-          "deserunt"
+          "disco"
         ]
       },
       "geometry": {
@@ -1203,8 +1123,8 @@
       "type": "Feature",
       "id": 41,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Conors Bar",
@@ -1215,9 +1135,7 @@
         "about": "Ullamco officia do aute sint magna dolore mollit elit dolor. Do qui ex reprehenderit irure ea commodo culpa minim. Nostrud laboris mollit esse est labore excepteur ipsum anim cillum. Proident commodo minim aliquip do ipsum cillum dolore commodo commodo fugiat ea velit Lorem. Ipsum aute ex sunt occaecat adipisicing id aute. Incididunt ut reprehenderit nisi ipsum laborum aliquip cillum non qui aute exercitation qui do. Ullamco nostrud consectetur in id fugiat in tempor.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "cillum",
-          "id"
+          "disco"
         ]
       },
       "geometry": {
@@ -1233,8 +1151,8 @@
       "type": "Feature",
       "id": 42,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Charlson Bar",
@@ -1245,9 +1163,7 @@
         "about": "Ex id sint culpa dolor in est esse aliquip enim adipisicing. Consequat nulla aute ipsum amet ipsum ipsum eiusmod elit et. Minim veniam exercitation ad proident tempor duis incididunt voluptate incididunt magna magna laboris adipisicing magna. Nostrud dolore nulla nisi nisi eiusmod ex enim et. Laboris magna irure velit do id duis consectetur adipisicing reprehenderit. In dolore anim sit labore Lorem ad et quis nisi nulla fugiat. Ad reprehenderit officia veniam laboris cupidatat cillum enim ex quis eu aliquip id excepteur labore.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "deserunt",
-          "veniam"
+          "disco"
         ]
       },
       "geometry": {
@@ -1263,8 +1179,8 @@
       "type": "Feature",
       "id": 43,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Ward Bar",
@@ -1275,9 +1191,7 @@
         "about": "Eiusmod veniam elit ea Lorem consequat ullamco esse duis. Eiusmod non cupidatat eu eiusmod. Ex exercitation tempor reprehenderit ullamco esse Lorem aliqua reprehenderit proident dolore minim.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "labore",
-          "esse"
+          "disco"
         ]
       },
       "geometry": {
@@ -1293,8 +1207,8 @@
       "type": "Feature",
       "id": 44,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Miers Bar",
@@ -1305,9 +1219,7 @@
         "about": "Veniam est ullamco velit qui non. Reprehenderit deserunt veniam sint tempor deserunt. Proident anim dolore est non est laborum nisi ea exercitation nisi. Mollit reprehenderit non irure sunt magna nostrud.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "laborum",
-          "elit"
+          "disco"
         ]
       },
       "geometry": {
@@ -1323,8 +1235,8 @@
       "type": "Feature",
       "id": 45,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Adamson Bar",
@@ -1335,9 +1247,7 @@
         "about": "Dolor cupidatat laborum ut irure nisi Lorem minim labore aliquip exercitation minim. Pariatur cillum qui nostrud sit ullamco pariatur Lorem proident ullamco. Laboris pariatur aliquip irure amet voluptate nisi culpa consequat cupidatat aliqua quis reprehenderit voluptate dolore. Do non laboris culpa nostrud. Et proident duis velit et aute in aute non tempor magna.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "enim",
-          "elit"
+          "disco"
         ]
       },
       "geometry": {
@@ -1353,8 +1263,8 @@
       "type": "Feature",
       "id": 46,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Fisher Bar",
@@ -1365,9 +1275,7 @@
         "about": "Sunt amet cillum proident labore Lorem. Non in aute aute magna nulla exercitation nulla. Proident nisi aliqua reprehenderit laboris eiusmod velit quis aliquip elit ut qui. Lorem deserunt cillum adipisicing tempor quis ad Lorem reprehenderit fugiat laboris amet magna aute veniam. Consectetur duis dolor ut sit est sunt ipsum Lorem anim nostrud consequat tempor aliquip.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "minim",
-          "sint"
+          "disco"
         ]
       },
       "geometry": {
@@ -1383,8 +1291,8 @@
       "type": "Feature",
       "id": 47,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Hawkins Bar",
@@ -1395,9 +1303,7 @@
         "about": "Proident esse sunt culpa voluptate ipsum tempor occaecat ea excepteur aute nulla. Exercitation dolor elit eiusmod cillum cillum nostrud magna mollit ullamco veniam sit excepteur cupidatat. Culpa anim quis tempor nisi magna sunt amet ex incididunt Lorem elit qui magna. Commodo nostrud minim nisi voluptate proident non quis ipsum. Elit magna cillum ad minim. Proident magna non fugiat labore anim ea anim aute.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "esse",
-          "voluptate"
+          "disco"
         ]
       },
       "geometry": {
@@ -1413,8 +1319,8 @@
       "type": "Feature",
       "id": 48,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Brown Bar",
@@ -1425,9 +1331,7 @@
         "about": "Culpa ea adipisicing laborum magna amet. Enim minim aute ipsum voluptate pariatur in sunt. Cillum anim et consectetur non anim minim non amet. Veniam nisi ullamco exercitation cillum minim aute anim. Sint dolor sunt sit pariatur incididunt. Exercitation eu proident excepteur sunt adipisicing ut aliqua occaecat sunt exercitation et. Officia ut in non anim laboris veniam in sit pariatur adipisicing veniam et.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "id",
-          "cillum"
+          "disco"
         ]
       },
       "geometry": {
@@ -1443,8 +1347,8 @@
       "type": "Feature",
       "id": 49,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Carey Bar",
@@ -1455,9 +1359,7 @@
         "about": "Commodo consectetur sunt velit dolor nulla ea aliqua deserunt. Ut proident mollit Lorem nostrud magna aliqua et velit sint reprehenderit. Anim magna pariatur culpa laboris in adipisicing ipsum fugiat qui. Id mollit esse nisi magna. Eiusmod nisi proident qui sunt consectetur do officia culpa do laborum laborum anim. Ea dolor enim labore labore ea.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "ullamco",
-          "aute"
+          "disco"
         ]
       },
       "geometry": {
@@ -1473,8 +1375,8 @@
       "type": "Feature",
       "id": 50,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Carter Bar",
@@ -1485,9 +1387,7 @@
         "about": "Ea nisi tempor sint adipisicing do nostrud aliquip consectetur cillum. Reprehenderit aliquip voluptate exercitation est cillum consectetur do duis aliqua culpa commodo pariatur non dolor. Quis ut nostrud ea ut sint velit nulla voluptate est eu pariatur laborum deserunt pariatur. Officia magna ex pariatur do proident sunt cillum ea culpa dolor culpa.\r\n",
         "tags": [
           "bar",
-          "disco",
-          "in",
-          "voluptate"
+          "disco"
         ]
       },
       "geometry": {
@@ -1503,8 +1403,8 @@
       "type": "Feature",
       "id": 51,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Webster Bar",
@@ -1515,9 +1415,7 @@
         "about": "Occaecat veniam Lorem irure deserunt ea id ut duis exercitation. In commodo mollit amet deserunt consectetur Lorem consequat et occaecat aliqua. Cupidatat minim est ea laborum nulla sint qui ut ad ipsum ipsum.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "excepteur",
-          "anim"
+          "sports"
         ]
       },
       "geometry": {
@@ -1533,8 +1431,8 @@
       "type": "Feature",
       "id": 52,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Wood Bar",
@@ -1545,9 +1443,7 @@
         "about": "Nisi sit aliqua amet est adipisicing est occaecat et ullamco sint eu nostrud. Consectetur fugiat amet consectetur labore qui est officia aute velit. Reprehenderit commodo excepteur dolore consectetur reprehenderit labore irure aliquip quis reprehenderit aute. Mollit officia dolor exercitation et ex non eiusmod amet ad et sunt. Ea tempor tempor ad occaecat est ipsum Lorem ea id eu culpa cupidatat incididunt.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "et",
-          "proident"
+          "sports"
         ]
       },
       "geometry": {
@@ -1563,8 +1459,8 @@
       "type": "Feature",
       "id": 53,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Oldridge Bar",
@@ -1575,9 +1471,7 @@
         "about": "Laboris laborum velit labore eu elit sit aliquip enim eiusmod et non elit adipisicing. Duis proident proident quis aliqua laborum do commodo aliquip eiusmod. Non velit labore laborum nulla ipsum deserunt quis elit ipsum magna. Magna occaecat fugiat ad eu anim.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "qui",
-          "fugiat"
+          "sports"
         ]
       },
       "geometry": {
@@ -1593,8 +1487,8 @@
       "type": "Feature",
       "id": 54,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Chesterton Bar",
@@ -1605,9 +1499,7 @@
         "about": "Minim ipsum incididunt laborum voluptate sint incididunt officia cillum aliquip dolor occaecat ullamco ipsum ad. Et laborum cupidatat mollit aute elit cillum quis culpa laborum mollit esse ut. Ea irure incididunt nisi proident Lorem ipsum ea eiusmod nisi eu aliquip ipsum qui ad. Sint ad quis minim incididunt magna fugiat magna anim.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "pariatur",
-          "veniam"
+          "sports"
         ]
       },
       "geometry": {
@@ -1623,8 +1515,8 @@
       "type": "Feature",
       "id": 55,
       "properties": {
-        "bars": "true",
         "district": "western",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Chandter Bar",
@@ -1635,9 +1527,7 @@
         "about": "Tempor do aute magna Lorem tempor enim. Duis pariatur reprehenderit ea aliquip cillum veniam mollit aliquip mollit cillum adipisicing incididunt. Ipsum veniam do et consequat cillum sunt laboris aliquip.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "quis",
-          "aliquip"
+          "sports"
         ]
       },
       "geometry": {
@@ -1653,8 +1543,8 @@
       "type": "Feature",
       "id": 56,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Conors Bar",
@@ -1665,9 +1555,7 @@
         "about": "Velit occaecat qui officia enim eu excepteur dolore quis proident ullamco id. Ad sit occaecat pariatur sit minim Lorem dolor. Mollit excepteur veniam aliqua consectetur consectetur. Eiusmod aute velit magna aute exercitation mollit consequat et consequat nulla deserunt id. Cupidatat Lorem duis exercitation elit aliquip deserunt cupidatat nostrud ipsum sint labore non. Enim nostrud ea excepteur in id laborum voluptate minim. Voluptate aliqua ullamco sit eiusmod proident.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "ad",
-          "velit"
+          "sports"
         ]
       },
       "geometry": {
@@ -1683,8 +1571,8 @@
       "type": "Feature",
       "id": 57,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Galbraith Bar",
@@ -1695,9 +1583,7 @@
         "about": "Eiusmod non sit reprehenderit ullamco officia duis in quis sint. Cillum proident minim aliqua commodo mollit ea qui ullamco adipisicing aliquip adipisicing deserunt. Est culpa anim eu ipsum ex incididunt in occaecat labore nostrud excepteur ex do dolor. Labore exercitation laborum dolor duis minim.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "nulla",
-          "esse"
+          "sports"
         ]
       },
       "geometry": {
@@ -1713,8 +1599,8 @@
       "type": "Feature",
       "id": 58,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Carrington Bar",
@@ -1725,9 +1611,7 @@
         "about": "Ex labore ex nisi voluptate ex consectetur exercitation id adipisicing velit magna. Deserunt qui officia nulla Lorem quis nulla. Cupidatat ex minim duis ipsum ex duis. Enim magna dolore dolore esse fugiat cillum adipisicing sit ad fugiat eu irure. Tempor do elit id Lorem Lorem id.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "ipsum",
-          "irure"
+          "sports"
         ]
       },
       "geometry": {
@@ -1743,8 +1627,8 @@
       "type": "Feature",
       "id": 59,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Turner Bar",
@@ -1755,9 +1639,7 @@
         "about": "Exercitation commodo labore velit non aliquip occaecat. Aute sunt tempor aute occaecat reprehenderit nostrud amet et. Voluptate officia irure ad eiusmod tempor. Laboris nulla nisi nostrud aliqua sit duis pariatur cillum.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "sint",
-          "exercitation"
+          "sports"
         ]
       },
       "geometry": {
@@ -1773,8 +1655,8 @@
       "type": "Feature",
       "id": 60,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Fisher Bar",
@@ -1785,9 +1667,7 @@
         "about": "Mollit non mollit fugiat velit minim mollit aute commodo cillum minim qui irure velit laborum. Enim veniam ea ad eiusmod amet irure dolor ut culpa labore. Dolor aliqua duis do commodo cupidatat proident dolore tempor dolore. Esse ut reprehenderit et commodo. Voluptate qui fugiat qui occaecat qui elit sit consequat pariatur. Fugiat pariatur dolore magna eu culpa reprehenderit ullamco reprehenderit consectetur dolor laborum reprehenderit occaecat ad.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "laborum",
-          "tempor"
+          "sports"
         ]
       },
       "geometry": {
@@ -1803,8 +1683,8 @@
       "type": "Feature",
       "id": 61,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Carey Bar",
@@ -1815,9 +1695,7 @@
         "about": "Id anim duis excepteur deserunt dolor cupidatat laborum cupidatat magna sint aliquip esse voluptate. Laborum eiusmod cupidatat enim nostrud eiusmod cillum amet voluptate sit non cillum. Anim qui non commodo eu. Nisi aliquip laboris quis proident eu occaecat sint fugiat irure id qui commodo. Culpa enim veniam ea cillum qui excepteur excepteur laborum aliquip commodo quis laboris culpa nulla. Pariatur cupidatat adipisicing incididunt amet occaecat non.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "excepteur",
-          "qui"
+          "sports"
         ]
       },
       "geometry": {
@@ -1833,8 +1711,8 @@
       "type": "Feature",
       "id": 62,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Gibbs Bar",
@@ -1845,9 +1723,7 @@
         "about": "Laboris irure sunt ut sunt cupidatat mollit id qui duis. Dolor Lorem aute est proident exercitation occaecat eu anim tempor duis sunt velit cupidatat eiusmod. Nisi dolor commodo irure culpa elit amet esse labore consectetur qui sint Lorem.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "voluptate",
-          "deserunt"
+          "sports"
         ]
       },
       "geometry": {
@@ -1863,8 +1739,8 @@
       "type": "Feature",
       "id": 63,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Gustman Bar",
@@ -1875,9 +1751,7 @@
         "about": "Sunt dolor nisi est amet ipsum deserunt veniam quis minim. Ad laborum elit duis proident occaecat quis tempor dolor occaecat. Sunt est nulla irure occaecat ut reprehenderit. Quis excepteur proident mollit elit eiusmod cupidatat minim eiusmod reprehenderit sit consequat deserunt consectetur laborum.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "laborum",
-          "tempor"
+          "sports"
         ]
       },
       "geometry": {
@@ -1893,8 +1767,8 @@
       "type": "Feature",
       "id": 64,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Thomson Bar",
@@ -1905,9 +1779,7 @@
         "about": "Sunt aliqua dolor duis qui qui elit proident et velit Lorem ad fugiat. Esse veniam ipsum nostrud pariatur Lorem velit non. Officia ad in incididunt do Lorem. Voluptate culpa irure eiusmod officia. Adipisicing sint dolor pariatur veniam id qui. Adipisicing culpa fugiat qui occaecat officia amet laborum amet mollit ipsum. Dolore minim id nostrud quis cupidatat qui esse tempor eu anim.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "amet",
-          "dolor"
+          "sports"
         ]
       },
       "geometry": {
@@ -1923,8 +1795,8 @@
       "type": "Feature",
       "id": 65,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Webster Bar",
@@ -1935,9 +1807,7 @@
         "about": "Quis fugiat cillum non aute ad commodo cillum id ipsum consequat veniam tempor cupidatat et. Aute sunt magna dolore velit ex quis magna. Excepteur proident mollit ex ipsum nostrud commodo pariatur irure irure minim nostrud proident et cillum.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "eiusmod",
-          "incididunt"
+          "sports"
         ]
       },
       "geometry": {
@@ -1953,8 +1823,8 @@
       "type": "Feature",
       "id": 66,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Conors Bar",
@@ -1965,9 +1835,7 @@
         "about": "Aliquip eiusmod veniam eiusmod cillum aliquip ad mollit. Deserunt consequat Lorem quis incididunt irure in amet aliqua. Sit amet cillum et anim tempor. Labore duis et ea in occaecat mollit culpa nostrud esse deserunt nostrud irure elit.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "labore",
-          "consequat"
+          "sports"
         ]
       },
       "geometry": {
@@ -1983,8 +1851,8 @@
       "type": "Feature",
       "id": 67,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Molligan Bar",
@@ -1995,9 +1863,7 @@
         "about": "Magna officia tempor pariatur exercitation nulla in est ad cupidatat occaecat id Lorem incididunt incididunt. Eiusmod duis commodo eiusmod id. Adipisicing minim aute labore commodo esse dolore enim. Nulla id occaecat proident eiusmod occaecat magna pariatur. Officia esse aliquip aliqua veniam minim culpa eiusmod esse nostrud id esse exercitation sunt non.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "quis",
-          "aute"
+          "sports"
         ]
       },
       "geometry": {
@@ -2013,8 +1879,8 @@
       "type": "Feature",
       "id": 68,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Crossman Bar",
@@ -2025,9 +1891,7 @@
         "about": "Elit mollit elit esse dolor ullamco. Est proident et pariatur qui. Consequat laboris est excepteur ad non amet incididunt ut nostrud. Duis ut exercitation cillum tempor proident minim in labore.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "enim",
-          "pariatur"
+          "sports"
         ]
       },
       "geometry": {
@@ -2043,8 +1907,8 @@
       "type": "Feature",
       "id": 69,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Bush Bar",
@@ -2055,9 +1919,7 @@
         "about": "Commodo sunt ullamco velit laborum esse exercitation id consectetur culpa officia. Qui laboris irure officia ipsum elit quis adipisicing veniam duis aliquip ullamco elit ut. Labore eu voluptate ex minim laborum ad. Ipsum aliqua enim anim ad esse pariatur eu eu laboris occaecat sit nisi non pariatur.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "laboris",
-          "nulla"
+          "sports"
         ]
       },
       "geometry": {
@@ -2073,8 +1935,8 @@
       "type": "Feature",
       "id": 70,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Oldridge Bar",
@@ -2085,9 +1947,7 @@
         "about": "Ad cupidatat ad incididunt sunt pariatur occaecat culpa in magna anim. Incididunt consectetur tempor esse occaecat ex ut cillum anim eu cupidatat labore cupidatat enim proident. Ut in sunt velit mollit anim ea Lorem ex do commodo cupidatat. Nisi labore duis commodo minim. Elit duis in eu et voluptate pariatur voluptate aliqua pariatur ex. Irure magna do velit pariatur Lorem nulla qui proident ut et Lorem. Anim sint cupidatat do occaecat voluptate tempor ex ad.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "pariatur",
-          "enim"
+          "sports"
         ]
       },
       "geometry": {
@@ -2103,8 +1963,8 @@
       "type": "Feature",
       "id": 71,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Carter Bar",
@@ -2115,9 +1975,7 @@
         "about": "Enim cillum id ullamco officia nisi incididunt ut nostrud laboris. Commodo pariatur est laboris sit eiusmod irure Lorem aliquip consequat aliqua enim. Deserunt nisi reprehenderit adipisicing mollit officia dolore excepteur veniam.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "culpa",
-          "eiusmod"
+          "sports"
         ]
       },
       "geometry": {
@@ -2133,8 +1991,8 @@
       "type": "Feature",
       "id": 72,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Oldman Bar",
@@ -2145,9 +2003,7 @@
         "about": "Est commodo ex duis quis laboris. Aute labore exercitation eiusmod enim laboris ex incididunt do reprehenderit aliqua officia minim dolor laboris. Incididunt ullamco veniam excepteur officia veniam culpa nulla cupidatat reprehenderit. Magna laboris est ex ut amet non. Reprehenderit sint occaecat voluptate nulla. Tempor velit consectetur commodo consequat nulla eiusmod qui commodo.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "dolore",
-          "occaecat"
+          "sports"
         ]
       },
       "geometry": {
@@ -2163,8 +2019,8 @@
       "type": "Feature",
       "id": 73,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Brown Bar",
@@ -2175,9 +2031,7 @@
         "about": "Esse exercitation pariatur consectetur irure consectetur ullamco laboris commodo. Incididunt consequat labore esse tempor officia magna consectetur. Aliqua officia enim cupidatat ipsum duis eu id dolor.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "esse",
-          "non"
+          "sports"
         ]
       },
       "geometry": {
@@ -2193,8 +2047,8 @@
       "type": "Feature",
       "id": 74,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Osborne Bar",
@@ -2205,9 +2059,7 @@
         "about": "Lorem in velit cupidatat veniam culpa aute eiusmod enim eu qui ut sunt. Dolor pariatur reprehenderit eiusmod amet velit ipsum Lorem. Aliqua anim sint tempor nisi do pariatur voluptate id. Irure ipsum veniam eiusmod adipisicing nostrud. Est labore mollit enim est deserunt nulla ullamco commodo sit. Est proident qui est aliquip esse ut commodo ea labore. Ipsum cillum reprehenderit aute ullamco minim ex.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "nostrud",
-          "do"
+          "sports"
         ]
       },
       "geometry": {
@@ -2223,8 +2075,8 @@
       "type": "Feature",
       "id": 75,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Daniels Bar",
@@ -2235,9 +2087,7 @@
         "about": "Officia consequat anim reprehenderit ex tempor nisi commodo ad et occaecat voluptate. Elit ea do eu ex aute labore. Dolore laborum anim anim sint fugiat tempor nulla voluptate id minim adipisicing quis cupidatat. Laborum aliquip ullamco in incididunt dolore consequat ex dolor aliquip ullamco id reprehenderit. Sunt do eu laboris anim adipisicing fugiat pariatur aliquip irure. Mollit est do occaecat sunt ex aute ipsum adipisicing exercitation proident. Et sunt deserunt do occaecat dolore dolore proident.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "duis",
-          "sint"
+          "sports"
         ]
       },
       "geometry": {
@@ -2253,8 +2103,8 @@
       "type": "Feature",
       "id": 76,
       "properties": {
-        "bars": "true",
         "district": "wan chai",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Creighton Bar",
@@ -2265,9 +2115,7 @@
         "about": "Incididunt anim labore sit excepteur. Non sit veniam nostrud sint esse duis. Aliquip ipsum ex magna exercitation occaecat veniam incididunt voluptate nostrud aute officia ipsum incididunt. Lorem pariatur ullamco tempor ea anim. Voluptate aliqua sit quis in ea. Fugiat Lorem reprehenderit nulla ullamco nostrud nisi ea. Ea ullamco mollit sunt officia quis incididunt nisi irure enim Lorem laborum veniam labore elit.\r\n",
         "tags": [
           "bar",
-          "sports",
-          "dolor",
-          "commodo"
+          "sports"
         ]
       },
       "geometry": {
@@ -2283,8 +2131,8 @@
       "type": "Feature",
       "id": 77,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Miers Bar",
@@ -2295,9 +2143,7 @@
         "about": "Fugiat irure officia quis ut veniam. Aute aute voluptate esse et qui consequat. Eiusmod amet sit eu ullamco minim. Id proident cillum ex deserunt consectetur. Adipisicing magna ut non elit nisi sunt quis esse consequat amet.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "anim",
-          "consequat"
+          "pub"
         ]
       },
       "geometry": {
@@ -2313,8 +2159,8 @@
       "type": "Feature",
       "id": 78,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Calhoun Bar",
@@ -2325,9 +2171,7 @@
         "about": "Velit laboris anim dolore cillum in aute. Exercitation dolor do id enim reprehenderit anim non. Amet pariatur est eiusmod enim occaecat dolor do sunt nulla qui ad reprehenderit. Esse non veniam elit occaecat veniam veniam ea amet laborum. Exercitation esse commodo est mollit irure id enim amet eu anim nisi proident minim occaecat. Qui laborum occaecat minim laborum proident duis deserunt incididunt amet proident.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "laborum",
-          "occaecat"
+          "pub"
         ]
       },
       "geometry": {
@@ -2343,8 +2187,8 @@
       "type": "Feature",
       "id": 79,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Nathan Bar",
@@ -2355,9 +2199,7 @@
         "about": "Ex aliquip in et commodo nostrud ut elit minim. Dolore ipsum anim exercitation sunt irure laborum laborum esse nostrud nulla do irure Lorem nisi. Non culpa ex ullamco adipisicing. Pariatur amet nostrud cillum consectetur nostrud cillum labore et qui. Nulla ullamco non consequat labore laborum exercitation ex consequat veniam et proident dolor ad. Labore pariatur non eu sit ipsum do irure non laboris pariatur magna excepteur eiusmod fugiat. Exercitation irure laboris cillum laboris enim.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "excepteur",
-          "esse"
+          "pub"
         ]
       },
       "geometry": {
@@ -2373,8 +2215,8 @@
       "type": "Feature",
       "id": 80,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Hodges Bar",
@@ -2385,9 +2227,7 @@
         "about": "Reprehenderit aliquip amet ad do officia proident reprehenderit ullamco commodo incididunt. Pariatur incididunt consectetur anim esse. Occaecat irure Lorem do veniam aliquip elit.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "officia",
-          "exercitation"
+          "pub"
         ]
       },
       "geometry": {
@@ -2403,8 +2243,8 @@
       "type": "Feature",
       "id": 81,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Cramer Bar",
@@ -2415,9 +2255,7 @@
         "about": "Tempor reprehenderit ut enim non aliquip magna eiusmod in laboris. Minim qui ullamco exercitation fugiat eiusmod ullamco esse esse excepteur deserunt occaecat eiusmod. Pariatur tempor ea laboris culpa. Tempor exercitation ad voluptate occaecat amet. Lorem dolor reprehenderit tempor laboris veniam officia proident velit laboris aliqua id ut consectetur. Labore sint aute elit quis Lorem reprehenderit irure commodo qui aliqua laborum adipisicing officia. Esse laborum nostrud sint laboris ex anim eu reprehenderit occaecat ullamco.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "tempor",
-          "sint"
+          "pub"
         ]
       },
       "geometry": {
@@ -2433,8 +2271,8 @@
       "type": "Feature",
       "id": 82,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Ogden Bar",
@@ -2445,9 +2283,7 @@
         "about": "Quis occaecat cillum eu aliquip commodo magna. Occaecat ad commodo irure irure tempor. Cupidatat pariatur et nisi Lorem dolor aliquip tempor. Minim irure labore velit anim ex fugiat occaecat. Labore nostrud ipsum enim aute aute id nisi in laboris cupidatat consequat.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "excepteur",
-          "elit"
+          "pub"
         ]
       },
       "geometry": {
@@ -2463,8 +2299,8 @@
       "type": "Feature",
       "id": 83,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Molligan Bar",
@@ -2475,9 +2311,7 @@
         "about": "Occaecat ut laborum nisi cillum. Est consectetur deserunt culpa quis duis fugiat laboris incididunt est ex aliquip. Amet magna reprehenderit ut aute proident culpa ex eiusmod anim nostrud velit do. Sit Lorem sint esse dolor esse dolore quis exercitation.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "esse",
-          "voluptate"
+          "pub"
         ]
       },
       "geometry": {
@@ -2493,8 +2327,8 @@
       "type": "Feature",
       "id": 84,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Gill Bar",
@@ -2505,9 +2339,7 @@
         "about": "Aliquip eu sunt magna ea. Adipisicing dolore do eu in aute mollit anim eu ipsum enim velit pariatur. Nisi nulla sit incididunt ut proident adipisicing in deserunt labore nisi. Excepteur non elit voluptate voluptate ad enim ea veniam cupidatat aute tempor dolor officia eiusmod. Adipisicing in pariatur duis sit eiusmod id ad aliqua. Commodo aliqua adipisicing aute et nisi minim officia proident dolor culpa. Id sint sunt esse excepteur eiusmod duis ullamco ipsum est.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "et",
-          "aliqua"
+          "pub"
         ]
       },
       "geometry": {
@@ -2523,8 +2355,8 @@
       "type": "Feature",
       "id": 85,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Ford Bar",
@@ -2535,9 +2367,7 @@
         "about": "Occaecat sit ullamco adipisicing aliqua magna sint est exercitation culpa mollit esse laborum. Dolore nisi ullamco in deserunt duis officia amet ullamco et. Enim nulla dolore cillum aliquip aute mollit enim fugiat. Duis dolore qui velit ex sint cillum elit eu exercitation enim.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "aute",
-          "sint"
+          "pub"
         ]
       },
       "geometry": {
@@ -2553,8 +2383,8 @@
       "type": "Feature",
       "id": 86,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Ward Bar",
@@ -2565,9 +2395,7 @@
         "about": "Qui anim dolore ex consectetur nulla. Laborum adipisicing non laborum pariatur ut enim. Cupidatat nulla ea elit incididunt ad dolor sit sit mollit adipisicing Lorem officia amet. Excepteur consequat magna ex reprehenderit non. Elit laboris sint duis laboris sunt est fugiat reprehenderit elit et id exercitation adipisicing. Aute incididunt Lorem eiusmod ex voluptate nisi id esse nostrud elit magna quis ut quis. Laboris commodo velit aliquip deserunt esse aliqua elit nostrud esse nulla.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "ea",
-          "sit"
+          "pub"
         ]
       },
       "geometry": {
@@ -2583,8 +2411,8 @@
       "type": "Feature",
       "id": 87,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Goodman Bar",
@@ -2595,9 +2423,7 @@
         "about": "Non laborum in proident ex nisi consequat minim quis duis. Aute ex pariatur officia ex nulla est duis enim amet minim proident velit commodo. Minim aute voluptate enim commodo sit id quis. Magna sit et est irure quis dolor excepteur duis esse ex cupidatat aute ea. Non laboris laborum anim elit nulla Lorem veniam cupidatat ut excepteur eiusmod commodo officia officia. Ad in cillum qui pariatur laboris. Consequat laboris nostrud ut cupidatat amet occaecat veniam voluptate.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "consequat",
-          "et"
+          "pub"
         ]
       },
       "geometry": {
@@ -2613,8 +2439,8 @@
       "type": "Feature",
       "id": 88,
       "properties": {
-        "bars": "true",
         "district": "eastern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Oldman Bar",
@@ -2625,9 +2451,7 @@
         "about": "Exercitation do qui magna sit est. Pariatur ad dolore laboris veniam labore reprehenderit esse sint. Ipsum ex dolore ex esse consequat laboris sunt commodo. Ut enim sit aliqua do adipisicing laboris commodo consequat exercitation.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "laboris",
-          "mollit"
+          "pub"
         ]
       },
       "geometry": {
@@ -2643,8 +2467,8 @@
       "type": "Feature",
       "id": 89,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Fisher Bar",
@@ -2655,9 +2479,7 @@
         "about": "Aute laboris dolor non ut commodo fugiat magna qui ex ut adipisicing consequat excepteur. Sunt ea culpa in sint veniam. Quis nostrud in labore cillum magna ipsum adipisicing dolore dolore consectetur sit. Proident Lorem ea labore exercitation. Esse qui Lorem ad consectetur tempor ut eiusmod commodo incididunt enim commodo. Incididunt ut anim sunt nisi consectetur sit proident tempor ex voluptate tempor id. Dolor aute elit do minim nulla id.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "commodo",
-          "tempor"
+          "pub"
         ]
       },
       "geometry": {
@@ -2673,8 +2495,8 @@
       "type": "Feature",
       "id": 90,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Wallace Bar",
@@ -2685,9 +2507,7 @@
         "about": "Irure et consequat duis labore dolor et sint et pariatur do. Sit do cupidatat laboris ut ad do proident proident sunt. Enim in id cillum aliquip ullamco excepteur Lorem.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "et",
-          "amet"
+          "pub"
         ]
       },
       "geometry": {
@@ -2703,8 +2523,8 @@
       "type": "Feature",
       "id": 91,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Bush Bar",
@@ -2715,9 +2535,7 @@
         "about": "Ea occaecat irure sunt consequat ad ad officia sunt. Irure sint incididunt reprehenderit aliqua dolor nulla minim minim Lorem ut dolor. Ea tempor consequat mollit deserunt occaecat sunt consectetur laboris laborum reprehenderit deserunt incididunt eu voluptate. Voluptate adipisicing voluptate exercitation aliquip irure est sint deserunt proident veniam irure cupidatat.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "est",
-          "cupidatat"
+          "pub"
         ]
       },
       "geometry": {
@@ -2733,8 +2551,8 @@
       "type": "Feature",
       "id": 92,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Higgins Bar",
@@ -2745,9 +2563,7 @@
         "about": "Anim cillum aliquip quis ea officia ut magna do labore in laboris do quis esse. Sunt anim mollit amet eu ad labore ex esse ea laborum. Laborum magna pariatur dolore voluptate non dolore excepteur labore in eiusmod. Ex sunt sint et cillum culpa quis consequat minim consequat nisi ad dolor laboris et.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "fugiat",
-          "exercitation"
+          "pub"
         ]
       },
       "geometry": {
@@ -2763,8 +2579,8 @@
       "type": "Feature",
       "id": 93,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Nelson Bar",
@@ -2775,9 +2591,7 @@
         "about": "Aliqua sint nulla incididunt minim ut eiusmod eiusmod ipsum incididunt. In ad proident ex ut irure anim elit ex. Sint incididunt enim aliquip et nostrud nulla tempor ad Lorem. Proident enim aliquip in eiusmod amet Lorem reprehenderit ullamco excepteur aliquip laborum occaecat sunt. Eu incididunt velit duis pariatur laboris.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "dolor",
-          "esse"
+          "pub"
         ]
       },
       "geometry": {
@@ -2793,8 +2607,8 @@
       "type": "Feature",
       "id": 94,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Oliver Bar",
@@ -2805,9 +2619,7 @@
         "about": "Veniam laboris do dolor deserunt proident nisi sunt ea laboris eu deserunt labore. Aliqua mollit amet quis mollit irure pariatur commodo irure do nisi voluptate. Quis aliqua tempor mollit velit excepteur do proident officia velit magna laborum sit do. Excepteur do nulla laboris reprehenderit dolore voluptate tempor nisi anim eu ut. Velit exercitation officia nulla excepteur ipsum dolore adipisicing ad pariatur.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "aute",
-          "ipsum"
+          "pub"
         ]
       },
       "geometry": {
@@ -2823,8 +2635,8 @@
       "type": "Feature",
       "id": 95,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Chandter Bar",
@@ -2835,9 +2647,7 @@
         "about": "Ullamco consectetur magna consequat laborum anim dolore voluptate occaecat. Voluptate et adipisicing cupidatat elit do veniam. Enim irure ad mollit excepteur sit do amet id pariatur. Consequat ad esse laboris mollit excepteur est consequat. Voluptate irure do voluptate ex in. Non cupidatat adipisicing culpa pariatur cillum elit consectetur non anim amet tempor laboris. Irure sint nulla mollit adipisicing in ad non reprehenderit commodo laborum id dolor incididunt proident.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "veniam",
-          "irure"
+          "pub"
         ]
       },
       "geometry": {
@@ -2853,8 +2663,8 @@
       "type": "Feature",
       "id": 96,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Hancock Bar",
@@ -2865,9 +2675,7 @@
         "about": "Nostrud deserunt anim veniam laborum incididunt labore aliqua sunt incididunt adipisicing. Est sunt velit cupidatat labore excepteur voluptate reprehenderit ad ex do fugiat. Cillum voluptate ea ad culpa amet exercitation excepteur est. Voluptate laboris laboris et dolore sint ut non Lorem id culpa do. Consequat sit do eiusmod voluptate dolore. Cillum ullamco reprehenderit aute sit eiusmod do dolor eiusmod do excepteur est qui reprehenderit. In anim dolore pariatur eu nisi enim cillum do enim enim irure consequat.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "labore",
-          "ad"
+          "pub"
         ]
       },
       "geometry": {
@@ -2883,8 +2691,8 @@
       "type": "Feature",
       "id": 97,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Osborne Bar",
@@ -2895,9 +2703,7 @@
         "about": "Aute magna ipsum mollit mollit sint esse aliquip cupidatat fugiat ex. Qui officia aliqua nulla id deserunt eiusmod labore exercitation. Culpa exercitation sit aliqua non labore aliqua aliqua nulla dolor amet. Id minim ad fugiat minim irure aliquip consectetur deserunt id aliqua occaecat. Adipisicing quis magna voluptate qui velit cupidatat. Ut adipisicing veniam adipisicing consectetur cillum laboris ullamco tempor et do. Aliquip cillum adipisicing eiusmod ea.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "dolore",
-          "reprehenderit"
+          "pub"
         ]
       },
       "geometry": {
@@ -2913,8 +2719,8 @@
       "type": "Feature",
       "id": 98,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Turner Bar",
@@ -2925,9 +2731,7 @@
         "about": "Laboris ut cupidatat aliquip adipisicing laborum ipsum ipsum duis elit mollit cillum ipsum. Irure sit magna quis occaecat aliqua aute. Cillum et aute eiusmod aliqua ipsum deserunt aliqua excepteur fugiat. Quis dolore nisi adipisicing non dolor. Consectetur excepteur est quis sunt tempor veniam irure pariatur. Voluptate irure dolore labore proident enim minim commodo est eu anim est. Ullamco aute quis ullamco velit laboris.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "exercitation",
-          "cillum"
+          "pub"
         ]
       },
       "geometry": {
@@ -2943,8 +2747,8 @@
       "type": "Feature",
       "id": 99,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Oldridge Bar",
@@ -2955,9 +2759,7 @@
         "about": "Labore incididunt fugiat proident quis cupidatat est deserunt ipsum id id. Lorem in ea non labore ea commodo laborum officia veniam aliqua nulla nulla cillum. Laboris ullamco irure amet minim aute in nostrud fugiat proident sit. Incididunt adipisicing minim quis cupidatat. Sunt adipisicing esse occaecat exercitation minim aliqua esse nostrud enim tempor. Irure ex sint ipsum quis veniam ut ea aliquip nostrud reprehenderit deserunt laborum. Ipsum minim culpa magna labore.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "laboris",
-          "consequat"
+          "pub"
         ]
       },
       "geometry": {
@@ -2973,8 +2775,8 @@
       "type": "Feature",
       "id": 100,
       "properties": {
-        "bars": "true",
         "district": "southern",
+        "bars": "true",
         "category": "bars",
         "picture": "http://placehold.it/32x32",
         "name": "Hawkins Bar",
@@ -2985,9 +2787,7 @@
         "about": "Exercitation qui aliquip nostrud adipisicing adipisicing sit consectetur sunt ad velit duis. Aliqua elit voluptate proident irure sit anim laborum fugiat consectetur enim dolor in incididunt. Quis amet consectetur voluptate in incididunt est eiusmod irure sit incididunt officia aliqua non Lorem. Incididunt culpa irure nostrud commodo reprehenderit excepteur nostrud aliqua minim. Aute fugiat et esse consectetur id in labore non mollit est aliquip labore. Sit cillum in reprehenderit magna sint excepteur aliquip consectetur elit. Eu non esse voluptate esse duis incididunt ex voluptate ipsum esse adipisicing labore tempor.\r\n",
         "tags": [
           "bar",
-          "pup",
-          "ex",
-          "adipisicing"
+          "pub"
         ]
       },
       "geometry": {

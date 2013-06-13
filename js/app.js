@@ -2,7 +2,7 @@
 
 
 // Declare app level module which depends on filters, and services
-var app = angular.module('myApp', ['myApp.services', 'myApp.directives', 'leaflet-directive', 'ui.bootstrap']);
+var app = angular.module('myApp', ['ui.unique', 'myApp.filters', 'myApp.services', 'myApp.directives', 'leaflet-directive', 'ui.bootstrap']);
 
 
 

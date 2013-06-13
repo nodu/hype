@@ -210,3 +210,16 @@ nav {
 #district-select {
    width: 60%;
 }
+
+
+/* for ng-cloak*/
+/*[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}*/
+
+
+#barSubmit {
+  position: absolute; 
+  bottom:5px; 
+  right:5px;
+}

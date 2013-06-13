@@ -52,3 +52,6 @@ Marker on click add class to content div to show in mobile
 	add marker's content to new tab
 
 Add the filters for the different data types
+
+
+Check unnecessary ng-cloak direcives on deployment!

@@ -6,6 +6,12 @@
   <link rel="stylesheet" href="css/bootstrap.css"/>
   <link rel="stylesheet" href="css/leaflet.css"/>
   <link rel="stylesheet" href="css/app.css"/>
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/uiUnique.js"></script>
+  <!-- // <script src="js/angularUI.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.js"></script> -->
+
+
 </head>
 <body ng-controller="appController"> 
   <!-- This doesn't seem pretty, not sure how to correctly add 2 app wide controllers -->
@@ -20,27 +26,40 @@
 
      <accordion close-others="oneAtATime">
       <accordion-group id="navTop" heading="Opener /w Logo" >
-        <input ng-model="opt.query" placeholder="Search" style="width: 78%;"> 
-        <!-- <input type="checkbox" ng-model="opt.query"> -->
-        <a href="#" ng-click="save()"><i class="icon-fixed-width icon-plus"></i></a> 
-      </accordion-group>
+      <input ng-cloak ng-model="opt.query" placeholder="Search" style="width: 78%;"> 
+      <!-- <input type="checkbox" ng-model="opt.query"> -->
+      <a href="#" ng-click="save(featDB)"><i class="icon-fixed-width icon-plus"></i></a> 
+    </accordion-group>
     
-      <accordion-group heading="Bars" is-open="true">
-        <form name="myForm">
-          <select id="district-select" ng-model="districtSelect" ng-options="district for district in districts">
-            <option value="">District</option>
-          </select><br>
-          Club: <input type="checkbox" ng-model="club"> Club: {{club}}<br>
-          Pub: <input type="checkbox" ng-model="pub">  Pub: {{pub}}<br>
-          Pub: <input type="checkbox" ng-model="disco">  Disco: {{disco}}<br>
-          Pub: <input type="checkbox" ng-model="sports">  Sports: {{sports}}
-          <input type="button" class="btn small" value="Submit" style="position: absolute; bottom:5px; right:5px;">
-        </form>
-      </accordion-group>
+    <accordion-group heading="Bars" is-open="true">
+    <form name="myForm" ng-cloak>
+      <select id="district-select" ng-model="districtSelect" ng-options="district for district in districts">
+        <option value="">District</option>
+      </select>
+      {{districtSelect}}
+      <br>
+      <div>
+        <!-- ng-model="club" /////// >Club: {{club}}< -->
+        <!-- Bar: <input type="checkbox"  ng-model="search[featDB.properties.tags[1]]"> <br> -->
+        <!-- Club: <input type="checkbox" ng-model="search[barsDB[5].tag]"><br> -->
+        Disco: <input type="checkbox" ng-model="di.disco" ng-true-value="disco">  Disco: {{di.disco}}<br>
+        Sports: <input type="checkbox" ng-model="di.sports">  Sports: {{di.sports}}
+        
+        <div ng-repeat="feat in featDB | unique:'properties.tags[1]'">
+          <input type="checkbox" ng-checked="feat.checked" ng-model="feat.checked"> 
+          <!-- {{feat.properties.district}} -->
+          {{feat.properties.tags[1]}}
+          {{feat.checked}}
+        </div>
 
-      <accordion-group id="navBottom" heading="Cow Lorem Ipsum">
-        Content
-      </accordion-group>
+        <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="submit(builtList)">
+      </div>
+    </form>
+  </accordion-group>
+
+  <accordion-group id="navBottom" heading="Beaches">
+  Filter's here
+</accordion-group>
 </accordion>
 
 </nav>
@@ -52,15 +71,20 @@
 
 
 <div class="content">
- 
+
   <accordion close-others="oneAtATime">
-    <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()">
-    <div class="ng-cloak"> 
+    <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()"> -->
+    <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
+    <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | selectedFeatureTags | filter:opt.query" ng-click="onContentHeaderClick()">
+    <div ng-cloak> 
+      <p>{{group.id}}</p>
+      <p>Checked: {{group.checked}}</p>
       <p>{{group.properties.address}}</p>
       <p>{{group.properties.phone}}</p>
       <p>{{group.properties.email}}</p>
       <p>{{group.properties.about}}</p>
       <p>{{group.properties.district}}</p>
+      <p>{{group.properties.tags}}</p>
     </div>
   </accordion-group>
 </accordion>
@@ -69,7 +93,7 @@
 
 
   <button id="credits" class="btn btn-medium" ng-click="open()">Credits</button>
-  <div modal="shouldBeOpen" close="close()" options="opts">
+  <div ng-cloak modal="shouldBeOpen" close="close()" options="opts">
     <div class="modal-header">
       <h4>Credits</h4>
     </div>
@@ -89,7 +113,6 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
 -->
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
-<script src="lib/angular/angular.js"></script>
 <script src="js/ui-bootstrap-tpls-0.3.0.js"></script>
 <script src="js/leaflet-src.js"></script>
 <script src="js/angular-leaflet-directive.js"></script>
