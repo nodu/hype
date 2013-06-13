@@ -45,10 +45,12 @@
         Disco: <input type="checkbox" ng-model="di.disco" ng-true-value="disco">  Disco: {{di.disco}}<br>
         Sports: <input type="checkbox" ng-model="di.sports">  Sports: {{di.sports}}
         
-        <div ng-repeat="feat in featDB | unique:'properties.tags[1]'">
+        <!-- <div ng-repeat="feat in featDB | unique:'properties.tags[1]'"> -->
+        <div ng-repeat="feat in featDB | unique:'tag'">
           <input type="checkbox" ng-checked="feat.checked" ng-model="feat.checked"> 
           <!-- {{feat.properties.district}} -->
-          {{feat.properties.tags[1]}}
+          <!-- {{feat.properties.tags[1]}} -->
+          {{feat.tag}}
           {{feat.checked}}
         </div>
 
@@ -75,16 +77,17 @@
   <accordion close-others="oneAtATime">
     <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()"> -->
     <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-    <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | selectedFeatureTags | filter:opt.query" ng-click="onContentHeaderClick()">
+    <accordion-group heading="{{feat.properties.name}}" ng-repeat="feat in featDB | selectedFeatureTags | filter:opt.query" ng-click="onContentHeaderClick()">
     <div ng-cloak> 
-      <p>{{group.id}}</p>
-      <p>Checked: {{group.checked}}</p>
-      <p>{{group.properties.address}}</p>
-      <p>{{group.properties.phone}}</p>
-      <p>{{group.properties.email}}</p>
-      <p>{{group.properties.about}}</p>
-      <p>{{group.properties.district}}</p>
-      <p>{{group.properties.tags}}</p>
+      <p>{{feat.id}}</p>
+      <p>{{feat.tag}}</p>
+      <p>Checked: {{feat.checked}}</p>
+      <p>{{feat.properties.address}}</p>
+      <p>{{feat.properties.phone}}</p>
+      <p>{{feat.properties.email}}</p>
+      <p>{{feat.properties.about}}</p>
+      <p>{{feat.properties.district}}</p>
+      <p>{{feat.properties.tags}}</p>
     </div>
   </accordion-group>
 </accordion>

@@ -8,9 +8,12 @@ filter('selectedFeatureTags', function($filter) {
 		var len;
 
 	    // get customers that have been checked
-	    // var checkedTags = $filter('filter')(feature, {checked: true});
-	    var checkedTags = ["pie", "doh" ]
-	    // console.log(checkedTags.length);
+	    var checkedTags = $filter('filter')(feature, {checked: true});
+	    // var checkedTags = ["pie", "doh" ]
+
+	    for (var i = 0; i < checkedTags.length; i++) {
+	    	console.log("checked: " + checkedTags[i]);
+	    };
 	    
 	    // Add in a check to see if any customers were selected. If none, return 
 	    // them all without filters
@@ -23,8 +26,8 @@ filter('selectedFeatureTags', function($filter) {
 	    for(var i = 0, len = checkedTags.length; i < len; ++i) {
 	      // if this checked customers cities isn't already in the cities object 
 	      // add it
-	      if(!tagList.hasOwnProperty(checkedTags[i].properties.tags[1])) {
-	      	tagList[checkedTags[i].properties.tags[1]] = true;
+	      if(!tagList.hasOwnProperty(checkedTags[i].tag)) {
+	      	tagList[checkedTags[i].tag] = true;
 	      }
 	      console.log(tagList)
 
@@ -33,10 +36,10 @@ filter('selectedFeatureTags', function($filter) {
 	    // Now that we have the cities that come from the checked customers, we can
 	    //get all customers from those cities and return them
 	    var ret = [];
-	    for(var i = 0; i < feature.length; ++i) {
+	    for(var i = 0, len = feature.length;  i < len; ++i) {
 	      // If this customer's city exists in the cities object, add it to the 
 	      // return array
-	      if(tagList[feature[i].tags]) {
+	      if(tagList[feature[i].tag]) {
 	      	ret.push(feature[i]);
 	      } 
 	  }
