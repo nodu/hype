@@ -2,7 +2,6 @@
     {
       "type": "Feature",
       "id": 1,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -31,7 +30,6 @@
     {
       "type": "Feature",
       "id": 2,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -60,7 +58,6 @@
     {
       "type": "Feature",
       "id": 3,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -89,7 +86,6 @@
     {
       "type": "Feature",
       "id": 4,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -118,7 +114,6 @@
     {
       "type": "Feature",
       "id": 5,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -147,7 +142,6 @@
     {
       "type": "Feature",
       "id": 6,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -176,7 +170,6 @@
     {
       "type": "Feature",
       "id": 7,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -205,7 +198,6 @@
     {
       "type": "Feature",
       "id": 8,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -234,7 +226,6 @@
     {
       "type": "Feature",
       "id": 9,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -263,7 +254,6 @@
     {
       "type": "Feature",
       "id": 10,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -292,7 +282,6 @@
     {
       "type": "Feature",
       "id": 11,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -321,7 +310,6 @@
     {
       "type": "Feature",
       "id": 12,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -350,7 +338,6 @@
     {
       "type": "Feature",
       "id": 13,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -379,7 +366,6 @@
     {
       "type": "Feature",
       "id": 14,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -408,7 +394,6 @@
     {
       "type": "Feature",
       "id": 15,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -437,7 +422,6 @@
     {
       "type": "Feature",
       "id": 16,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -466,7 +450,6 @@
     {
       "type": "Feature",
       "id": 17,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -495,7 +478,6 @@
     {
       "type": "Feature",
       "id": 18,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -524,7 +506,6 @@
     {
       "type": "Feature",
       "id": 19,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -553,7 +534,6 @@
     {
       "type": "Feature",
       "id": 20,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -582,7 +562,6 @@
     {
       "type": "Feature",
       "id": 21,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -611,7 +590,6 @@
     {
       "type": "Feature",
       "id": 22,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -640,7 +618,6 @@
     {
       "type": "Feature",
       "id": 23,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -669,7 +646,6 @@
     {
       "type": "Feature",
       "id": 24,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -698,7 +674,6 @@
     {
       "type": "Feature",
       "id": 25,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -727,7 +702,6 @@
     {
       "type": "Feature",
       "id": 26,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -756,7 +730,6 @@
     {
       "type": "Feature",
       "id": 27,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -785,7 +758,6 @@
     {
       "type": "Feature",
       "id": 28,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -814,7 +786,6 @@
     {
       "type": "Feature",
       "id": 29,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -843,7 +814,6 @@
     {
       "type": "Feature",
       "id": 30,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -872,7 +842,6 @@
     {
       "type": "Feature",
       "id": 31,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -901,7 +870,6 @@
     {
       "type": "Feature",
       "id": 32,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -930,7 +898,6 @@
     {
       "type": "Feature",
       "id": 33,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -959,7 +926,6 @@
     {
       "type": "Feature",
       "id": 34,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -988,7 +954,6 @@
     {
       "type": "Feature",
       "id": 35,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -1017,7 +982,6 @@
     {
       "type": "Feature",
       "id": 36,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -1046,7 +1010,6 @@
     {
       "type": "Feature",
       "id": 37,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -1075,7 +1038,6 @@
     {
       "type": "Feature",
       "id": 38,
-      "tag": "clubx",
       "properties": {
         "district": "central",
         "bars": "true",
@@ -1104,7 +1066,6 @@
     {
       "type": "Feature",
       "id": 39,
-      "tag": "clubx",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1133,7 +1094,6 @@
     {
       "type": "Feature",
       "id": 40,
-      "tag": "clubx",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1162,7 +1122,6 @@
     {
       "type": "Feature",
       "id": 41,
-      "tag": "clubx",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1191,7 +1150,6 @@
     {
       "type": "Feature",
       "id": 42,
-      "tag": "clubx",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1220,7 +1178,6 @@
     {
       "type": "Feature",
       "id": 43,
-      "tag": "clubx",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1249,7 +1206,6 @@
     {
       "type": "Feature",
       "id": 44,
-      "tag": "clubx",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1278,7 +1234,6 @@
     {
       "type": "Feature",
       "id": 45,
-      "tag": "clubx",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1307,7 +1262,6 @@
     {
       "type": "Feature",
       "id": 46,
-      "tag": "clubx",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1336,7 +1290,6 @@
     {
       "type": "Feature",
       "id": 47,
-      "tag": "clubx",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1365,7 +1318,6 @@
     {
       "type": "Feature",
       "id": 48,
-      "tag": "clubx",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1394,7 +1346,6 @@
     {
       "type": "Feature",
       "id": 49,
-      "tag": "clubz",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1423,7 +1374,6 @@
     {
       "type": "Feature",
       "id": 50,
-      "tag": "clubz",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1452,7 +1402,6 @@
     {
       "type": "Feature",
       "id": 51,
-      "tag": "clubz",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1481,7 +1430,6 @@
     {
       "type": "Feature",
       "id": 52,
-      "tag": "clubz",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1510,7 +1458,6 @@
     {
       "type": "Feature",
       "id": 53,
-      "tag": "clubz",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1539,7 +1486,6 @@
     {
       "type": "Feature",
       "id": 54,
-      "tag": "clubz",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1568,7 +1514,6 @@
     {
       "type": "Feature",
       "id": 55,
-      "tag": "clubz",
       "properties": {
         "district": "western",
         "bars": "true",
@@ -1597,7 +1542,6 @@
     {
       "type": "Feature",
       "id": 56,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1626,7 +1570,6 @@
     {
       "type": "Feature",
       "id": 57,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1655,7 +1598,6 @@
     {
       "type": "Feature",
       "id": 58,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1684,7 +1626,6 @@
     {
       "type": "Feature",
       "id": 59,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1713,7 +1654,6 @@
     {
       "type": "Feature",
       "id": 60,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1742,7 +1682,6 @@
     {
       "type": "Feature",
       "id": 61,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1771,7 +1710,6 @@
     {
       "type": "Feature",
       "id": 62,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1800,7 +1738,6 @@
     {
       "type": "Feature",
       "id": 63,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1829,7 +1766,6 @@
     {
       "type": "Feature",
       "id": 64,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1858,7 +1794,6 @@
     {
       "type": "Feature",
       "id": 65,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1887,7 +1822,6 @@
     {
       "type": "Feature",
       "id": 66,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1916,7 +1850,6 @@
     {
       "type": "Feature",
       "id": 67,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1945,7 +1878,6 @@
     {
       "type": "Feature",
       "id": 68,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -1974,7 +1906,6 @@
     {
       "type": "Feature",
       "id": 69,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -2003,7 +1934,6 @@
     {
       "type": "Feature",
       "id": 70,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -2032,7 +1962,6 @@
     {
       "type": "Feature",
       "id": 71,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -2061,7 +1990,6 @@
     {
       "type": "Feature",
       "id": 72,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -2090,7 +2018,6 @@
     {
       "type": "Feature",
       "id": 73,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -2119,7 +2046,6 @@
     {
       "type": "Feature",
       "id": 74,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -2148,7 +2074,6 @@
     {
       "type": "Feature",
       "id": 75,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -2177,7 +2102,6 @@
     {
       "type": "Feature",
       "id": 76,
-      "tag": "clubz",
       "properties": {
         "district": "wan chai",
         "bars": "true",
@@ -2206,7 +2130,6 @@
     {
       "type": "Feature",
       "id": 77,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2235,7 +2158,6 @@
     {
       "type": "Feature",
       "id": 78,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2264,7 +2186,6 @@
     {
       "type": "Feature",
       "id": 79,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2293,7 +2214,6 @@
     {
       "type": "Feature",
       "id": 80,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2322,7 +2242,6 @@
     {
       "type": "Feature",
       "id": 81,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2351,7 +2270,6 @@
     {
       "type": "Feature",
       "id": 82,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2380,7 +2298,6 @@
     {
       "type": "Feature",
       "id": 83,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2409,7 +2326,6 @@
     {
       "type": "Feature",
       "id": 84,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2438,7 +2354,6 @@
     {
       "type": "Feature",
       "id": 85,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2467,7 +2382,6 @@
     {
       "type": "Feature",
       "id": 86,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2496,7 +2410,6 @@
     {
       "type": "Feature",
       "id": 87,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2525,7 +2438,6 @@
     {
       "type": "Feature",
       "id": 88,
-      "tag": "clubz",
       "properties": {
         "district": "eastern",
         "bars": "true",
@@ -2554,7 +2466,6 @@
     {
       "type": "Feature",
       "id": 89,
-      "tag": "clubz",
       "properties": {
         "district": "southern",
         "bars": "true",
@@ -2583,7 +2494,6 @@
     {
       "type": "Feature",
       "id": 90,
-      "tag": "clubz",
       "properties": {
         "district": "southern",
         "bars": "true",
@@ -2612,7 +2522,6 @@
     {
       "type": "Feature",
       "id": 91,
-      "tag": "clubz",
       "properties": {
         "district": "southern",
         "bars": "true",
@@ -2641,7 +2550,6 @@
     {
       "type": "Feature",
       "id": 92,
-      "tag": "clubz",
       "properties": {
         "district": "southern",
         "bars": "true",
@@ -2670,7 +2578,6 @@
     {
       "type": "Feature",
       "id": 93,
-      "tag": "clubz",
       "properties": {
         "district": "southern",
         "bars": "true",
@@ -2699,7 +2606,6 @@
     {
       "type": "Feature",
       "id": 94,
-      "tag": "clubz",
       "properties": {
         "district": "southern",
         "bars": "true",
@@ -2728,7 +2634,6 @@
     {
       "type": "Feature",
       "id": 95,
-      "tag": "clubz",
       "properties": {
         "district": "southern",
         "bars": "true",
@@ -2757,7 +2662,6 @@
     {
       "type": "Feature",
       "id": 96,
-      "tag": "clubz",
       "properties": {
         "district": "southern",
         "bars": "true",
@@ -2786,7 +2690,6 @@
     {
       "type": "Feature",
       "id": 97,
-      "tag": "clubz",
       "properties": {
         "district": "southern",
         "bars": "true",
@@ -2815,7 +2718,6 @@
     {
       "type": "Feature",
       "id": 98,
-      "tag": "clubz",
       "properties": {
         "district": "southern",
         "bars": "true",
@@ -2844,7 +2746,6 @@
     {
       "type": "Feature",
       "id": 99,
-      "tag": "clubz",
       "properties": {
         "district": "southern",
         "bars": "true",
@@ -2873,7 +2774,6 @@
     {
       "type": "Feature",
       "id": 100,
-      "tag": "clubx",
       "properties": {
         "district": "southern",
         "bars": "true",

@@ -45,12 +45,9 @@
         Disco: <input type="checkbox" ng-model="di.disco" ng-true-value="disco">  Disco: {{di.disco}}<br>
         Sports: <input type="checkbox" ng-model="di.sports">  Sports: {{di.sports}}
         
-        <!-- <div ng-repeat="feat in featDB | unique:'properties.tags[1]'"> -->
-        <div ng-repeat="feat in featDB | unique:'tag'">
+        <div ng-repeat="feat in featDB | unique:'properties.tags[1]'">
           <input type="checkbox" ng-checked="feat.checked" ng-model="feat.checked"> 
-          <!-- {{feat.properties.district}} -->
-          <!-- {{feat.properties.tags[1]}} -->
-          {{feat.tag}}
+          {{feat.properties.tags[1] | filter:'uppercase'}}
           {{feat.checked}}
         </div>
 
@@ -80,7 +77,7 @@
     <accordion-group heading="{{feat.properties.name}}" ng-repeat="feat in featDB | selectedFeatureTags | filter:opt.query" ng-click="onContentHeaderClick()">
     <div ng-cloak> 
       <p>{{feat.id}}</p>
-      <p>{{feat.tag}}</p>
+      <p>{{feat.properties.tags[1]}}</p>
       <p>Checked: {{feat.checked}}</p>
       <p>{{feat.properties.address}}</p>
       <p>{{feat.properties.phone}}</p>
