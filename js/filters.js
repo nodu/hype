@@ -68,3 +68,4 @@ angular.module('myApp.filters', [])
     }
 });
 
+// Don't need capitalize filter anymore...

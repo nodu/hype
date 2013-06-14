@@ -24,14 +24,15 @@
 
     <nav class="nav">  
      <accordion close-others="oneAtATime">
-      <accordion-group id="navTop" heading="Opener /w Logo" ng-click="onNavClick(openDB)">
+      <!-- ng-click="onNavClick(openDB)"  Doesn't work, div is rebuilt into html -->
+      <accordion-group id="navTop" heading="Opener /w Logo" is-open="true">
       <input ng-cloak ng-model="opt.query" placeholder="Search" style="width: 78%;"> 
       <!-- <input type="checkbox" ng-model="opt.query"> -->
       <a href="#" ng-click="save(featDB)"><i class="icon-fixed-width icon-plus"></i></a> 
     </accordion-group>
 
      <!-- ng-click="onNavClick('barsDB')" -->
-    <accordion-group heading="Bars" is-open="true">
+    <accordion-group heading="Bars" is-open="opt.open.bars">
     <form name="myForm" ng-cloak>
       <select id="district-select" ng-model="districtSelect" ng-options="district for district in districts">
         <option value="">District</option>
@@ -47,7 +48,7 @@
          -->
         <div ng-repeat="bar in barsDB | unique:'properties.tags[1]'">
           <input type="checkbox" ng-checked="bar.checked" ng-model="bar.checked"> 
-          {{bar.properties.tags[1] | capitalize}}
+          {{bar.properties.tags[1] | capArray}}
           {{bar.checked}}
         </div>
 
@@ -57,15 +58,14 @@
       </div>
     </form>
   </accordion-group>
-
-  <accordion-group id="navBottom" heading="Beaches" ng-click="onNavClick(beachesDB)">
-  <div ng-repeat="beach in beachesDB | unique:'properties.district'">
+<!-- is-open="onNavClick(beachesDB)" ng-click="onNavClick(beachesDB)"-->
+  <accordion-group id="navBottom" heading="Beaches"  is-open="opt.open.beaches">
+  <div ng-repeat="beach in changer | unique:'properties.district'">
     <input type="checkbox" ng-checked="beach.checked" ng-model="beach.checked">
     {{beach.properties.district | lowercase | capArray}}
-    <!-- This only capitalizes the first word, not each word in string -->
   </div>
     <input id="beachSubmit" type="button" class="btn small" value="Submit" ng-click="save(beachesDB)">
-    <input  type="button" class="btn small" value="onNavClick" g-click="onNavClick(beachesDB)">
+    <input  type="button" class="btn small" value="onNavClick" ng-click="onNavClick(beachesDB)">
 
 </accordion-group>
 </accordion>
@@ -83,7 +83,7 @@
   <accordion close-others="oneAtATime">
     <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()"> -->
     <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-    <accordion-group heading="{{feat.properties.name}}" ng-repeat="feat in barsDB | filter:districtSelect | filter:opt.query | selectedFeatureTags" >
+    <accordion-group heading="{{feat.properties.name}}" ng-repeat="feat in changer | filter:districtSelect | filter:opt.query | selectedFeatureTags" >
     <div ng-cloak> 
       <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p>
       <!-- <p>{{feat.properties.tags[1]}}</p> -->

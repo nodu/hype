@@ -128,12 +128,26 @@ $scope.club = function() {
 
 		// Try to change the ng-repeat for content based on nav header click
 		// var changer = JSON.parse(JSON.stringify($scope.beachesDB));
-		// $scope.changer = $scope.barsDB;
+		$scope.changer = [{open: false}];
 		// var clone = 
 		$scope.onNavClick = function(dbName){
 			$scope.changer = JSON.parse(JSON.stringify(dbName));
-
+			console.log($scope.changer)
 		};
+		$scope.$watch('opt.open.beaches', function(isOpen){
+    		if (isOpen) {
+      			console.log('First group was opened'); 
+			$scope.changer = JSON.parse(JSON.stringify($scope.beachesDB));
+
+    		}    
+  		});
+  		$scope.$watch('opt.open.bars', function(isOpen){
+    		if (isOpen) {
+      			console.log('First group was opened'); 
+			$scope.changer = JSON.parse(JSON.stringify($scope.barsDB));
+
+    		}    
+  		});
 
 
 		// Enables using the scope from within the accordion directive
