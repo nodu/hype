@@ -46,7 +46,7 @@
         <!-- Disco: <input type="checkbox" ng-model="di.disco" ng-true-value="disco">  Disco: {{di.disco}}<br>
         Sports: <input type="checkbox" ng-model="di.sports">  Sports: {{di.sports}}
          -->
-        <div ng-repeat="bar in barsDB | unique:'properties.tags[1]'">
+        <div ng-repeat="bar in changer | unique:'properties.tags[1]'">
           <input type="checkbox" ng-checked="bar.checked" ng-model="bar.checked"> 
           {{bar.properties.tags[1] | capArray}}
           {{bar.checked}}
