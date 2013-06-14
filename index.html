@@ -23,14 +23,14 @@
     <!-- remove animate?  switch ng-click to directives? -->
 
     <nav class="nav">  
-
      <accordion close-others="oneAtATime">
-      <accordion-group id="navTop" heading="Opener /w Logo" >
+      <accordion-group id="navTop" heading="Opener /w Logo" ng-click="onNavClick(openDB)">
       <input ng-cloak ng-model="opt.query" placeholder="Search" style="width: 78%;"> 
       <!-- <input type="checkbox" ng-model="opt.query"> -->
       <a href="#" ng-click="save(featDB)"><i class="icon-fixed-width icon-plus"></i></a> 
     </accordion-group>
-    
+
+     <!-- ng-click="onNavClick('barsDB')" -->
     <accordion-group heading="Bars" is-open="true">
     <form name="myForm" ng-cloak>
       <select id="district-select" ng-model="districtSelect" ng-options="district for district in districts">
@@ -42,22 +42,31 @@
         <!-- ng-model="club" /////// >Club: {{club}}< -->
         <!-- Bar: <input type="checkbox"  ng-model="search[featDB.properties.tags[1]]"> <br> -->
         <!-- Club: <input type="checkbox" ng-model="search[barsDB[5].tag]"><br> -->
-        Disco: <input type="checkbox" ng-model="di.disco" ng-true-value="disco">  Disco: {{di.disco}}<br>
+        <!-- Disco: <input type="checkbox" ng-model="di.disco" ng-true-value="disco">  Disco: {{di.disco}}<br>
         Sports: <input type="checkbox" ng-model="di.sports">  Sports: {{di.sports}}
-        
-        <div ng-repeat="feat in featDB | unique:'properties.tags[1]'">
-          <input type="checkbox" ng-checked="feat.checked" ng-model="feat.checked"> 
-          {{feat.properties.tags[1] | filter:'uppercase'}}
-          {{feat.checked}}
+         -->
+        <div ng-repeat="bar in barsDB | unique:'properties.tags[1]'">
+          <input type="checkbox" ng-checked="bar.checked" ng-model="bar.checked"> 
+          {{bar.properties.tags[1] | capitalize}}
+          {{bar.checked}}
         </div>
 
-        <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="submit(builtList)">
+        <!-- <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="submit(featDB)"> -->
+        <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="save(barsDB)">
+        <!-- <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="submit(builtList)"> -->
       </div>
     </form>
   </accordion-group>
 
-  <accordion-group id="navBottom" heading="Beaches">
-  Filter's here
+  <accordion-group id="navBottom" heading="Beaches" ng-click="onNavClick(beachesDB)">
+  <div ng-repeat="beach in beachesDB | unique:'properties.district'">
+    <input type="checkbox" ng-checked="beach.checked" ng-model="beach.checked">
+    {{beach.properties.district | lowercase | capArray}}
+    <!-- This only capitalizes the first word, not each word in string -->
+  </div>
+    <input id="beachSubmit" type="button" class="btn small" value="Submit" ng-click="save(beachesDB)">
+    <input  type="button" class="btn small" value="onNavClick" g-click="onNavClick(beachesDB)">
+
 </accordion-group>
 </accordion>
 
@@ -74,17 +83,15 @@
   <accordion close-others="oneAtATime">
     <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()"> -->
     <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-    <accordion-group heading="{{feat.properties.name}}" ng-repeat="feat in featDB | selectedFeatureTags | filter:opt.query" ng-click="onContentHeaderClick()">
+    <accordion-group heading="{{feat.properties.name}}" ng-repeat="feat in barsDB | filter:districtSelect | filter:opt.query | selectedFeatureTags" >
     <div ng-cloak> 
-      <p>{{feat.id}}</p>
-      <p>{{feat.properties.tags[1]}}</p>
-      <p>Checked: {{feat.checked}}</p>
+      <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p>
+      <!-- <p>{{feat.properties.tags[1]}}</p> -->
+      <!-- <p>Checked: {{feat.checked}}</p> -->
       <p>{{feat.properties.address}}</p>
       <p>{{feat.properties.phone}}</p>
       <p>{{feat.properties.email}}</p>
       <p>{{feat.properties.about}}</p>
-      <p>{{feat.properties.district}}</p>
-      <p>{{feat.properties.tags}}</p>
     </div>
   </accordion-group>
 </accordion>

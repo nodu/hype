@@ -2,8 +2,8 @@
 
 /* Filters */
 
-angular.module('myApp.filters', []).
-filter('selectedFeatureTags', function($filter) {
+angular.module('myApp.filters', [])
+.filter('selectedFeatureTags', function($filter) {
 	return function(feature) {
 		var len;
 
@@ -11,9 +11,10 @@ filter('selectedFeatureTags', function($filter) {
 	    var checkedTags = $filter('filter')(feature, {checked: true});
 	    // var checkedTags = ["pie", "doh" ]
 
-	    for (var i = 0; i < checkedTags.length; i++) {
-	    	console.log("checked: " + checkedTags[i]);
-	    };
+	    // for (var i = 0; i < checkedTags.length; i++) {
+	    // 	console.log("checked: " + checkedTags[i]);
+	    // 	console.log(checkedTags.length)
+	    // };
 	    
 	    // Add in a check to see if any customers were selected. If none, return 
 	    // them all without filters
@@ -47,4 +48,23 @@ filter('selectedFeatureTags', function($filter) {
 	    // we have our result!
 	    return ret;
 };
+})
+.filter('capitalize', function() {
+    return function(input, scope) {
+        if (input!=null)
+            {return input.substring(0,1).toUpperCase()+input.substring(1);}
+    }
+})
+.filter('capArray', function() {
+    return function(input, scope) {
+        if (input!=null){
+        	var split = input.split(/[ ,]+/);
+        	var newArr = []; 
+        	for (var i = 0; i < split.length; i++) {
+        		newArr.push(split[i].substring(0,1).toUpperCase()+split[i].substring(1));
+        	};
+        	return newArr.join(" ");
+        }
+    }
 });
+

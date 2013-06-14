@@ -32,7 +32,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 
 	// Checkboxes
-	$scope.barsDB = [ {name: 'Marxcos', tag: 'New York'},{name: 'Martijn', tag: 'Miami'} ];
+	// $scope.barsDB = [ {name: 'Marxcos', tag: 'New York'},{name: 'Martijn', tag: 'Miami'} ];
 	$scope.search = {};
 	$scope.searchBy = function () {
 		return function (obj) {
@@ -114,28 +114,45 @@ $scope.club = function() {
 
 
 	// Should I separate this into a different controller?
-	app.controller("getJSON_HTTP_Request", function($scope, $http, $filter){
-		$http.get("data/barsDB.js")
-		.then(function(dataResponse) {
-			$scope.featDB = dataResponse.data;
-		});
+	app.controller("getJSON_HTTP_Request", ['$scope', '$filter', 'barsDB', 'beachesDB', 
+		function($scope, $filter, barsDB, beachesDB){
+		// Get data from services
+		barsDB.get(function(data){
+			$scope.barsDB = data.data;
+			// console.log($scope.featDB)
+		}); 
+		beachesDB.get(function(data){
+			$scope.beachesDB = data.data;
+			// console.log($scope.beachesDB)
+		});          		
+
+		// Try to change the ng-repeat for content based on nav header click
+		// var changer = JSON.parse(JSON.stringify($scope.beachesDB));
+		// $scope.changer = $scope.barsDB;
+		// var clone = 
+		$scope.onNavClick = function(dbName){
+			$scope.changer = JSON.parse(JSON.stringify(dbName));
+
+		};
+
+
 		// Enables using the scope from within the accordion directive
 		// Changed the ng-model, filter, and savedJSON filter to opt.query 
 		$scope.opt = {};
 		
-		var markerLayer = L.layerGroup(); 
-		// Need this global layer to be able to clear the layer before 
-		//adding a new layer, removed dublicate markers
-		// In future, need a way of checking if x in layer
 		
 		$scope.save = function(json) {
-			$scope.savedJSON = $filter('filter')(json, $scope.opt.query);
+			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
+			$scope.textFilter = $filter('filter')(json, $scope.opt.query);
+			$scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
+			// ng-repeat="feat in featDB | selectedFeatureTags | filter:opt.query"
 			var markerList = [];
 
 			for (var obj in $scope.savedJSON){
 				var marker = L.marker([$scope.savedJSON[obj].geometry.coordinates[1], 
-					$scope.savedJSON[obj].geometry.coordinates[0]])
-				.bindPopup($scope.savedJSON[obj].properties.name, $scope.savedJSON[obj].properties.category)
+				$scope.savedJSON[obj].geometry.coordinates[0]])
+				.bindPopup($scope.savedJSON[obj].properties.name, 
+					$scope.savedJSON[obj].properties.category)
 				.openPopup();
 				// Add other wanted properties here, popups, mouseover effects...
 				markerList.push(marker);
@@ -146,36 +163,41 @@ $scope.club = function() {
 
 			markerLayer.addTo(map);
 		};
+		
+		var markerLayer = L.layerGroup(); 
+		// Need this global layer to be able to clear the layer before 
+		//adding a new layer, removed dublicate markers
+		// In future, need a way of checking if x in layer
 
 		$scope.clear = function() {
 			markerLayer.clearLayers()
 				//declare markerLayer as a global varible and this will work
-			};
-
+		};
+		$scope.builtList = [];
+		$scope.submit = function (object){
 			$scope.builtList = [];
-			$scope.submit = function (object){
-				$scope.builtList = [];
-				// $scope.clear();
+			// $scope.clear();
+			// markerLayer.clearLayers();
 
-				// markerLayer.clearLayers();
-
-				if ($scope.di.disco == 'disco') {
+			if ($scope.di.disco == 'disco') {
 			// console.log($scope.featDB[0].properties.tags.length);
 			// console.log("disco is hot! " + "Sports: "+$scope.di.sports);
-			for (var i = 0; i < $scope.featDB.length; i++) {
-				for (var t = 0; t < $scope.featDB[i].properties.tags.length; t++) {
-					console.log($scope.featDB[i].properties.tags[t])
-					if ($scope.featDB[i].properties.tags[t] == 'disco') {
-						$scope.builtList.push($scope.featDB[i])
+				for (var i = 0; i < $scope.featDB.length; i++) {
+					for (var t = 0; t < $scope.featDB[i].properties.tags.length; t++) {
+						console.log($scope.featDB[i].properties.tags[t])
+						if ($scope.featDB[i].properties.tags[t] == 'disco') {
+							$scope.builtList.push($scope.featDB[i])
+						};
 					};
+
 				};
+			} else{console.log("it's false "+"Sports: "+$scope.di.sports)};
+			$scope.save(object);
 
-			};
-		} else{console.log("it's false "+"Sports: "+$scope.di.sports)};
-		$scope.save(object);
 
-	};		
-});
+		};		
+
+}]);
 
 
 
