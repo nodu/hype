@@ -58,6 +58,11 @@ leafletDirective.directive("leaflet", ["$http", "$log", function ($http, $log) {
 
             // This adds the zoom control back with bottomleft position
             map.addControl(L.control.zoom({position: "bottomleft"}));
+            L.control.locate({
+                position: "bottomleft",
+                'setView': false
+                // setView doesn't seem to be working
+                }).addTo(map);
 
             setupCenter();
             setupMarkers();

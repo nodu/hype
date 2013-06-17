@@ -31,8 +31,5 @@ angular.module('myApp.directives', [])
 		link: linkFN
 
 	};
-});
-
-// app.directive('contentOpen', function(){
-	
-// });
+})
+;

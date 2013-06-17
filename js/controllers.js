@@ -12,7 +12,13 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 	// For accordion:
 	$scope.oneAtATime = true;
-	
+
+	$scope.openItinerary = function(){
+		$scope.itineraryOpen = true;
+	};
+	$scope.closeItinerary = function(){
+		$scope.itineraryOpen = false;
+	};
 	$scope.open = function () {
 		$scope.shouldBeOpen = true;
 	};
@@ -43,28 +49,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
       }
   }
 };
-$scope.club = function() {
-		// Need a function/varible to be set here that allows for 
-		// filtering of savedJSON to be displayed in contentContainer
-		// and to be added on map...
-	};
-	$scope.pub = function() {
-		// Need a function/varible to be set here that allows for 
-		// filtering of savedJSON to be displayed in contentContainer
-		// and to be added on map...
-	};
-	// $scope.disco = function() {
-		// Need a function/varible to be set here that allows for 
-		// filtering of savedJSON to be displayed in contentContainer
-		// and to be added on map...
-	// };
-	$scope.sports = "";
-	// $scope.savedJSON = $filter('filter')($scope.featDB, $scope.sports);
-	// $scope.submitJSON = $filter('filter')($scope.featDB, function(){
-	// 			for (var i = 0; i < $scope.featDB.length; i++) {
-	// 				if ($scope.featDB[i].properties.tags.match($scope.sports)){}
-	// 				}
-	// 		});
+
 
 	// For showing/hiding the mobile version's containers/navs
 	$scope.navOpen = function() {
@@ -114,8 +99,9 @@ $scope.club = function() {
 
 
 	// Should I separate this into a different controller?
-	app.controller("getJSON_HTTP_Request", ['$scope', '$filter', 'barsDB', 'beachesDB', 
-		function($scope, $filter, barsDB, beachesDB){
+	app.controller("getJSON_HTTP_Request", ['$scope', '$filter', 'barsDB', 'beachesDB', 'newDB','$timeout', 
+		function($scope, $filter, barsDB, beachesDB, newDB, $timeout){
+			window.my_scope2 = $scope
 		// Get data from services
 		barsDB.get(function(data){
 			$scope.barsDB = data.data;
@@ -124,47 +110,73 @@ $scope.club = function() {
 		beachesDB.get(function(data){
 			$scope.beachesDB = data.data;
 			// console.log($scope.beachesDB)
+		}); 
+		newDB.get(function(data){
+			$scope.newDB = data.data;
+			$scope.changer = data.data;
+			// console.log($scope.beachesDB)
 		});          		
-
-		// Try to change the ng-repeat for content based on nav header click
-		// var changer = JSON.parse(JSON.stringify($scope.beachesDB));
-		$scope.changer = [{open: false}];
-		// var clone = 
-		$scope.onNavClick = function(dbName){
-			$scope.changer = JSON.parse(JSON.stringify(dbName));
-			console.log($scope.changer)
-		};
-		$scope.$watch('opt.open.beaches', function(isOpen){
-    		if (isOpen) {
-      			console.log('First group was opened'); 
-			$scope.changer = JSON.parse(JSON.stringify($scope.beachesDB));
-
-    		}    
-  		});
-  		$scope.$watch('opt.open.bars', function(isOpen){
-    		if (isOpen) {
-      			console.log('First group was opened'); 
-			$scope.changer = JSON.parse(JSON.stringify($scope.barsDB));
-
-    		}    
-  		});
-
 
 		// Enables using the scope from within the accordion directive
 		// Changed the ng-model, filter, and savedJSON filter to opt.query 
+		// for save fn
 		$scope.opt = {};
-		
-		
+
+		// Try to change the ng-repeat for content based on nav header click
+		// var changer = JSON.parse(JSON.stringify($scope.beachesDB));
+		// $scope.changer = [{open: false}];
+		// $scope.changer = JSON.parse($scope.test);
+
+
+		// Adding this line below, makes length errors from filter:21 go away...
+		$scope.changer = JSON.parse(JSON.stringify(newDB));
+		// $scope.changer;
+		// console.log($scope.changer)
+
+		// var clone = 
+		// $scope.onNavClick = function(dbName){
+		// 	$scope.changer = JSON.parse(JSON.stringify(dbName));
+		// 	console.log($scope.changer)
+		// };
+		$scope.$watch('opt.openBeaches', function(isOpen){
+			if (isOpen) {
+				console.log('Beach group was opened'); 
+				$scope.changer = JSON.parse(JSON.stringify($scope.beachesDB));
+
+			}    
+		});
+		$scope.$watch('opt.openBars', function(isOpen){
+			if (isOpen) {
+				console.log('Bars group was opened'); 
+				$scope.changer = JSON.parse(JSON.stringify($scope.barsDB));
+
+			}    
+		});
+
+		// $scope.opt.openBars = "true";
+		// $scope.$apply();
+		$scope.$watch('opt.openNew', function(isOpen){
+			// isOpen = true;
+
+			if (isOpen) {
+				// console.log("THIS LINE: "+$scope.opt.openNew); 
+				console.log('New group was opened'); 
+				$scope.changer = JSON.parse(JSON.stringify($scope.newDB));
+
+			}    
+			// return true
+		});
+
 		$scope.save = function(json) {
 			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
 			$scope.textFilter = $filter('filter')(json, $scope.opt.query);
-			$scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
+			$scope.savedJSON = $filter('selectedFeatureDistrict')($scope.textFilter);
 			// ng-repeat="feat in featDB | selectedFeatureTags | filter:opt.query"
 			var markerList = [];
 
 			for (var obj in $scope.savedJSON){
 				var marker = L.marker([$scope.savedJSON[obj].geometry.coordinates[1], 
-				$scope.savedJSON[obj].geometry.coordinates[0]])
+					$scope.savedJSON[obj].geometry.coordinates[0]])
 				.bindPopup($scope.savedJSON[obj].properties.name, 
 					$scope.savedJSON[obj].properties.category)
 				.openPopup();
@@ -186,32 +198,48 @@ $scope.club = function() {
 		$scope.clear = function() {
 			markerLayer.clearLayers()
 				//declare markerLayer as a global varible and this will work
+			};
+
+		// Alerts!
+		$scope.alerts = [];
+		$scope.addAlert = function(timeout) {
+			var alertSuc = {type: 'success', msg: 'Added!'};    
+			$scope.alerts.push(alertSuc);
+			
+			if (timeout) {
+				$timeout(function(){
+				$scope.closeAlert($scope.alerts.indexOf(alert));
+			}, timeout);
+				// $timeout(function(){console.log("timedout!")}, 4000);
+			}
 		};
-		$scope.builtList = [];
-		$scope.submit = function (object){
-			$scope.builtList = [];
-			// $scope.clear();
-			// markerLayer.clearLayers();
 
-			if ($scope.di.disco == 'disco') {
-			// console.log($scope.featDB[0].properties.tags.length);
-			// console.log("disco is hot! " + "Sports: "+$scope.di.sports);
-				for (var i = 0; i < $scope.featDB.length; i++) {
-					for (var t = 0; t < $scope.featDB[i].properties.tags.length; t++) {
-						console.log($scope.featDB[i].properties.tags[t])
-						if ($scope.featDB[i].properties.tags[t] == 'disco') {
-							$scope.builtList.push($scope.featDB[i])
-						};
-					};
+		$scope.removeIt = function(feat, timeout) {
+			$scope.itinerary.splice($scope.itinerary.indexOf(feat), 1)
+			var alertErr = {type: 'error', msg: 'Removed!'};    
+			$scope.alerts.push(alertErr)
+			if (timeout) {
+				$timeout(function(){
+				$scope.closeAlert($scope.alerts.indexOf(alert));
+			}, timeout)}
+		}
+		
+		$scope.closeAlert = function(index) {
+			$scope.alerts.splice(index, 1);
+		};
 
-				};
-			} else{console.log("it's false "+"Sports: "+$scope.di.sports)};
-			$scope.save(object);
-
-
-		};		
-
-}]);
+		// Itinerary Modal
+		$scope.itinerary = [];
+		$scope.addToIt = function(feat, timeout) {
+			
+			console.log(feat);
+			$scope.addAlert(timeout);
+			if ($scope.itinerary.indexOf(feat) == -1) {
+				$scope.itinerary.push(feat)		
+			};
+			console.log($scope.itinerary);
+		}
+	}]);
 
 
 

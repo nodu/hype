@@ -3,75 +3,84 @@
 <head>
   <meta charset="utf-8">
   <title>HYPE!</title>
-  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"/> -->
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/leaflet.css"/>
+  <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" /> -->
   <link rel="stylesheet" href="css/app.css"/>
   <script src="lib/angular/angular.js"></script>
   <script src="js/uiUnique.js"></script>
-  <!-- // <script src="js/angularUI.js"></script> -->
+  <!-- <script src="js/angularUI.js"></script> -->
   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.js"></script> -->
 
 
-</head>
-<body ng-controller="appController"> 
-  <!-- This doesn't seem pretty, not sure how to correctly add 2 app wide controllers -->
-  <!-- Putting them in the same ctrl doesn't seem modular, service for http? -->
-  <div ng-controller="getJSON_HTTP_Request">
-    <leaflet defaults="defaults" center="center"></leaflet>
 
-    <button class="nav_toggle btn" ng-click="navOpen()" animate="up">Filter</button> 
-    <!-- remove animate?  switch ng-click to directives? -->
+    <!--[if lt IE 9]>
+     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+     <link rel="stylesheet" href="css/L.Control.Locate.ie.css"/>
+     <![endif]-->
 
-    <nav class="nav">  
-     <accordion close-others="oneAtATime">
-      <!-- ng-click="onNavClick(openDB)"  Doesn't work, div is rebuilt into html -->
-      <accordion-group id="navTop" heading="Opener /w Logo" is-open="true">
-      <input ng-cloak ng-model="opt.query" placeholder="Search" style="width: 78%;"> 
-      <!-- <input type="checkbox" ng-model="opt.query"> -->
-      <a href="#" ng-click="save(changer)"><i class="icon-fixed-width icon-plus"></i></a> 
-    </accordion-group>
+   </head>
+   <body ng-controller="appController"> 
+    <!-- This doesn't seem pretty, not sure how to correctly add 2 app wide controllers -->
+    <!-- Putting them in the same ctrl doesn't seem modular, service for http? -->
+    <div ng-controller="getJSON_HTTP_Request">
+      
+      <leaflet defaults="defaults" center="center"></leaflet>
 
-     <!-- ng-click="onNavClick('barsDB')" -->
-    <accordion-group heading="Bars" is-open="opt.open.bars">
-    <form name="myForm" ng-cloak>
-      <select id="district-select" ng-model="districtSelect" ng-options="district for district in districts">
-        <option value="">District</option>
-      </select>
-      {{districtSelect}}
-      <br>
-      <div>
-        <!-- ng-model="club" /////// >Club: {{club}}< -->
-        <!-- Bar: <input type="checkbox"  ng-model="search[featDB.properties.tags[1]]"> <br> -->
-        <!-- Club: <input type="checkbox" ng-model="search[barsDB[5].tag]"><br> -->
+      <button class="nav_toggle btn" ng-click="navOpen()">Filter</button> 
+      <!-- remove animate="up"?  switch ng-click to directives? -->
+
+      <nav class="nav">  
+       <accordion close-others="oneAtATime">
+        <!-- ng-click="onNavClick(openDB)"  Doesn't work, div is rebuilt into html -->
+        <accordion-group id="navTop" heading="Opener /w Logo" is-open="opt.openNew">
+        <input ng-cloak ng-model="opt.query" placeholder="Search" style="width: 78%;"> 
+        <!-- <input type="checkbox" ng-model="opt.query"> -->
+        <a href="#" ng-click="save(changer)"><i class="icon-fixed-width icon-plus"></i></a> 
+      </accordion-group>
+
+      <!-- ng-click="onNavClick('barsDB')" -->
+      <accordion-group heading="Bars" is-open="opt.openBars">
+      <form name="myForm" ng-cloak>
+        <select id="district-select" ng-model="districtSelect" ng-options="district for district in districts">
+          <option value="">District</option>
+        </select>
+        {{districtSelect}}
+        <br>
+        <div>
+          <!-- ng-model="club" /////// >Club: {{club}}< -->
+          <!-- Bar: <input type="checkbox"  ng-model="search[featDB.properties.tags[1]]"> <br> -->
+          <!-- Club: <input type="checkbox" ng-model="search[barsDB[5].tag]"><br> -->
         <!-- Disco: <input type="checkbox" ng-model="di.disco" ng-true-value="disco">  Disco: {{di.disco}}<br>
         Sports: <input type="checkbox" ng-model="di.sports">  Sports: {{di.sports}}
-         -->
-        <div ng-repeat="bar in changer | unique:'properties.tags[1]'">
-          <input type="checkbox" ng-checked="bar.checked" ng-model="bar.checked"> 
-          {{bar.properties.tags[1] | capArray}}
-          {{bar.checked}}
-        </div>
-
-        <!-- <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="submit(featDB)"> -->
-        <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)">
-        <!-- <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="submit(builtList)"> -->
+      -->
+      <div ng-repeat="bar in changer | unique:'properties.tags[1]'">
+        <input type="checkbox" ng-checked="bar.checked" ng-model="bar.checked"> 
+        {{bar.properties.tags[1] | capArray}}
+        {{bar.checked}}
       </div>
-    </form>
-  </accordion-group>
+
+      <!-- <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="submit(featDB)"> -->
+      <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)">
+      <!-- <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="submit(builtList)"> -->
+    </div>
+  </form>
+</accordion-group>
 <!-- is-open="onNavClick(beachesDB)" ng-click="onNavClick(beachesDB)"-->
-  <accordion-group id="navBottom" heading="Beaches"  is-open="opt.open.beaches">
-  <div ng-repeat="beach in changer | unique:'properties.district'">
-    <input type="checkbox" ng-checked="beach.checked" ng-model="beach.checked">
-    {{beach.properties.district | lowercase | capArray}}
-  </div>
-    <input id="beachSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)">
-    <input  type="button" class="btn small" value="onNavClick" ng-click="onNavClick(beachesDB)">
+<accordion-group id="navBottom" heading="Beaches"  is-open="opt.openBeaches">
+<div ng-repeat="beach in changer | unique:'properties.district'">
+  <input type="checkbox" ng-checked="beach.checked" ng-model="beach.checked">
+  {{beach.properties.district | lowercase | capArray}}
+</div>
+<input id="beachSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)">
 
 </accordion-group>
 </accordion>
 
 </nav>
-<button class="content_toggle btn" ng-click="contentOpen()" animate="down">Content</button> 
+<button class="content_toggle btn" ng-click="contentOpen()">Content</button> 
+<!-- animate="down"  Removed -->
 
 
 
@@ -83,7 +92,7 @@
   <accordion close-others="oneAtATime">
     <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()"> -->
     <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-    <accordion-group heading="{{feat.properties.name}}" ng-repeat="feat in changer | filter:districtSelect | filter:opt.query | selectedFeatureTags" >
+    <accordion-group heading="{{feat.properties.name}}" ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureTags | selectedFeatureDistrict" >
     <div ng-cloak> 
       <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p>
       <!-- <p>{{feat.properties.tags[1]}}</p> -->
@@ -92,12 +101,35 @@
       <p>{{feat.properties.phone}}</p>
       <p>{{feat.properties.email}}</p>
       <p>{{feat.properties.about}}</p>
+      <button class="btn" ng-click="addToIt(feat, 2500)">Save to itinerary</button>
     </div>
   </accordion-group>
 </accordion>
 </div>
 <footer>
 
+
+  <button id="itinerary" class="btn btn-medium" ng-click="openItinerary()">Itinerary</button>
+  <div ng-cloak modal="itineraryOpen" close="closeItinerary()" options="opts">
+    <div class="modal-header">
+      <h4>Itinerary</h4>
+    </div>
+    <div class="modal-body">
+      <p ng-show="itinerary == false">Nothing to see here, move along</p>
+      <div ng-repeat="item in itinerary">
+        {{item.properties.name}} [<a href ng-click="removeIt(feat, 2500)">X</a>]
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-info" ng-click="save(itinerary)">Map It!</button>
+      <button class="btn btn-info" ng-click="closeItinerary()">Close</button>
+    </div>
+  </div>
+
+<div>
+  <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+  <!-- <button id="alertBtn" class='btn' ng-click="addAlert(250)">Add Alert</button> -->
+</div>
 
   <button id="credits" class="btn btn-medium" ng-click="open()">Credits</button>
   <div ng-cloak modal="shouldBeOpen" close="close()" options="opts">
@@ -122,6 +154,7 @@
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 <script src="js/ui-bootstrap-tpls-0.3.0.js"></script>
 <script src="js/leaflet-src.js"></script>
+<script src="js/L.Control.Locate.js" ></script>
 <script src="js/angular-leaflet-directive.js"></script>
 <script src="js/app.js"></script>
 <script src="js/services.js"></script>

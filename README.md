@@ -59,4 +59,41 @@ Check unnecessary ng-cloak direcives on deployment!
 ssh-key test FAILED, need to add the normal ssh keys to github
 
 
+
+
+
+
+
+
+
+
+
+
+OLD CODE - Depricated
+		// $scope.builtList = [];
+		// $scope.submit = function (object){
+		// 	$scope.builtList = [];
+		// 	// $scope.clear();
+		// 	// markerLayer.clearLayers();
+
+		// 	if ($scope.di.disco == 'disco') {
+		// 	// console.log($scope.featDB[0].properties.tags.length);
+		// 	// console.log("disco is hot! " + "Sports: "+$scope.di.sports);
+		// 		for (var i = 0; i < $scope.featDB.length; i++) {
+		// 			for (var t = 0; t < $scope.featDB[i].properties.tags.length; t++) {
+		// 				console.log($scope.featDB[i].properties.tags[t])
+		// 				if ($scope.featDB[i].properties.tags[t] == 'disco') {
+		// 					$scope.builtList.push($scope.featDB[i])
+		// 				};
+		// 			};
+
+		// 		};
+		// 	} else{console.log("it's false "+"Sports: "+$scope.di.sports)};
+		// 	$scope.save(object);
+
+
+		// };		
+
+
+
 filtering by ngmodel="districtSelect" doesn't work....

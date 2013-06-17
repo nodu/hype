@@ -12,6 +12,15 @@ angular.module('myApp.services', [])
 		}
 	};
 }])
+.factory('newDB', ['$http', function($http){
+	return{
+		get: function(callback){
+			$http.get("data/newDB.js").then(function(dataResponse) {
+          		callback(dataResponse);
+      });
+		}
+	};
+}])
 .factory('beachesDB', ['$http', function($http){
 	return{
 		get: function(callback){

@@ -8,27 +8,27 @@ angular.module('myApp.filters', [])
 		var len;
 
 	    // get customers that have been checked
-	    var checkedTags = $filter('filter')(feature, {checked: true});
-	    // var checkedTags = ["pie", "doh" ]
+	    var checkedDist = $filter('filter')(feature, {checked: true});
+	    // var checkedDist = ["pie", "doh" ]
 
-	    // for (var i = 0; i < checkedTags.length; i++) {
-	    // 	console.log("checked: " + checkedTags[i]);
-	    // 	console.log(checkedTags.length)
+	    // for (var i = 0; i < checkedDist.length; i++) {
+	    // 	console.log("checked: " + checkedDist[i]);
+	    // 	console.log(checkedDist.length)
 	    // };
 	    
 	    // Add in a check to see if any customers were selected. If none, return 
 	    // them all without filters
-	    if(checkedTags.length === 0) {
+	    if(checkedDist.length === 0) {
 	    	return feature;
 	    }
 	    
 	    // get all the unique cities that come from these checked customers
 	    var tagList = {};
-	    for(var i = 0, len = checkedTags.length; i < len; ++i) {
+	    for(var i = 0, len = checkedDist.length; i < len; ++i) {
 	      // if this checked customers cities isn't already in the cities object 
 	      // add it
-	      if(!tagList.hasOwnProperty(checkedTags[i].properties.tags[1])) {
-	      	tagList[checkedTags[i].properties.tags[1]] = true;
+	      if(!tagList.hasOwnProperty(checkedDist[i].properties.tags[1])) {
+	      	tagList[checkedDist[i].properties.tags[1]] = true;
 	      }
 	      console.log(tagList)
 
@@ -47,7 +47,100 @@ angular.module('myApp.filters', [])
 
 	    // we have our result!
 	    return ret;
-};
+	};
+})
+.filter('dis', function($filter) {
+	return function(feature) {
+		var len;
+
+	    // get customers that have been checked
+	    // var checkedDist = $filter('filter')(feature, {checked: true});
+	    var checkedDist = [];
+	    // var checkedDist = ["pie", "doh" ]
+
+	    // for (var i = 0; i < checkedDist.length; i++) {
+	    // 	console.log("checked: " + checkedDist[i]);
+	    // 	console.log(checkedDist.length)
+	    // };
+	    
+	    // Add in a check to see if any customers were selected. If none, return 
+	    // them all without filters
+	    if(checkedDist.length === 0) {
+	    	return feature;
+	    }
+	    
+	    // get all the unique cities that come from these checked customers
+	  //   var tagList = {};
+	  //   for(var i = 0, len = checkedDist.length; i < len; ++i) {
+	  //     // if this checked customers cities isn't already in the cities object 
+	  //     // add it
+	  //     if(!tagList.hasOwnProperty(checkedDist[i].properties.tags[1])) {
+	  //     	tagList[checkedDist[i].properties.tags[1]] = true;
+	  //     }
+	  //     console.log(tagList)
+
+	  // }
+
+	    // Now that we have the cities that come from the checked customers, we can
+	    //get all customers from those cities and return them
+	    var ret = [];
+	    for(var i = 0, len = feature.length;  i < len; ++i) {
+	      // If this customer's city exists in the cities object, add it to the 
+	      // return array
+	      if(feature[i].properties.district == districtSelect) {
+	      	ret.push(feature[i]);
+	      } 
+	  }
+
+	    // we have our result!
+	    return ret;
+	};
+})
+.filter('selectedFeatureDistrict', function($filter) {
+	return function(feature) {
+		var len;
+
+	    // get customers that have been checked
+	    var checkedDist = $filter('filter')(feature, {checked: true});
+	    // var checkedDist = ["pie", "doh" ]
+
+	    // for (var i = 0; i < checkedDist.length; i++) {
+	    // 	console.log("checked: " + checkedDist[i]);
+	    // 	console.log(checkedDist.length)
+	    // };
+	    
+	    // Add in a check to see if any customers were selected. If none, return 
+	    // them all without filters
+	    if(checkedDist.length === 0) {
+	    	return feature;
+	    }
+	    
+	    // get all the unique cities that come from these checked customers
+	    var distList = {};
+	    for(var i = 0, len = checkedDist.length; i < len; ++i) {
+	      // if this checked customers cities isn't already in the cities object 
+	      // add it
+	      if(!distList.hasOwnProperty(checkedDist[i].properties.district)) {
+	      	distList[checkedDist[i].properties.district] = true;
+	      }
+	      console.log(distList)
+
+	  }
+
+	    // Now that we have the cities that come from the checked customers, we can
+	    //get all customers from those cities and return them
+	    var ret = [];
+	    for(var i = 0, len = feature.length;  i < len; ++i) {
+	      // If this customer's city exists in the cities object, add it to the 
+	      // return array
+	      if(distList[feature[i].properties.district]) {
+	      	ret.push(feature[i]);
+	      } 
+	  }
+
+	    // we have our result!
+	    return ret;
+	};
 })
 .filter('capitalize', function() {
     return function(input, scope) {

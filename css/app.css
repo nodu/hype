@@ -29,11 +29,6 @@
   padding: 0;
 }
 
-
-@media screen and (min-width: 320px) {
-
-}
-
 .showme {
   background-color: black;
   color: white;
@@ -65,8 +60,14 @@
   /*display: none;*/
 }
 
-.leaflet-control-zoom {
+.leaflet-container .leaflet-control-zoom {
   /*display: none;*/
+  margin-top: 0px ;
+  /*margin-left: 0px;*/
+  /*position: absolute;*/
+  /*z-index: 2;*/
+  /*bottom: .5%;*/
+  /*left: .5%;*/
 }
 
 /*******************************************************/
@@ -228,4 +229,60 @@ nav {
   position: absolute; 
   bottom:5px; 
   right:5px;
+}
+
+
+
+/*********************/
+/*Locate Plugin's CSS*/
+/*********************/
+
+.leaflet-bar-part-single {
+  -webkit-border-radius: 4px 4px 4px 4px;
+          border-radius: 4px 4px 4px 4px;
+  border-bottom: none;
+}
+
+.leaflet-touch .leaflet-bar-part-single {
+  -webkit-border-radius: 7px 7px 7px 7px;
+          border-radius: 7px 7px 7px 7px;
+  border-bottom: none;
+}
+
+.leaflet-control-locate a {
+  background-image: url(../img/locate.png);
+}
+
+.leaflet-control-locate.requesting a {
+    background-image: url(../img/spinner.gif);
+}
+
+.leaflet-control-locate.active a {
+    background-image: url(../img/locate_active.png);
+}
+
+.leaflet-control-locate.active.following a {
+  background-image: url(../img/locate_following.png);
+}
+
+
+#itinerary{
+  position: absolute;
+  z-index: 3;
+  top: .5%;
+  left: 45%;
+}
+
+
+.alert {
+  position: fixed;
+ /*bottom: 50%;*/
+  z-index: 5;
+}
+
+#alertBtn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
 }
