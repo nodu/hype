@@ -100,10 +100,14 @@ filtering by ngmodel="districtSelect" doesn't work....
 
 
 
-Open marker on header click
-Add watch function for search box, so + button is irrelevant
-fix left side whitespace, why is this happening?
-fix filtering by Select 
-sharebar!
-switch css to smacss
-persistent data from FB by saving the user's fb ID in a userDB, if user in DB BAM, else create 	user
+*Open marker on header click
+*Add watch function for search box, so + button is irrelevant
+*fix left side whitespace, why is this happening?
+*fix filtering by Select 
+*sharebar!
+*switch css to smacss
+*persistent data from FB by saving the user's fb ID in a userDB, if user in DB BAM, else create 	user
+*Make credits bigger (add to nav?)
+*Increase mobile screen res check?
+*long screens are going to make the contentContainer look ugly, narrow and stretched
+*map zoom lvl on mobile?
