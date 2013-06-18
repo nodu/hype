@@ -37,6 +37,13 @@
 
 }
 
+/***************/
+/*Global Styles*/
+/***************/
+html body{
+  font-family: 'Rye', cursive;
+
+}
 .display-none {
   display: none;
 }
@@ -71,7 +78,7 @@
 /*Class for created control (right content control box)*/
 /*******************************************************/
 .content {
-  position: absolute;  /*better would be fixed positon*/
+  position: absolute;
   top: 6%;
   right: .5%;
   z-index: 2;
@@ -84,6 +91,8 @@
   height: 80%;
   width: 25%;
   overflow: auto;
+  border: 2px solid grey;
+
 }
 .content h4 {
   margin: 0 0 5px;
@@ -102,7 +111,7 @@ nav {
   background-color: grey;
   border-radius: 3px;
   color: black;
-  font-family: 'Rye', cursive;
+  /*font-family: 'Rye', cursive;*/
   text-align: center;
 }
 
@@ -115,7 +124,7 @@ nav {
   border-radius: 3px;
   /*background-color: blue;*/
   color: black;
-  font-family: 'Rye', cursive;
+  /*font-family: 'Rye', cursive;*/
 
 }
 
@@ -317,10 +326,10 @@ nav {
   /*Now they just stack, you can only see the top one...*/
   position: absolute;
   /*bottom: 50%;*/
-  left: 10%;
+  left: 1%;
   bottom:10%;
   z-index: 4;
-  height: 10px;
+  /*height: 10px;*/
 }
 
 #alertBtn {
@@ -341,7 +350,7 @@ nav {
 }
 
 #logo {
-  color:red;
+  color: black;
   font-family: 'Rye', cursive;
   width: 10%;
   font-size: 2.5em;
@@ -349,6 +358,6 @@ nav {
   float:left;
 }
 
-#logo span {
-  color: black;
+span {
+  color: red;
 }

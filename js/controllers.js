@@ -131,6 +131,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 		// Adding this line below, makes length errors from filter:21 go away...
 		$scope.changer = JSON.parse(JSON.stringify(newDB));
+
 		// $scope.changer;
 		// console.log($scope.changer)
 
@@ -153,6 +154,8 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			if (isOpen) {
 				console.log('Beach group was opened'); 
 				$scope.changer = JSON.parse(JSON.stringify($scope.beachesDB));
+			$scope.opt.query = [];
+
 
 			}    
 		});
@@ -160,6 +163,8 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			if (isOpen) {
 				console.log('Bars group was opened'); 
 				$scope.changer = JSON.parse(JSON.stringify($scope.barsDB));
+			$scope.opt.query = [];
+
 
 			}    
 		});
@@ -173,6 +178,8 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 				// console.log("THIS LINE: "+$scope.opt.openNew); 
 				console.log('New group was opened'); 
 				$scope.changer = JSON.parse(JSON.stringify($scope.newDB));
+			$scope.opt.query = [];
+
 
 			}    
 			// return true
@@ -182,6 +189,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
 			$scope.textFilter = $filter('filter')(json, $scope.opt.query);
 			$scope.savedJSON = $filter('selectedFeatureDistrict')($scope.textFilter);
+			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
 			// ng-repeat="feat in featDB | selectedFeatureTags | filter:opt.query"
 			var markerList = [];
 
@@ -262,6 +270,16 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 		}
 			);
+
+		$scope.$watch("bar.checked", function (value){
+		
+			console.log(value)
+			$scope.save($scope.changer)
+
+		}
+			);
+		// $scope.save($scope.changer)
+		
 	}]);
 
 

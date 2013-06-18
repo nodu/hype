@@ -111,3 +111,8 @@ filtering by ngmodel="districtSelect" doesn't work....
 * Increase mobile screen res check?
 * long screens are going to make the contentContainer look ugly, narrow and stretched
 * map zoom lvl on mobile?
+* auto map markers on accordion click
+* add watch for checkboxes
+
+Issues
+* Alert's don't stack vertically and seem to pause the timeout of the previous alert.
