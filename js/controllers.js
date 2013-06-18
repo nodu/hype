@@ -255,9 +255,12 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 
 		$scope.$watch("opt.query", function (value){
+		
 			console.log(value)
+			$scope.save($scope.changer)
+			// $scope.opt.query = [];
+
 		}
-			// $scope.save()
 			);
 	}]);
 

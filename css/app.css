@@ -98,10 +98,12 @@ nav {
   width: 20%;
 }
 .accordion-heading {
-  background: rgba(255,255,255,0.8);
+  /*background: rgba(255,255,255,0.8);*/
+  background-color: grey;
   border-radius: 3px;
   color: black;
   font-family: 'Rye', cursive;
+  text-align: center;
 }
 
 .accordion-heading a {
@@ -163,7 +165,7 @@ nav {
 /**************************/
 /****** Mobile View *******/
 /**************************/
-@media (max-device-width: 720px) {
+@media (max-width: 720px) {
 
   .content{
     display: none;
@@ -315,7 +317,8 @@ nav {
   /*Now they just stack, you can only see the top one...*/
   position: absolute;
   /*bottom: 50%;*/
-  right: 10%;
+  left: 10%;
+  bottom:10%;
   z-index: 4;
   height: 10px;
 }
