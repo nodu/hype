@@ -32,7 +32,8 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 	// Select // Submit
 	$scope.districts = ["Central", "Wan Chai", "Eastern", "Western", "Southern"];
-	$scope.districtSelect = "";
+	$scope.districtSelect = {};
+
 	$scope.di = {};
 	// $scope.disco = 'disco';
 
@@ -279,7 +280,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		}
 			);
 		// $scope.save($scope.changer)
-		
+
 	}]);
 
 

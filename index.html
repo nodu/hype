@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/bootstrap.css"/>
   <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/leaflet.css"/>
+  <link rel="stylesheet" href="css/font-awesome.css"/>
   <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" /> -->
   <link rel="stylesheet" href="css/app.css"/>
   <link href='http://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
@@ -27,40 +28,49 @@
     <!-- This doesn't seem pretty, not sure how to correctly add 2 app wide controllers -->
     <!-- Putting them in the same ctrl doesn't seem modular, service for http? -->
     <div ng-controller="getJSON_HTTP_Request">
-    <div id="fb-root"></div>
+      <div id="fb-root"></div>
 
       <leaflet defaults="defaults" center="center"></leaflet>
 
-
-      <header>
-        <div id="topBar">
-          <div id="logo">
-            Hype<span>!</span>
-          </div>
-          <div id="searchBox">
-            <input id="searchBar" ng-cloak ng-model="opt.query" placeholder="Search"> 
-            <a href="#" ng-click="save(changer)"><i class="icon-fixed-width icon-plus"></i></a>
-          </div> 
-          <button id="itinerary" class="btn btn-medium" ng-click="openItinerary()">Itinerary</button>
-
+        <button class="nav_toggle btn" ng-click="navOpen()"><i class="icon-search icon-5x"></i></button> 
+      <nav class="nav">
+        <div id="logo">
+          Hype<span>!</span>
         </div>
-      </header>
+        <div id="buttons">
+          <!-- <button class="btn btn-primary" ng-click="">Log In</button>  -->
+          <div data-facebook='<%= Figaro.env.facebook_key %>'>
+            <button class="btn btn-primary" ng-click='fetch()'>Log In</button> 
+          </div> 
+          <button id="itinerary" class="btn btn-inverse" ng-click="openItinerary()">Itinerary</button>
+        </div>
+        <div id="searchBox">
+          <input id="searchBar" ng-cloak ng-model="opt.query" placeholder="Search"> 
+          <!-- <a href="#" ng-click="save(changer)"><i class="icon-fixed-width icon-plus"></i></a> -->
+        </div> 
+        <div>  
+         <accordion close-others="oneAtATime">
+          <accordion-group id="districtAccordion">
+          <accordion-heading>
+            District <i class="icon-chevron-down"></i>
+          </accordion-heading>
+          <div ng-repeat="dist in districts">
+            <label class="checkbox" for="{{dist}}">{{dist}}              
+              <input type="checkbox" ng-model="districtSelect[dist]" name="group" id="{{dist}}" />
+            </label>
+            <!-- {{districtSelect}} -->
+          </div>
+        </accordion-group>
+        <accordion-group id="navTop" is-open="opt.openNew">
+          <accordion-heading>
+            New! <i class="icon-chevron-down"></i>
+          </accordion-heading>
+        </accordion-group>
 
-
-      <button class="nav_toggle btn" ng-click="navOpen()">Filter</button> 
-      <!-- remove animate="up"?  switch ng-click to directives? -->
-
-      <nav class="nav">  
-       <accordion close-others="oneAtATime">
-        <!-- ng-click="onNavClick(openDB)"  Doesn't work, div is rebuilt into html -->
-        <accordion-group id="navTop" heading="Hot in HK!" is-open="opt.openNew">
-        <!-- <input ng-cloak ng-model="opt.query" placeholder="Search" style="width: 78%;">  -->
-        <!-- <input type="checkbox" ng-model="opt.query"> -->
-        <!-- <a href="#" ng-click="save(changer)"><i class="icon-fixed-width icon-plus"></i></a>  -->
-      </accordion-group>
-
-      <!-- ng-click="onNavClick('barsDB')" -->
-      <accordion-group heading="Bars" is-open="opt.openBars">
+      <accordion-group is-open="opt.openBars">
+        <accordion-heading>
+              Bars <i class="icon-chevron-down"></i>
+        </accordion-heading>
       <form name="myForm" ng-cloak>
         <select id="district-select" ng-model="districtSelect" ng-options="district for district in districts">
           <option value="">District</option>
@@ -68,106 +78,135 @@
         {{districtSelect}}
         <br>
         <div>
-          <!-- ng-model="club" /////// >Club: {{club}}< -->
-          <!-- Bar: <input type="checkbox"  ng-model="search[featDB.properties.tags[1]]"> <br> -->
-          <!-- Club: <input type="checkbox" ng-model="search[barsDB[5].tag]"><br> -->
-        <!-- Disco: <input type="checkbox" ng-model="di.disco" ng-true-value="disco">  Disco: {{di.disco}}<br>
-        Sports: <input type="checkbox" ng-model="di.sports">  Sports: {{di.sports}}
-      -->
-      <div ng-repeat="bar in changer | unique:'properties.tags[1]'">
-        <input type="checkbox" ng-checked="bar.checked" ng-model="bar.checked"> 
-        {{bar.properties.tags[1] | capArray}}
-        {{bar.checked}}
-      </div>
+          <div ng-repeat="bar in changer | unique:'properties.tags[1]'">
+            <input type="checkbox" ng-checked="bar.checked" ng-model="bar.checked"> 
+            {{bar.properties.tags[1] | capArray}}
+            {{bar.checked}}
+          </div>
 
-      <!-- <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="submit(featDB)"> -->
-      <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)">
-      <!-- <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="submit(builtList)"> -->
+          <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)">
+        </div>
+      </form>
+    </accordion-group>
+    <accordion-group id="navBottom" is-open="opt.openBeaches">
+      <accordion-heading>
+        Beaches <i class="icon-chevron-down"></i>
+      </accordion-heading>
+    <div ng-repeat="beach in changer | unique:'properties.district'">
+      <input type="checkbox" ng-checked="beach.checked" ng-model="beach.checked">
+      {{beach.properties.district | lowercase | capArray}}
     </div>
-  </form>
-</accordion-group>
-<!-- is-open="onNavClick(beachesDB)" ng-click="onNavClick(beachesDB)"-->
-<accordion-group id="navBottom" heading="Beaches"  is-open="opt.openBeaches">
-<div ng-repeat="beach in changer | unique:'properties.district'">
-  <input type="checkbox" ng-checked="beach.checked" ng-model="beach.checked">
-  {{beach.properties.district | lowercase | capArray}}
-</div>
-<input id="beachSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)">
+    <input id="beachSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)">
 
-</accordion-group>
-</accordion>
-
-</nav>
-<button class="content_toggle btn" ng-click="contentOpen()">Content</button> 
-<!-- animate="down"  Removed -->
-
-
-
-
-
-
-<div class="content">
-  <div>
-    Hype<span>!</span>Hits<span>!</span>
-  </div>
-
-  <accordion close-others="oneAtATime">
-    <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()"> -->
-    <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-    <accordion-group heading="{{feat.properties.name}}" ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureTags | selectedFeatureDistrict" is-open="opt.contentClickAddMarker(feat)">
-    <div ng-cloak> 
-      <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p>
-      <!-- <p>{{feat.properties.tags[1]}}</p> -->
-      <!-- <p>Checked: {{feat.checked}}</p> -->
-      <p>{{feat.properties.address}}</p>
-      <p>{{feat.properties.phone}}</p>
-      <p>{{feat.properties.email}}</p>
-      <p>{{feat.properties.about}}</p>
-      <button class="btn" ng-click="addToIt(feat, 2500)">Save to itinerary</button>
-    </div>
   </accordion-group>
 </accordion>
+
 </div>
-<footer>
+</nav>
+      <header>
+        <div id="topBar">
+         <div id="logo">
+          Hype<span>!</span>
+        </div>
+        </div>
+      </header>
 
 
-  <div ng-cloak modal="itineraryOpen" close="closeItinerary()" options="opts">
-    <div class="modal-header">
-      <h4>Itinerary</h4>
+      
+
+
+      <button class="content_toggle btn" ng-click="contentOpen()"><i class="icon-reorder icon-5x"></i></button> 
+      <!-- animate="down"  Removed -->
+
+
+
+
+
+
+      <div class="content">
+        <div>
+          Hype<span>!</span>Hits<span>!</span>
+        </div>
+
+        <accordion close-others="oneAtATime">
+          <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()"> -->
+          <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
+          <accordion-group ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureTags | selectedFeatureDistrict" is-open="opt.contentClickAddMarker(feat)">
+           <accordion-heading>
+            {{feat.properties.name}} <i class="icon-chevron-down"></i>
+           </accordion-heading>
+          <div ng-cloak> 
+            <div class="contentAddress">
+              <p>{{feat.properties.address}}</p>
+            </div>
+            <div class="contentImg">
+              <img src="http://placehold.it/350x150">
+            </div>
+            <div class="contentDesc">
+              <p>{{feat.properties.about}}</p>
+            </div>
+            <div class="contentButtons">
+              <button class="btn" ng-click="addToIt(feat, 2500)">Save</button>
+              <button class="btn" ng-click="addToIt(feat, 2500)">Share</button>
+              <button class="btn" ng-click="addToIt(feat, 2500)">Contact</button>
+              <button class="btn" ng-click="addToIt(feat, 2500)">Taxi Card</button>
+
+            </div>
+            <div class="contentSocial">
+              <p>{{feat.properties.phone}}</p>
+              <p>{{feat.properties.email}}</p>
+            </div>
+
+            <!-- <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p> -->
+            <!-- <p>{{feat.properties.tags[1]}}</p> -->
+            <!-- <p>Checked: {{feat.checked}}</p> -->
+            
+            
+            
+          </div>
+        </accordion-group>
+      </accordion>
     </div>
-    <div class="modal-body">
-      <p ng-show="itinerary == false">Nothing to see here, move along</p>
-      <div ng-repeat="item in itinerary">
-        {{item.properties.name}} [<a href ng-click="removeIt(feat, 2500)">X</a>]
+    <footer>
+
+
+      <div ng-cloak modal="itineraryOpen" close="closeItinerary()" options="opts">
+        <div class="modal-header">
+          <h4>Itinerary</h4>
+        </div>
+        <div class="modal-body">
+          <p ng-show="itinerary == false">Nothing to see here, move along</p>
+          <div ng-repeat="item in itinerary">
+            {{item.properties.name}} [<a href ng-click="removeIt(feat, 2500)">X</a>]
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-info" ng-click="save(itinerary)">Map It!</button>
+          <button class="btn btn-info" ng-click="closeItinerary()">Close</button>
+        </div>
       </div>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-info" ng-click="save(itinerary)">Map It!</button>
-      <button class="btn btn-info" ng-click="closeItinerary()">Close</button>
-    </div>
-  </div>
 
-  <div>
-    <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
-    <!-- <button id="alertBtn" class='btn' ng-click="addAlert(250)">Add Alert</button> -->
-  </div>
-
-  <button id="credits" class="btn btn-medium" ng-click="open()">Credits</button>
-  <div ng-cloak modal="shouldBeOpen" close="close()" options="opts">
-    <div class="modal-header">
-      <h4>Credits</h4>
-    </div>
-    <div class="modal-body">
-      <p>Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,
-        <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
-        Imagery &copy; <a href="http://cloudmade.com">CloudMade</a></p>
+      <div>
+        <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+        <!-- <button id="alertBtn" class='btn' ng-click="addAlert(250)">Add Alert</button> -->
       </div>
-      <div class="modal-footer">
-        <button class="btn btn-info" ng-click="close()">Ok!</button>
-      </div>
-    </div>
 
-  </footer>
+      <button id="credits" class="btn btn-medium" ng-click="open()">Credits</button>
+      <div ng-cloak modal="shouldBeOpen" close="close()" options="opts">
+        <div class="modal-header">
+          <h4>Credits</h4>
+        </div>
+        <div class="modal-body">
+          <p>Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,
+            <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
+            Imagery &copy; <a href="http://cloudmade.com">CloudMade</a></p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-info" ng-click="close()">Ok!</button>
+          </div>
+        </div>
+
+      </footer>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
