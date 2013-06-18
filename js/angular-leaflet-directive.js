@@ -43,7 +43,7 @@ leafletDirective.directive("leaflet", ["$http", "$log", function ($http, $log) {
         link: function ($scope, element, attrs /*, ctrl */) {
             // added zoomControl: false
             // took var out to make it a global varible, that way my existing markers logic works!
-            map = new L.Map(element[0], {zoomControl: false, attributionControl:false});
+            map = new L.Map(element[0], {zoomControl: false, attributionControl:true});
             map.setView([0, 0], 1);
 
             $scope.leaflet = {};

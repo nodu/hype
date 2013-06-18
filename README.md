@@ -97,3 +97,13 @@ OLD CODE - Depricated
 
 
 filtering by ngmodel="districtSelect" doesn't work....
+
+
+
+Open marker on header click
+Add watch function for search box, so + button is irrelevant
+fix left side whitespace, why is this happening?
+fix filtering by Select 
+sharebar!
+switch css to smacss
+persistent data from FB by saving the user's fb ID in a userDB, if user in DB BAM, else create 	user

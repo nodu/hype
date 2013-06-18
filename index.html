@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="css/leaflet.css"/>
   <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" /> -->
   <link rel="stylesheet" href="css/app.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
   <script src="lib/angular/angular.js"></script>
   <script src="js/uiUnique.js"></script>
+
   <!-- <script src="js/angularUI.js"></script> -->
   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.js"></script> -->
 
@@ -25,8 +27,25 @@
     <!-- This doesn't seem pretty, not sure how to correctly add 2 app wide controllers -->
     <!-- Putting them in the same ctrl doesn't seem modular, service for http? -->
     <div ng-controller="getJSON_HTTP_Request">
-      
+    <div id="fb-root"></div>
+
       <leaflet defaults="defaults" center="center"></leaflet>
+
+
+      <header>
+        <div id="topBar">
+          <div id="logo">
+            <span>Hype</span>!
+          </div>
+          <div id="searchBox">
+            <input id="searchBar" ng-cloak ng-model="opt.query" placeholder="Search"> 
+            <a href="#" ng-click="save(changer)"><i class="icon-fixed-width icon-plus"></i></a>
+          </div> 
+          <button id="itinerary" class="btn btn-medium" ng-click="openItinerary()">Itinerary</button>
+
+        </div>
+      </header>
+
 
       <button class="nav_toggle btn" ng-click="navOpen()">Filter</button> 
       <!-- remove animate="up"?  switch ng-click to directives? -->
@@ -34,10 +53,10 @@
       <nav class="nav">  
        <accordion close-others="oneAtATime">
         <!-- ng-click="onNavClick(openDB)"  Doesn't work, div is rebuilt into html -->
-        <accordion-group id="navTop" heading="Opener /w Logo" is-open="opt.openNew">
-        <input ng-cloak ng-model="opt.query" placeholder="Search" style="width: 78%;"> 
+        <accordion-group id="navTop" heading="Hot in HK!" is-open="opt.openNew">
+        <!-- <input ng-cloak ng-model="opt.query" placeholder="Search" style="width: 78%;">  -->
         <!-- <input type="checkbox" ng-model="opt.query"> -->
-        <a href="#" ng-click="save(changer)"><i class="icon-fixed-width icon-plus"></i></a> 
+        <!-- <a href="#" ng-click="save(changer)"><i class="icon-fixed-width icon-plus"></i></a>  -->
       </accordion-group>
 
       <!-- ng-click="onNavClick('barsDB')" -->
@@ -92,7 +111,7 @@
   <accordion close-others="oneAtATime">
     <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()"> -->
     <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-    <accordion-group heading="{{feat.properties.name}}" ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureTags | selectedFeatureDistrict" >
+    <accordion-group heading="{{feat.properties.name}}" ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureTags | selectedFeatureDistrict" is-open="opt.contentClickAddMarker(feat)">
     <div ng-cloak> 
       <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p>
       <!-- <p>{{feat.properties.tags[1]}}</p> -->
@@ -109,7 +128,6 @@
 <footer>
 
 
-  <button id="itinerary" class="btn btn-medium" ng-click="openItinerary()">Itinerary</button>
   <div ng-cloak modal="itineraryOpen" close="closeItinerary()" options="opts">
     <div class="modal-header">
       <h4>Itinerary</h4>
@@ -126,10 +144,10 @@
     </div>
   </div>
 
-<div>
-  <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
-  <!-- <button id="alertBtn" class='btn' ng-click="addAlert(250)">Add Alert</button> -->
-</div>
+  <div>
+    <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+    <!-- <button id="alertBtn" class='btn' ng-click="addAlert(250)">Add Alert</button> -->
+  </div>
 
   <button id="credits" class="btn btn-medium" ng-click="open()">Credits</button>
   <div ng-cloak modal="shouldBeOpen" close="close()" options="opts">

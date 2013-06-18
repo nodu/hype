@@ -52,6 +52,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 
 	// For showing/hiding the mobile version's containers/navs
+	// MOVE TO DIRECTIVE!!!!!!!!!!!
 	$scope.navOpen = function() {
 		var content = angular.element(document.getElementsByClassName("content"));
 		var nav = angular.element(document.getElementsByClassName("nav"));
@@ -138,6 +139,16 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		// 	$scope.changer = JSON.parse(JSON.stringify(dbName));
 		// 	console.log($scope.changer)
 		// };
+
+		$scope.$watch('opt.contentClickAddMarker', function(isOpen){
+			// (feat)
+			if(isOpen){
+				// map.
+
+			}
+		})
+
+
 		$scope.$watch('opt.openBeaches', function(isOpen){
 			if (isOpen) {
 				console.log('Beach group was opened'); 
@@ -176,10 +187,12 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 			for (var obj in $scope.savedJSON){
 				var marker = L.marker([$scope.savedJSON[obj].geometry.coordinates[1], 
-					$scope.savedJSON[obj].geometry.coordinates[0]])
-				.bindPopup($scope.savedJSON[obj].properties.name, 
-					$scope.savedJSON[obj].properties.category)
-				.openPopup();
+					$scope.savedJSON[obj].geometry.coordinates[0]]);
+
+				marker.bindPopup($scope.savedJSON[obj].properties.name +"<br>"+
+								 $scope.savedJSON[obj].properties.category + 
+								'<button class="btn" onclick="my_scope2.addToIt(this, 2500)">Save to itinerary</button>')
+				// .openPopup();
 				// Add other wanted properties here, popups, mouseover effects...
 				markerList.push(marker);
 				console.log(marker);
@@ -202,8 +215,8 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 		// Alerts!
 		$scope.alerts = [];
-		$scope.addAlert = function(timeout) {
-			var alertSuc = {type: 'success', msg: 'Added!'};    
+		$scope.addAlert = function(feat, timeout) {
+			var alertSuc = {type: 'success', msg: 'Added! '+ feat.properties.name};    
 			$scope.alerts.push(alertSuc);
 			
 			if (timeout) {
@@ -223,7 +236,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 				$scope.closeAlert($scope.alerts.indexOf(alert));
 			}, timeout)}
 		}
-		
+
 		$scope.closeAlert = function(index) {
 			$scope.alerts.splice(index, 1);
 		};
@@ -233,12 +246,19 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		$scope.addToIt = function(feat, timeout) {
 			
 			console.log(feat);
-			$scope.addAlert(timeout);
+			$scope.addAlert(feat, timeout);
 			if ($scope.itinerary.indexOf(feat) == -1) {
 				$scope.itinerary.push(feat)		
 			};
 			console.log($scope.itinerary);
 		}
+
+
+		$scope.$watch("opt.query", function (value){
+			console.log(value)
+		}
+			// $scope.save()
+			);
 	}]);
 
 

@@ -50,14 +50,11 @@
 }
 
 .angular-leaflet-map {
+  left:0;
   height: 100%; 
   width: 100%; 
   position: absolute;
   z-index: 1;
-}
-
-.leaflet-control-attribution {
-  /*display: none;*/
 }
 
 .leaflet-container .leaflet-control-zoom {
@@ -75,7 +72,7 @@
 /*******************************************************/
 .content {
   position: absolute;  /*better would be fixed positon*/
-  top: 1%;
+  top: 6%;
   right: .5%;
   z-index: 2;
   padding: 6px 8px;
@@ -95,25 +92,34 @@
 
 nav {
   position: absolute;
-  top: 1%;
+  top: 6%;
   left: .5%;
   z-index: 2;
   width: 20%;
 }
-
 .accordion-heading {
   background: rgba(255,255,255,0.8);
   border-radius: 3px;
+  color: black;
+  font-family: 'Rye', cursive;
+}
+
+.accordion-heading a {
+  color: black;
 }
 
 .accordion-inner {
   background: rgba(255,255,255,1);
   border-radius: 3px;
   /*background-color: blue;*/
+  color: black;
+  font-family: 'Rye', cursive;
+
 }
 
 
 #credits {
+  display: none;
   position: absolute;
   bottom: .5%;
   right: .5%;
@@ -127,6 +133,8 @@ nav {
 
 .btn {
   /*background: rgba(255,255,255,0.8);*/
+  font-family: 'Rye', cursive;
+
 }
 
 .content_toggle {
@@ -155,7 +163,8 @@ nav {
 /**************************/
 /****** Mobile View *******/
 /**************************/
-@media (max-width: 720px) {
+@media (max-device-width: 720px) {
+
   .content{
     display: none;
   }
@@ -167,7 +176,7 @@ nav {
   .content_toggle {
     display: inline;
     position: absolute;
-    top: .5%;
+    top: 6%;
     right: .5%;
     z-index: 3;
   }
@@ -175,13 +184,28 @@ nav {
   .nav_toggle {
     display: inline;
     position: absolute;
-    top: .5%;
+    top: 6%;
     left: .5%;
     z-index: 3;
   }
 
   .leaflet-control-zoom {
     display: none;
+  }
+  .leaflet-control-attribution {
+    display: none;
+  }
+  #credits {
+    display: inline;
+
+    position: absolute;
+    bottom: .5%;
+    right: .5%;
+    z-index: 2;
+    background: rgba(255,255,255,0.8);
+
+    /*border-radius: 3px;*/
+    /*background: rgba(255,255,255,1);*/
   }
 
 }
@@ -209,75 +233,91 @@ nav {
 
 /*Dropdown district select in nav*/
 #district-select {
-   width: 60%;
+ width: 60%;
 }
 
 
 /* for ng-cloak*/
 /*[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
-}*/
+  }*/
 
 
-#barSubmit {
-  position: absolute; 
-  bottom:5px; 
-  right:5px;
-}
+  #barSubmit {
+    position: absolute; 
+    bottom:5px; 
+    right:5px;
+  }
 
-#beachSubmit {
-  position: absolute; 
-  bottom:5px; 
-  right:5px;
-}
+  #beachSubmit {
+    position: absolute; 
+    bottom:5px; 
+    right:5px;
+  }
 
 
 
-/*********************/
-/*Locate Plugin's CSS*/
-/*********************/
+  /*********************/
+  /*Locate Plugin's CSS*/
+  /*********************/
 
-.leaflet-bar-part-single {
-  -webkit-border-radius: 4px 4px 4px 4px;
-          border-radius: 4px 4px 4px 4px;
-  border-bottom: none;
-}
+  .leaflet-bar-part-single {
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    border-bottom: none;
+  }
 
-.leaflet-touch .leaflet-bar-part-single {
-  -webkit-border-radius: 7px 7px 7px 7px;
-          border-radius: 7px 7px 7px 7px;
-  border-bottom: none;
-}
+  .leaflet-touch .leaflet-bar-part-single {
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border-radius: 7px 7px 7px 7px;
+    border-bottom: none;
+  }
 
-.leaflet-control-locate a {
-  background-image: url(../img/locate.png);
-}
+  .leaflet-control-locate a {
+    background-image: url(../img/locate.png);
+  }
 
-.leaflet-control-locate.requesting a {
+  .leaflet-control-locate.requesting a {
     background-image: url(../img/spinner.gif);
-}
+  }
 
-.leaflet-control-locate.active a {
+  .leaflet-control-locate.active a {
     background-image: url(../img/locate_active.png);
-}
+  }
 
-.leaflet-control-locate.active.following a {
-  background-image: url(../img/locate_following.png);
-}
+  .leaflet-control-locate.active.following a {
+    background-image: url(../img/locate_following.png);
+  }
 
 
-#itinerary{
-  position: absolute;
+  #itinerary{
+  /*position: absolute;
   z-index: 3;
   top: .5%;
-  left: 45%;
+  left: 45%;*/
+  float: right;
 }
 
+#searchBar{
+  /*position: fixed;*/
+  /*left: 50%;*/
+  width: 80%;
+}
+
+#searchBox{
+  position: absolute;
+  left: 60%;
+  width: 20%
+}
 
 .alert {
-  position: fixed;
- /*bottom: 50%;*/
-  z-index: 5;
+  /*Not sure how to make them appear on top (like z-index: ), but allowing multiple alerts*/
+  /*Now they just stack, you can only see the top one...*/
+  position: absolute;
+  /*bottom: 50%;*/
+  right: 10%;
+  z-index: 4;
+  height: 10px;
 }
 
 #alertBtn {
@@ -285,4 +325,27 @@ nav {
   bottom: 0;
   left: 0;
   z-index: 3;
+}
+
+#topBar {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4%;
+  background-color: rgba(128, 128, 128, 0.8); 
+}
+
+#logo {
+  color:red;
+  font-family: 'Rye', cursive;
+  width: 10%;
+  font-size: 2.5em;
+  margin-top: 8px;
+  float:left;
+}
+
+#logo span {
+  color: black;
 }

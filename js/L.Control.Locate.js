@@ -29,7 +29,6 @@ L.Control.Locate = L.Control.extend({
             //fillColor: '#FFB000'
         },
         metric: true,
-        debug: false,
         onLocationError: function(err) {
             alert(err.message);
         },
@@ -50,13 +49,14 @@ L.Control.Locate = L.Control.extend({
         this._layer = new L.LayerGroup();
         this._layer.addTo(map);
         this._event = undefined;
-        // nested extend so that the first can overwrite the second
-        // and the second can overwrite the third
-        this._locateOptions = L.extend(L.extend({
-            'setView': false // have to set this to false because we have to
-                             // do setView manually
-        }, this.options.locateOptions), {
-            'watch': true  // if you overwrite this, visualization cannot be updated
+
+        this._locateOptions = {
+            watch: true  // if you overwrite this, visualization cannot be updated
+        };
+        L.extend(this._locateOptions, this.options.locateOptions);
+        L.extend(this._locateOptions, {
+            setView: false // have to set this to false because we have to
+                           // do setView manually
         });
 
         // extend the follow marker style and circle from the normal style
@@ -70,12 +70,6 @@ L.Control.Locate = L.Control.extend({
         var link = L.DomUtil.create('a', 'leaflet-bar-part leaflet-bar-part-single', container);
         link.href = '#';
         link.title = this.options.strings.title;
-
-        var _log = function(data) {
-            if (self.options.debug) {
-                console.log(data);
-            }
-        };
 
         L.DomEvent
             .on(link, 'click', L.DomEvent.stopPropagation)
@@ -104,14 +98,11 @@ L.Control.Locate = L.Control.extend({
             .on(link, 'dblclick', L.DomEvent.stopPropagation);
 
         var onLocationFound = function (e) {
-            _log('onLocationFound');
-
             self._active = true;
 
             if (self._event &&
                 (self._event.latlng.lat != e.latlng.lat ||
                  self._event.latlng.lng != e.latlng.lng)) {
-                _log('location has changed');
             }
 
             self._event = e;
@@ -132,7 +123,6 @@ L.Control.Locate = L.Control.extend({
 
         var stopFollowing = function() {
             self._following = false;
-            //self._container.className = classNames + " active";
             if (self.options.stopFollowingOnDrag) {
                 map.off('dragstart', stopFollowing);
             }
@@ -140,8 +130,6 @@ L.Control.Locate = L.Control.extend({
         };
 
         var visualizeLocation = function() {
-            _log('visualizeLocation,' + 'setView:' + self._locateOnNextLocationFound);
-
             var radius = self._event.accuracy / 2;
 
             if (self._locateOnNextLocationFound) {
@@ -197,14 +185,13 @@ L.Control.Locate = L.Control.extend({
 
         var resetVariables = function() {
             self._active = false;
-            self._locateOnNextLocationFound = true;
+            self._locateOnNextLocationFound = self.options.setView;
             self._following = false;
         };
 
         resetVariables();
 
         var stopLocate = function() {
-            _log('stopLocate');
             map.stopLocate();
             map.off('dragstart', stopFollowing);
 
@@ -216,8 +203,6 @@ L.Control.Locate = L.Control.extend({
 
 
         var onLocationError = function (err) {
-            _log('onLocationError');
-
             // ignore timeout error if the location is watched
             if (err.code==3 && this._locateOptions.watch) {
                 return;
