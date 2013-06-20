@@ -58,14 +58,14 @@
         </div> 
         <div>  
          <accordion close-others="oneAtATime">
-          <accordion-group id="districtAccordion">
+          <accordion-group id="districtAccordion" is-open="opt.openBars">
           <accordion-heading>
             District <i class="icon-chevron-down"></i>
           </accordion-heading>
           <!-- <div ng-repeat="dist in districts"> -->
           <div ng-repeat="dist in changer| unique:'properties.district'">
             <label class="checkbox" for="{{dist}}">             
-              <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" />{{dist.properties.district}}
+              <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}} " ng-true-value="dist"/>{{dist.properties.district}}
               <!-- ng-true-value="dist" -->
               <!-- ng-model="districtSelect[dist]" -->
               <!-- {{districtSelect[dist]}} -->
@@ -91,7 +91,7 @@
         <!-- <br> -->
         <div ng-repeat="dist in changer| unique:'properties.district'">
             <label class="checkbox" for="{{dist}}">             
-              <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" ng-true-value="dist"/>{{dist.properties.district}}
+              <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" ng-true-value="dist"/>{{dist.properties.district}}{{dist.dist}}
               
               <!-- ng-model="districtSelect[dist]" -->
               <!-- {{districtSelect[dist]}} -->
@@ -151,7 +151,7 @@
 
         <accordion close-others="oneAtATime">
           <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-          <accordion-group ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureTags" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'">
+          <accordion-group ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureDistrict" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'">
             
            <accordion-heading>
             {{feat.properties.name}} <i class="icon-chevron-down"></i>

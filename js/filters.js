@@ -6,32 +6,17 @@ angular.module('myApp.filters', [])
 .filter('selectedFeatureTags', function($filter) {
 	return function(feature) {
 		var len;
-
-	    // get customers that have been checked
 	    var checkedDist = $filter('filter')(feature, {checked: true});
-	    // var checkedDist = ["pie", "doh" ]
 
-	    // for (var i = 0; i < checkedDist.length; i++) {
-	    // 	console.log("checked: " + checkedDist[i]);
-	    // 	console.log(checkedDist.length)
-	    // };
-	    
-	    // Add in a check to see if any customers were selected. If none, return 
-	    // them all without filters
 	    if(checkedDist.length === 0) {
 	    	return feature;
 	    }
-	    
-	    // get all the unique cities that come from these checked customers
 	    var tagList = {};
 	    for(var i = 0, len = checkedDist.length; i < len; ++i) {
-	      // if this checked customers cities isn't already in the cities object 
-	      // add it
 	      if(!tagList.hasOwnProperty(checkedDist[i].properties.tags[1])) {
 	      	tagList[checkedDist[i].properties.tags[1]] = true;
 	      }
 	      console.log(tagList)
-
 	  }
 	    var ret = [];
 	    for(var i = 0, len = feature.length;  i < len; ++i) {
@@ -45,42 +30,25 @@ angular.module('myApp.filters', [])
 .filter('dis', function($filter) {
 	return function(feature) {
 		var len;
-
-	    // get customers that have been checked
 	    var checkedDist = $filter('filter')(feature, {dist: "dist"});
-	    console.log(checkedDist)
 
-	    
-	    // Add in a check to see if any customers were selected. If none, return 
-	    // them all without filters
+	    console.log(checkedDist)
 	    if(checkedDist.length === 0) {
 	    	return feature;
 	    }
-	    
-	    // get all the unique cities that come from these checked customers
 	    var tagList = {};
 	    for(var i = 0, len = checkedDist.length; i < len; ++i) {
-	  //     // if this checked customers cities isn't already in the cities object 
-	  //     // add it
 	      if(!tagList.hasOwnProperty(checkedDist[i].properties.district)) {
 	      	tagList[checkedDist[i].properties.district] = true;
 	      }
 	      console.log(tagList)
-
 	  }
-
-	    // Now that we have the cities that come from the checked customers, we can
-	    //get all customers from those cities and return them
 	    var ret = [];
 	    for(var i = 0, len = feature.length;  i < len; ++i) {
-	      // If this customer's city exists in the cities object, add it to the 
-	      // return array
 	      if(tagList[feature[i].properties.district]) {
 	      	ret.push(feature[i]);
 	      } 
 	  }
-
-	    // we have our result!
 	    console.log(ret)
 	    return ret;
 	};
@@ -88,6 +56,8 @@ angular.module('myApp.filters', [])
 .filter('selectedFeatureDistrict', function($filter) {
 	return function(feature) {
 		var len;
+		// console.log("feat: " + )
+		if (feature[0].properties.category == 'Beaches') {
 
 	    // get customers that have been checked
 	    var checkedDist = $filter('filter')(feature, {checked: true});
@@ -129,6 +99,28 @@ angular.module('myApp.filters', [])
 
 	    // we have our result!
 	    return ret;
+		} else {
+		var len;
+	    var checkedDist = $filter('filter')(feature, {checked: true});
+
+	    if(checkedDist.length === 0) {
+	    	return feature;
+	    }
+	    var tagList = {};
+	    for(var i = 0, len = checkedDist.length; i < len; ++i) {
+	      if(!tagList.hasOwnProperty(checkedDist[i].properties.tags[1])) {
+	      	tagList[checkedDist[i].properties.tags[1]] = true;
+	      }
+	      console.log(tagList)
+	  }
+	    var ret = [];
+	    for(var i = 0, len = feature.length;  i < len; ++i) {
+	      if(tagList[feature[i].properties.tags[1]]) {
+	      	ret.push(feature[i]);
+	      } 
+	  }
+	    return ret;
+	};
 	};
 })
 .filter('capitalize', function() {

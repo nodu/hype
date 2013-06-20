@@ -187,12 +187,16 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		});
 
 		$scope.save = function(json) {
+			console.log("json: " + json[0].properties.category)
 			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
 			$scope.distFilter = $filter('dis')(json)
 			// $scope.savedJSON = $filter('dis')(json)
 			console.log($scope.distFilter)
 			$scope.textFilter = $filter('filter')($scope.distFilter, $scope.opt.query);
-			$scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
+			
+			if (json[0].properties.category == 'Beaches') {
+				$scope.savedJSON = $filter('selectedFeatureDistrict')($scope.textFilter);
+			} else {$scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);}
 			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
 			// ng-repeat="feat in featDB | selectedFeatureTags | filter:opt.query"
 			var markerList = [];
@@ -209,7 +213,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 				// .openPopup();
 				// Add other wanted properties here, popups, mouseover effects...
 				markerList.push(marker);
-				console.log(marker);
+				// console.log(marker);
 			};
 			markerLayer.clearLayers();
 			markerLayer = L.layerGroup(markerList)
@@ -276,6 +280,11 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 		}
 			);
+
+		$scope.$watch("$scope.changer.dist", function (value){
+			console.log(value)
+			$scope.save($scope.changer)
+		})
 		// $scope.$watch("")
 
 		// $scope.$watch("barsDB[1].checked", function (value){

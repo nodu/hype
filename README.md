@@ -117,3 +117,6 @@ filtering by ngmodel="districtSelect" doesn't work....
 
 Issues
 * Alert's don't stack vertically and seem to pause the timeout of the previous alert.
+* * Something overwrites the checked state of district accordion when clicking another accordion!
+  * connecting a checkbox in another accordion with another Make new ...
+* using 
