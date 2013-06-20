@@ -33,19 +33,12 @@ angular.module('myApp.filters', [])
 	      console.log(tagList)
 
 	  }
-
-	    // Now that we have the cities that come from the checked customers, we can
-	    //get all customers from those cities and return them
 	    var ret = [];
 	    for(var i = 0, len = feature.length;  i < len; ++i) {
-	      // If this customer's city exists in the cities object, add it to the 
-	      // return array
 	      if(tagList[feature[i].properties.tags[1]]) {
 	      	ret.push(feature[i]);
 	      } 
 	  }
-
-	    // we have our result!
 	    return ret;
 	};
 })
@@ -54,18 +47,9 @@ angular.module('myApp.filters', [])
 		var len;
 
 	    // get customers that have been checked
-	    var checkedDist = $filter('filter')(feature, {checked: "dist"});
+	    var checkedDist = $filter('filter')(feature, {dist: "dist"});
+	    console.log(checkedDist)
 
-// Add ng-checked="dist" then filter by dist! 
-
-
-	    // var checkedDist = [];
-	    // var checkedDist = ["pie", "doh" ]
-
-	    // for (var i = 0; i < checkedDist.length; i++) {
-	    // 	console.log("checked: " + checkedDist[i]);
-	    // 	console.log(checkedDist.length)
-	    // };
 	    
 	    // Add in a check to see if any customers were selected. If none, return 
 	    // them all without filters
@@ -91,12 +75,13 @@ angular.module('myApp.filters', [])
 	    for(var i = 0, len = feature.length;  i < len; ++i) {
 	      // If this customer's city exists in the cities object, add it to the 
 	      // return array
-	      if(tagList[i].properties.district) {
-	      	ret.push(tagList[i]);
+	      if(tagList[feature[i].properties.district]) {
+	      	ret.push(feature[i]);
 	      } 
 	  }
 
 	    // we have our result!
+	    console.log(ret)
 	    return ret;
 	};
 })

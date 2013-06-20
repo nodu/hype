@@ -1,8 +1,11 @@
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
-  <meta charset="utf-8">
   <title>HYPE!</title>
+  <meta name=”description” content=””/>
+  <meta name=”keywords” content=”hong kong, events, location, map, to do, itinerary, search” />
+  <meta charset="utf-8">
+  <meta name=”robots” content=”index, follow, noarchive” />
   <link rel="stylesheet" href="css/bootstrap.css"/>
   <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/leaflet.css"/>
@@ -10,7 +13,7 @@
   <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" /> -->
   <link rel="stylesheet" href="css/app.css"/>
   <link href='http://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
-  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular1.0.7.js"></script>
   <script src="js/uiUnique.js"></script>
 
   <!-- <script src="js/angularUI.js"></script> -->
@@ -32,8 +35,8 @@
 
       <leaflet defaults="defaults" center="center"></leaflet>
 
-        <button class="nav_toggle btn toggle" ng-click="navOpen()"><i class="icon-search icon-5x"></i></button> 
-      <nav class="nav">
+        <button class="nav_toggle btn toggle" ng-click="navOpen()" ><i class="icon-search icon-5x"></i></button> 
+      <nav class="nav" ng-animate="'animate'">
         <div class="" >
         <!-- <div class="logoDiv" > -->
           <div>
@@ -62,7 +65,8 @@
           <!-- <div ng-repeat="dist in districts"> -->
           <div ng-repeat="dist in changer| unique:'properties.district'">
             <label class="checkbox" for="{{dist}}">             
-              <input type="checkbox" ng-model="dist.checked" name="group" id="{{dist}}" ng-true-value="dist"/>{{dist.properties.district}}
+              <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" />{{dist.properties.district}}
+              <!-- ng-true-value="dist" -->
               <!-- ng-model="districtSelect[dist]" -->
               <!-- {{districtSelect[dist]}} -->
             </label>
@@ -85,6 +89,15 @@
         </select>
         {{districtSelect}} -->
         <!-- <br> -->
+        <div ng-repeat="dist in changer| unique:'properties.district'">
+            <label class="checkbox" for="{{dist}}">             
+              <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" ng-true-value="dist"/>{{dist.properties.district}}
+              
+              <!-- ng-model="districtSelect[dist]" -->
+              <!-- {{districtSelect[dist]}} -->
+            </label>
+            <!-- {{districtSelect}} -->
+          </div>
         <div>
           <div ng-repeat="bar in changer | unique:'properties.tags[1]'">
             <input type="checkbox" ng-checked="bar.checked" ng-model="bar.checked"> 
@@ -123,15 +136,12 @@
       </header>
 
 
-      
+
+
 
 
       <button class="content_toggle btn toggle" ng-click="contentOpen()"><i class="icon-reorder icon-5x"></i></button> 
       <!-- animate="down"  Removed -->
-
-
-
-
 
 
       <div class="content" changeIcon>
@@ -140,15 +150,10 @@
         </div>
 
         <accordion close-others="oneAtATime">
-          <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()"> -->
           <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-          <accordion-group ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureDistrict" is-open="opt.contentClickAddMarker(feat)">
-          
-          
-
-
-          <!-- | dis | selectedFeatureDistrict -->
-           <accordion-heading class="derp">
+          <accordion-group ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureTags" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'">
+            
+           <accordion-heading>
             {{feat.properties.name}} <i class="icon-chevron-down"></i>
            </accordion-heading>
           <div ng-cloak> 
@@ -176,13 +181,18 @@
             <!-- <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p> -->
             <p>{{feat.properties.tags[1]}} {{feat.properties.district}}</p>
             <!-- <p>Checked: {{feat.checked}}</p> -->
-            
-            
-            
           </div>
         </accordion-group>
       </accordion>
     </div>
+
+
+
+
+
+
+
+
     <footer>
 
 
