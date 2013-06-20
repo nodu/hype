@@ -113,6 +113,7 @@ filtering by ngmodel="districtSelect" doesn't work....
 * map zoom lvl on mobile?
 * auto map markers on accordion click
 * add watch for checkboxes
+* Change class to icon-chevron-up on click "angular on click change class"
 
 Issues
 * Alert's don't stack vertically and seem to pause the timeout of the previous alert.

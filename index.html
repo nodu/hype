@@ -32,10 +32,15 @@
 
       <leaflet defaults="defaults" center="center"></leaflet>
 
-        <button class="nav_toggle btn" ng-click="navOpen()"><i class="icon-search icon-5x"></i></button> 
+        <button class="nav_toggle btn toggle" ng-click="navOpen()"><i class="icon-search icon-5x"></i></button> 
       <nav class="nav">
-        <div id="logo">
+        <div class="" >
+        <!-- <div class="logoDiv" > -->
+          <div>
+          <h3 class="fittext">
           Hype<span>!</span>
+          </h3>
+          </div>
         </div>
         <div id="buttons">
           <!-- <button class="btn btn-primary" ng-click="">Log In</button>  -->
@@ -54,9 +59,12 @@
           <accordion-heading>
             District <i class="icon-chevron-down"></i>
           </accordion-heading>
-          <div ng-repeat="dist in districts">
-            <label class="checkbox" for="{{dist}}">{{dist}}              
-              <input type="checkbox" ng-model="districtSelect[dist]" name="group" id="{{dist}}" />
+          <!-- <div ng-repeat="dist in districts"> -->
+          <div ng-repeat="dist in changer| unique:'properties.district'">
+            <label class="checkbox" for="{{dist}}">             
+              <input type="checkbox" ng-model="dist.checked" name="group" id="{{dist}}" ng-true-value="dist"/>{{dist.properties.district}}
+              <!-- ng-model="districtSelect[dist]" -->
+              <!-- {{districtSelect[dist]}} -->
             </label>
             <!-- {{districtSelect}} -->
           </div>
@@ -72,16 +80,17 @@
               Bars <i class="icon-chevron-down"></i>
         </accordion-heading>
       <form name="myForm" ng-cloak>
-        <select id="district-select" ng-model="districtSelect" ng-options="district for district in districts">
+        <!-- <select id="district-select" ng-model="districtSelect" ng-options="district for district in districts">
           <option value="">District</option>
         </select>
-        {{districtSelect}}
-        <br>
+        {{districtSelect}} -->
+        <!-- <br> -->
         <div>
           <div ng-repeat="bar in changer | unique:'properties.tags[1]'">
             <input type="checkbox" ng-checked="bar.checked" ng-model="bar.checked"> 
             {{bar.properties.tags[1] | capArray}}
-            {{bar.checked}}
+            <!-- {{bar.checked}} -->
+            <!-- {{bar}} -->
           </div>
 
           <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)">
@@ -105,9 +114,11 @@
 </nav>
       <header>
         <div id="topBar">
-         <div id="logo">
+         <div class="logo">
           Hype<span>!</span>
         </div>
+        <button id="itinerary" class="btn btn-inverse" ng-click="openItinerary()">Itinerary</button>
+
         </div>
       </header>
 
@@ -115,7 +126,7 @@
       
 
 
-      <button class="content_toggle btn" ng-click="contentOpen()"><i class="icon-reorder icon-5x"></i></button> 
+      <button class="content_toggle btn toggle" ng-click="contentOpen()"><i class="icon-reorder icon-5x"></i></button> 
       <!-- animate="down"  Removed -->
 
 
@@ -123,16 +134,21 @@
 
 
 
-      <div class="content">
+      <div class="content" changeIcon>
         <div>
-          Hype<span>!</span>Hits<span>!</span>
+          <h3 class="fittext">Hype<span>!</span>Hits<span>!</span></h3>
         </div>
 
         <accordion close-others="oneAtATime">
           <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in featDB | filter:opt.query" ng-click="onContentHeaderClick()"> -->
           <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-          <accordion-group ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureTags | selectedFeatureDistrict" is-open="opt.contentClickAddMarker(feat)">
-           <accordion-heading>
+          <accordion-group ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureDistrict" is-open="opt.contentClickAddMarker(feat)">
+          
+          
+
+
+          <!-- | dis | selectedFeatureDistrict -->
+           <accordion-heading class="derp">
             {{feat.properties.name}} <i class="icon-chevron-down"></i>
            </accordion-heading>
           <div ng-cloak> 
@@ -158,7 +174,7 @@
             </div>
 
             <!-- <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p> -->
-            <!-- <p>{{feat.properties.tags[1]}}</p> -->
+            <p>{{feat.properties.tags[1]}} {{feat.properties.district}}</p>
             <!-- <p>Checked: {{feat.checked}}</p> -->
             
             

@@ -5,6 +5,7 @@
       "properties": {
         "new": "true",
         "category": "new",
+        "district": "Central",
         "picture": "http://placehold.it/32x32",
         "name": "Oldman NEW!",
         "phone": "877-524-36762",

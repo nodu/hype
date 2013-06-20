@@ -4,6 +4,26 @@
 
 
 angular.module('myApp.directives', [])
+.directive('changeIcon', function(injectables){
+	var linkFN;
+	linkFN = function(scope, element, attrs){
+		element.bind('click', function(){
+			console.log(this)
+			console.log('derp')
+		})
+	// element.children().toggleClass('icon-chevron-down');
+	// element.children().toggleClass('icon-chevron-up')
+	// scope.shit = function(){console.log("derp!")};
+	// element.bind("mouseenter", scope.shit)
+		// document.getElementsByClassName("derp").toggleClass('icon-chevron-down')
+	}
+	return {
+		replace: true,
+		restrict: 'A',
+		link: linkFN
+	}
+	
+})
 .directive('animate', function() {
 	var linkFN;
 	linkFN = function (scope, element, attrs){

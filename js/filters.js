@@ -54,8 +54,12 @@ angular.module('myApp.filters', [])
 		var len;
 
 	    // get customers that have been checked
-	    // var checkedDist = $filter('filter')(feature, {checked: true});
-	    var checkedDist = [];
+	    var checkedDist = $filter('filter')(feature, {checked: "dist"});
+
+// Add ng-checked="dist" then filter by dist! 
+
+
+	    // var checkedDist = [];
 	    // var checkedDist = ["pie", "doh" ]
 
 	    // for (var i = 0; i < checkedDist.length; i++) {
@@ -70,16 +74,16 @@ angular.module('myApp.filters', [])
 	    }
 	    
 	    // get all the unique cities that come from these checked customers
-	  //   var tagList = {};
-	  //   for(var i = 0, len = checkedDist.length; i < len; ++i) {
+	    var tagList = {};
+	    for(var i = 0, len = checkedDist.length; i < len; ++i) {
 	  //     // if this checked customers cities isn't already in the cities object 
 	  //     // add it
-	  //     if(!tagList.hasOwnProperty(checkedDist[i].properties.tags[1])) {
-	  //     	tagList[checkedDist[i].properties.tags[1]] = true;
-	  //     }
-	  //     console.log(tagList)
+	      if(!tagList.hasOwnProperty(checkedDist[i].properties.district)) {
+	      	tagList[checkedDist[i].properties.district] = true;
+	      }
+	      console.log(tagList)
 
-	  // }
+	  }
 
 	    // Now that we have the cities that come from the checked customers, we can
 	    //get all customers from those cities and return them
@@ -87,8 +91,8 @@ angular.module('myApp.filters', [])
 	    for(var i = 0, len = feature.length;  i < len; ++i) {
 	      // If this customer's city exists in the cities object, add it to the 
 	      // return array
-	      if(feature[i].properties.district == districtSelect) {
-	      	ret.push(feature[i]);
+	      if(tagList[i].properties.district) {
+	      	ret.push(tagList[i]);
 	      } 
 	  }
 

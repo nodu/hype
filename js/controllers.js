@@ -189,7 +189,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		$scope.save = function(json) {
 			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
 			$scope.textFilter = $filter('filter')(json, $scope.opt.query);
-			$scope.savedJSON = $filter('selectedFeatureDistrict')($scope.textFilter);
+			$scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
 			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
 			// ng-repeat="feat in featDB | selectedFeatureTags | filter:opt.query"
 			var markerList = [];
@@ -198,9 +198,11 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 				var marker = L.marker([$scope.savedJSON[obj].geometry.coordinates[1], 
 					$scope.savedJSON[obj].geometry.coordinates[0]]);
 
-				marker.bindPopup($scope.savedJSON[obj].properties.name +"<br>"+
-								 $scope.savedJSON[obj].properties.category + 
-								'<button class="btn" onclick="my_scope2.addToIt(this, 2500)">Save to itinerary</button>')
+				marker.bindPopup($scope.savedJSON[obj].properties.name)
+				 // +"<br>"+
+								 // $scope.savedJSON[obj].properties.category
+				 // + '<button class="btn" onclick="my_scope2.addToIt(this, 2500)">Save to itinerary</button>'
+
 				// .openPopup();
 				// Add other wanted properties here, popups, mouseover effects...
 				markerList.push(marker);
@@ -225,7 +227,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		// Alerts!
 		$scope.alerts = [];
 		$scope.addAlert = function(feat, timeout) {
-			var alertSuc = {type: 'success', msg: 'Added! '+ feat.properties.name};    
+			var alertSuc = {type: 'success', msg: 'Added '+ feat.properties.name + '!'};    
 			$scope.alerts.push(alertSuc);
 			
 			if (timeout) {
@@ -272,13 +274,18 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		}
 			);
 
-		$scope.$watch("bar.checked", function (value){
-		
-			console.log(value)
-			$scope.save($scope.changer)
+		// $scope.$watch("barsDB[1].checked", function (value){
+		// 	// for (var i = 0; i < $scope.changer.length; i++) {
+		// 	// 	if ($scope.changer[i]
+		// 	// };
+	 //    	// var checkedBar = $filter('filter')(value, {checked: true});
 
-		}
-			);
+
+		// 	console.log("bar.checked " + value)
+		// 	$scope.save($scope.changer)
+
+		// }
+		// 	);
 		// $scope.save($scope.changer)
 
 	}]);
