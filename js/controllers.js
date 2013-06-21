@@ -191,7 +191,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
 			$scope.distFilter = $filter('dis')(json)
 			// $scope.savedJSON = $filter('dis')(json)
-			console.log($scope.distFilter)
+			console.log("this is the dis filter"+$scope.distFilter)
 			$scope.textFilter = $filter('filter')($scope.distFilter, $scope.opt.query);
 			
 			if (json[0].properties.category == 'Beaches') {
@@ -205,9 +205,9 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 				var marker = L.marker([$scope.savedJSON[obj].geometry.coordinates[1], 
 					$scope.savedJSON[obj].geometry.coordinates[0]]);
 
-				marker.bindPopup($scope.savedJSON[obj].properties.name)
-				 // +"<br>"+
-								 // $scope.savedJSON[obj].properties.category
+				marker.bindPopup($scope.savedJSON[obj].properties.name
+				 +"<br>"+
+								 $scope.savedJSON[obj].properties.district)
 				 // + '<button class="btn" onclick="my_scope2.addToIt(this, 2500)">Save to itinerary</button>'
 
 				// .openPopup();

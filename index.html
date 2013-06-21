@@ -151,10 +151,13 @@
 
         <accordion close-others="oneAtATime">
           <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-          <accordion-group ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureDistrict" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'">
+          <accordion-group ng-repeat="feat in changer | filter:opt.query | dis | selectedFeatureDistrict" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'">
             
            <accordion-heading>
-            {{feat.properties.name}} <i class="icon-chevron-down"></i>
+           {{feat.properties.district}}
+           {{feat.properties.tags[1]}}
+            <!-- {{feat.properties.name}}  -->
+            <i class="icon-chevron-down"></i>
            </accordion-heading>
           <div ng-cloak> 
             <div class="contentAddress">
