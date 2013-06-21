@@ -117,3 +117,7 @@ filtering by ngmodel="districtSelect" doesn't work....
 
 Issues
 * Alert's don't stack vertically and seem to pause the timeout of the previous alert.
+* Something overwrites the checked state of district accordion when clicking another accordion!
+* * connecting a checkbox in another accordion with another Make new ...
+* Current filtration is not dynamic with ng-repeat, doesn't  utilize | unique: property.district and does not offer multiple filters in each category, ie, (wan chai + western) results in 0 results.  western + (disco + sports)=0results
+* If keeping dumb filtration with ng-true-value, then ng-true-values will need to be super unique to avoid filtering other text

@@ -186,9 +186,20 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			// return true
 		});
 
+
+
 		$scope.save = function(json) {
 			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
-			$scope.distFilter = $filter('dis')(json)
+			$scope.something = $filter('filter')(json, $scope.opt.sa)
+			$scope.something2 = $filter('filter')($scope.something, $scope.opt.ea)
+			$scope.something3 = $filter('filter')($scope.something2, $scope.opt.we)
+			$scope.something4 = $filter('filter')($scope.something3, $scope.opt.wc)
+			$scope.something5 = $filter('filter')($scope.something4, $scope.opt.ce)
+			$scope.something6 = $filter('filter')($scope.something5, $scope.opt.di)
+			$scope.something7 = $filter('filter')($scope.something6, $scope.opt.sp)
+			$scope.something8 = $filter('filter')($scope.something7, $scope.opt.cl)
+			$scope.something9 = $filter('filter')($scope.something8, $scope.opt.pu)
+			$scope.distFilter = $filter('dis')($scope.something9)
 			// $scope.savedJSON = $filter('dis')(json)
 			console.log($scope.distFilter)
 			$scope.textFilter = $filter('filter')($scope.distFilter, $scope.opt.query);
@@ -276,6 +287,35 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 		}
 			);
+
+		$scope.$watch('opt.sa', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.$watch('opt.ea', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.$watch('opt.we', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.$watch('opt.ce', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.$watch('opt.wc', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.$watch('opt.di', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.$watch('opt.cl', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.$watch('opt.pu', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.$watch('opt.sp', function (value){
+			$scope.save($scope.changer)
+		})
+
 		// $scope.$watch("")
 
 		// $scope.$watch("barsDB[1].checked", function (value){

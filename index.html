@@ -13,7 +13,7 @@
   <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" /> -->
   <link rel="stylesheet" href="css/app.css"/>
   <link href='http://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
-  <script src="lib/angular/angular1.0.7.js"></script>
+  <script src="lib/angular/angular.js"></script>
   <script src="js/uiUnique.js"></script>
 
   <!-- <script src="js/angularUI.js"></script> -->
@@ -58,10 +58,21 @@
         </div> 
         <div>  
          <accordion close-others="oneAtATime">
-          <accordion-group id="districtAccordion">
-          <accordion-heading>
-            District <i class="icon-chevron-down"></i>
+          <accordion-group id="districtAccordion" is-open="opt.openBars" change-icons>
+          <accordion-heading >
+            District <i class="icon-chevron-down" ></i>
           </accordion-heading>
+          <input type="checkbox" ng-true-value="southern" ng-false-value="" ng-model="opt.sa"> Southern:{{opt.sa}}<br>
+          <input type="checkbox" ng-true-value="eastern" ng-false-value="" ng-model="opt.ea"> Eastern:{{opt.ea}}<br>
+          <input type="checkbox" ng-true-value="western" ng-false-value="" ng-model="opt.we"> Western:{{opt.we}}<br>
+          <input type="checkbox" ng-true-value="central" ng-false-value="" ng-model="opt.ce"> Central:{{opt.ce}}<br>
+          <input type="checkbox" ng-true-value="wan chai" ng-false-value="" ng-model="opt.wc"> Wan Chai:{{opt.wc}}<br><br>
+          <input type="checkbox" ng-true-value="disco" ng-false-value="" ng-model="opt.di"> Disco:{{opt.di}}<br>
+          <input type="checkbox" ng-true-value="sports" ng-false-value="" ng-model="opt.sp"> Sports:{{opt.sp}}<br>
+          <input type="checkbox" ng-true-value="club" ng-false-value="" ng-model="opt.cl"> Club:{{opt.cl}}<br>
+          <input type="checkbox" ng-true-value="pub" ng-false-value="" ng-model="opt.pu"> Pup:{{opt.pu}}<br>
+
+
           <!-- <div ng-repeat="dist in districts"> -->
           <div ng-repeat="dist in changer| unique:'properties.district'">
             <label class="checkbox" for="{{dist}}">             
@@ -79,7 +90,7 @@
           </accordion-heading>
         </accordion-group>
 
-      <accordion-group is-open="opt.openBars">
+      <accordion-group >
         <accordion-heading>
               Bars <i class="icon-chevron-down"></i>
         </accordion-heading>
@@ -144,17 +155,20 @@
       <!-- animate="down"  Removed -->
 
 
-      <div class="content" changeIcon>
+      <div class="content">
         <div>
           <h3 class="fittext">Hype<span>!</span>Hits<span>!</span></h3>
         </div>
 
         <accordion close-others="oneAtATime">
           <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-          <accordion-group ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureTags" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'">
+          <accordion-group  ng-repeat="feat in changer | filter:opt.sa | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query | selectedFeatureTags" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'" change-icons>
             
            <accordion-heading>
-            {{feat.properties.name}} <i class="icon-chevron-down"></i>
+            {{feat.properties.district}}
+            {{feat.properties.tags[1]}}
+            <!-- {{feat.properties.name}} -->
+             <i class="icon-chevron-down"></i>
            </accordion-heading>
           <div ng-cloak> 
             <div class="contentAddress">
