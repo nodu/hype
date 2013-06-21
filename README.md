@@ -121,3 +121,8 @@ Issues
 * * connecting a checkbox in another accordion with another Make new ...
 * Current filtration is not dynamic with ng-repeat, doesn't  utilize | unique: property.district and does not offer multiple filters in each category, ie, (wan chai + western) results in 0 results.  western + (disco + sports)=0results
 * If keeping dumb filtration with ng-true-value, then ng-true-values will need to be super unique to avoid filtering other text
+
+
+* Find a way to add is-open attributes on accordion headers inside ng-repeat, that way I can add click to open popup
+* And I would also be able to add change-icon directive.  I beilieve this will be accomplished with something like cElement for directives...
+* Add compile attributes for each ng-repeat

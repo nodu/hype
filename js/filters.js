@@ -3,6 +3,27 @@
 /* Filters */
 
 angular.module('myApp.filters', [])
+// .filter('distCheckbox', function($filter){
+// 	return function(array){
+// 		var southern = $filter('filter')(array, {properties: {district : 'southern'}})
+		// var eastern = $filter('filter')(feature, 'eastern')
+		// var western = $filter('filter')(feature, 'western')
+		// var wanchai = $filter('filter')(feature, 'wan chai')
+		// var central = $filter('filter')(feature, 'central')
+
+		// for (var i = 0; i < southern.length; i++) {
+			// console.log(southern[i])
+		// };
+
+		// var retArray = [];
+		// var checkedDist;
+  // if(checkedDist.length === 0) {
+	    	// return feature;
+	    // }
+		// return retArray;
+// 	}
+// })
+
 .filter('selectedFeatureTags', function($filter) {
 	return function(feature) {
 		var len;

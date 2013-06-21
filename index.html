@@ -62,7 +62,7 @@
           <accordion-heading >
             District <i class="icon-chevron-down" ></i>
           </accordion-heading>
-          <input type="checkbox" ng-true-value="southern" ng-false-value="" ng-model="opt.sa"> Southern:{{opt.sa}}<br>
+          <input type="checkbox" ng-true-value="southern" ng-false-value="" ng-model="opt.so"> Southern:{{opt.so}}<br>
           <input type="checkbox" ng-true-value="eastern" ng-false-value="" ng-model="opt.ea"> Eastern:{{opt.ea}}<br>
           <input type="checkbox" ng-true-value="western" ng-false-value="" ng-model="opt.we"> Western:{{opt.we}}<br>
           <input type="checkbox" ng-true-value="central" ng-false-value="" ng-model="opt.ce"> Central:{{opt.ce}}<br>
@@ -76,7 +76,7 @@
           <!-- <div ng-repeat="dist in districts"> -->
           <div ng-repeat="dist in changer| unique:'properties.district'">
             <label class="checkbox" for="{{dist}}">             
-              <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" />{{dist.properties.district}}
+              <input type="checkbox" ng-model="dist.dist" ng-true-value="{{dist.properties.district}}" name="group" id="{{dist}}" />{{dist.properties.district}}
               <!-- ng-true-value="dist" -->
               <!-- ng-model="districtSelect[dist]" -->
               <!-- {{districtSelect[dist]}} -->
@@ -161,9 +161,8 @@
         </div>
 
         <accordion close-others="oneAtATime">
-          <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-          <accordion-group  ng-repeat="feat in changer | filter:opt.sa | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query | selectedFeatureTags" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'" change-icons>
-            
+          <!-- <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query | selectedFeatureTags" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'" change-icons> -->
+          <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'" change-icons>
            <accordion-heading>
             {{feat.properties.district}}
             {{feat.properties.tags[1]}}
