@@ -53,7 +53,7 @@ angular.module('myApp.filters', [])
 	    return ret;
 	};
 })
-.filter('selectedFeatureDistrict', function($filter) {
+.filter('selectedFeatureDistrictBarBeach', function($filter) {
 	return function(feature) {
 		var len;
 		// console.log("feat: " + )

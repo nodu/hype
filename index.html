@@ -58,10 +58,11 @@
         </div> 
         <div>  
          <accordion close-others="oneAtATime">
-          <accordion-group id="districtAccordion" is-open="opt.openBars">
+          <accordion-group id="districtAccordion" is-open="opt.openBar">
           <accordion-heading>
             District <i class="icon-chevron-down"></i>
           </accordion-heading>
+          <!-- <input type="checkbox" ng-true-value="southern" ng-model="opt.sa"> Sa: on false, doesn't reload all accordions on content.  Successfully filters based on ng-true-value.  Could use this to filter districts w/o ng-repeat. And %index could be a way of added a watch on repeated checkboxes. -->
           <!-- <div ng-repeat="dist in districts"> -->
           <div ng-repeat="dist in changer| unique:'properties.district'">
             <label class="checkbox" for="{{dist}}">             
@@ -89,9 +90,10 @@
         </select>
         {{districtSelect}} -->
         <!-- <br> -->
+        <!-- <input type="checkbox" ng-true-value="southern" ng-model="opt.sa"> Sa: on false, doesn't reload all accordions on content.  Successfully filters based on ng-true-value.  Could use this to filter districts w/o ng-repeat. And %index could be a way of added a watch on repeated checkboxes. -->
         <div ng-repeat="dist in changer| unique:'properties.district'">
             <label class="checkbox" for="{{dist}}">             
-              <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" ng-true-value="dist"/>{{dist.properties.district}}{{dist.dist}}
+              <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" ng-true-value="dist"/>{{dist.properties.district}}{{dist.dist}}{{$index}}
               
               <!-- ng-model="districtSelect[dist]" -->
               <!-- {{districtSelect[dist]}} -->
@@ -151,7 +153,7 @@
 
         <accordion close-others="oneAtATime">
           <!-- <accordion-group heading="{{group.properties.name}}" ng-repeat="group in builtList" ng-click="onContentHeaderClick()"> -->
-          <accordion-group ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureDistrict" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'">
+          <accordion-group ng-repeat="feat in changer | dis | filter:opt.query | selectedFeatureDistrictBarBeach" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'">
             
            <accordion-heading>
             {{feat.properties.name}} <i class="icon-chevron-down"></i>

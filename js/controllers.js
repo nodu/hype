@@ -189,7 +189,8 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		$scope.save = function(json) {
 			console.log("json: " + json[0].properties.category)
 			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
-			$scope.distFilter = $filter('dis')(json)
+			$scope.wat = $filter('filter')(json, $scope.opt.sa)
+			$scope.distFilter = $filter('dis')($scope.wat)
 			// $scope.savedJSON = $filter('dis')(json)
 			console.log($scope.distFilter)
 			$scope.textFilter = $filter('filter')($scope.distFilter, $scope.opt.query);
@@ -281,9 +282,10 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		}
 			);
 
-		$scope.$watch("$scope.changer.dist", function (value){
+		$scope.$watch("opt.sa", function (value){
 			console.log(value)
 			$scope.save($scope.changer)
+			$scope.$apply()
 		})
 		// $scope.$watch("")
 
