@@ -28,23 +28,17 @@
 
    </head>
    <body ng-controller="appController"> 
-    <!-- This doesn't seem pretty, not sure how to correctly add 2 app wide controllers -->
-    <!-- Putting them in the same ctrl doesn't seem modular, service for http? -->
-    <div ng-controller="getJSON_HTTP_Request">
+    <div>
       <div id="fb-root"></div>
 
       <leaflet defaults="defaults" center="center"></leaflet>
 
-        <button class="nav_toggle btn toggle" ng-click="navOpen()" ><i class="icon-search icon-5x"></i></button> 
+      <button class="nav_toggle btn toggle" ng-click="navOpen()" ><i class="icon-search icon-5x"></i></button> 
       <nav class="nav" ng-animate="'animate'">
-        <div class="" >
-        <!-- <div class="logoDiv" > -->
-          <div>
-          <h3 class="fittext">
-          Hype<span>!</span>
-          </h3>
+          <!-- <div class="logoDiv" > -->
+          <div class="logoDiv logo">
+            <h3>Hype<span>!</span></h3>
           </div>
-        </div>
         <div id="buttons">
           <!-- <button class="btn btn-primary" ng-click="">Log In</button>  -->
           <div data-facebook='<%= Figaro.env.facebook_key %>'>
@@ -58,151 +52,158 @@
         </div> 
         <div>  
          <accordion close-others="oneAtATime">
-          <accordion-group id="districtAccordion" is-open="opt.openBars" change-icons>
+          <accordion-group id="districtAccordion" change-icons>
           <accordion-heading>
-            District <i class="icon-chevron-down" ></i>
-          </accordion-heading>
-          <input type="checkbox" ng-true-value="southern" ng-false-value="" ng-model="opt.so"> Southern:{{opt.so}}<br>
-          <input type="checkbox" ng-true-value="eastern" ng-false-value="" ng-model="opt.ea"> Eastern:{{opt.ea}}<br>
-          <input type="checkbox" ng-true-value="western" ng-false-value="" ng-model="opt.we"> Western:{{opt.we}}<br>
-          <input type="checkbox" ng-true-value="central" ng-false-value="" ng-model="opt.ce"> Central:{{opt.ce}}<br>
-          <input type="checkbox" ng-true-value="wan chai" ng-false-value="" ng-model="opt.wc"> Wan Chai:{{opt.wc}}<br><br>
-          <input type="checkbox" ng-true-value="disco" ng-false-value="" ng-model="opt.di"> Disco:{{opt.di}}<br>
-          <input type="checkbox" ng-true-value="sports" ng-false-value="" ng-model="opt.sp"> Sports:{{opt.sp}}<br>
-          <input type="checkbox" ng-true-value="club" ng-false-value="" ng-model="opt.cl"> Club:{{opt.cl}}<br>
-          <input type="checkbox" ng-true-value="pub" ng-false-value="" ng-model="opt.pu"> Pup:{{opt.pu}}<br>
-
-
-          <!-- <div ng-repeat="dist in districts"> -->
-          <div ng-repeat="dist in changer| unique:'properties.district'">
-            <label class="checkbox" for="{{dist}}">             
-              <input type="checkbox" ng-model="dist.dist" ng-true-value="{{dist.properties.district}}" name="group" id="{{dist}}" />{{dist.properties.district}}
-              <!-- ng-true-value="dist" -->
-              <!-- ng-model="districtSelect[dist]" -->
-              <!-- {{districtSelect[dist]}} -->
-            </label>
-            <!-- {{districtSelect}} -->
-          </div>
-        </accordion-group>
-        <accordion-group id="navTop" is-open="opt.openNew">
-          <accordion-heading>
-            New! <i class="icon-chevron-down"></i>
-          </accordion-heading>
-        </accordion-group>
-
-      <accordion-group >
-        <accordion-heading>
-              Bars <i class="icon-chevron-down"></i>
+          District <i class="icon-chevron-down" ></i>
         </accordion-heading>
-      <form name="myForm" ng-cloak>
+        <label><input type="checkbox" ng-true-value="southern" ng-false-value="" ng-model="opt.so"> Southern</label>
+        <label><input type="checkbox" ng-true-value="eastern" ng-false-value="" ng-model="opt.ea"> Eastern</label>
+        <label><input type="checkbox" ng-true-value="western" ng-false-value="" ng-model="opt.we"> Western</label>
+        <label><input type="checkbox" ng-true-value="central" ng-false-value="" ng-model="opt.ce"> Central</label>
+        <label><input type="checkbox" ng-true-value="wan chai" ng-false-value="" ng-model="opt.wc"> Wan Chai</label>
+        <label><input type="checkbox" ng-true-value="sai kung" ng-false-value="" ng-model="opt.sk"> Sai Kung</label>
+        <label><input type="checkbox" ng-true-value="tsuen wan" ng-false-value="" ng-model="opt.tw"> Tsuen Wan</label>
+        <label><input type="checkbox" ng-true-value="tuen mun" ng-false-value="" ng-model="opt.tm"> Tuen Mun</label>
+        <label><input type="checkbox" ng-true-value="islands" ng-false-value="" ng-model="opt.is"> Islands</label>
+        <button class="btn reset btn-small" ng-click="resetDistricts()">Reset</button>
+
+
+
+
+        <!-- <div ng-repeat="dist in districts"> -->
+        <!-- <div ng-repeat="dist in changer| unique:'properties.district'"> -->
+          <!-- <label class="checkbox" for="{{dist}}">              -->
+            <!-- <input type="checkbox" ng-model="dist.dist" ng-true-value="{{dist.properties.district}}" name="group" id="{{dist}}" />{{dist.properties.district}} -->
+            <!-- ng-true-value="dist" -->
+            <!-- ng-model="districtSelect[dist]" -->
+            <!-- {{districtSelect[dist]}} -->
+          <!-- </label> -->
+          <!-- {{districtSelect}} -->
+        <!-- </div> -->
+      </accordion-group>
+      <accordion-group id="navTop" is-open="opt.openNew">
+      <accordion-heading>
+      New! <i class="icon-chevron-down"></i>
+    </accordion-heading>
+  </accordion-group>
+
+  <accordion-group is-open="opt.openBars">
+  <accordion-heading>
+  Bars <i class="icon-chevron-down"></i>
+</accordion-heading>
+<form name="myForm" ng-cloak>
         <!-- <select id="district-select" ng-model="districtSelect" ng-options="district for district in districts">
           <option value="">District</option>
         </select>
         {{districtSelect}} -->
         <!-- <br> -->
-        <div ng-repeat="dist in changer| unique:'properties.district'">
-            <label class="checkbox" for="{{dist}}">             
-              <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" ng-true-value="dist"/>{{dist.properties.district}}
-              
-              <!-- ng-model="districtSelect[dist]" -->
-              <!-- {{districtSelect[dist]}} -->
-            </label>
-            <!-- {{districtSelect}} -->
-          </div>
+        <!-- <div ng-repeat="dist in changer| unique:'properties.district'"> -->
+          <!-- <label class="checkbox" for="{{dist}}">              -->
+            <!-- <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" ng-true-value="dist"/>{{dist.properties.district}} -->
+
+            <!-- ng-model="districtSelect[dist]" -->
+            <!-- {{districtSelect[dist]}} -->
+          <!-- </label> -->
+          <!-- {{districtSelect}} -->
+        <!-- </div> -->
         <div>
-          <div ng-repeat="bar in changer | unique:'properties.tags[1]'">
-            <input type="checkbox" ng-checked="bar.checked" ng-model="bar.checked"> 
-            {{bar.properties.tags[1] | capArray}}
+          <!-- <div ng-repeat="bar in changer | unique:'properties.tags[1]'"> -->
+          <div>
+            <label><input type="checkbox" ng-true-value="disco" ng-false-value="" ng-model="opt.di"> Disco<br></label>
+            <label><input type="checkbox" ng-true-value="sports" ng-false-value="" ng-model="opt.sp"> Sports</label>
+            <label><input type="checkbox" ng-true-value="club" ng-false-value="" ng-model="opt.cl"> Club</label>
+            <label><input type="checkbox" ng-true-value="pub" ng-false-value="" ng-model="opt.pu"> Pub</label>
+            <!-- {{bar.properties.tags[1] | capArray}} -->
             <!-- {{bar.checked}} -->
             <!-- {{bar}} -->
           </div>
-
-          <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)">
+          <button class="btn reset btn-small" ng-click="resetTags()">Reset</button>
+          <!-- <input id="barSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)"> -->
         </div>
       </form>
     </accordion-group>
     <accordion-group id="navBottom" is-open="opt.openBeaches">
-      <accordion-heading>
-        Beaches <i class="icon-chevron-down"></i>
-      </accordion-heading>
-    <div ng-repeat="beach in changer | unique:'properties.district'">
-      <input type="checkbox" ng-checked="beach.checked" ng-model="beach.checked">
-      {{beach.properties.district | lowercase | capArray}}
-    </div>
-    <input id="beachSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)">
+    <accordion-heading>
+    Beaches <i class="icon-chevron-down"></i>
+  </accordion-heading>
+  <div ng-repeat="beach in changer | unique:'properties.district'">
+    <input type="checkbox" ng-checked="beach.checked" ng-model="beach.checked">
+    {{beach.properties.district | lowercase | capArray}}
+  </div>
+  <!-- <input id="beachSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)"> -->
 
-  </accordion-group>
+</accordion-group>
 </accordion>
 
 </div>
 </nav>
-      <header>
-        <div id="topBar">
-         <div class="logo">
-          Hype<span>!</span>
-        </div>
-        <button id="itinerary" class="btn btn-inverse" ng-click="openItinerary()">Itinerary</button>
+<header>
+  <div id="topBar">
+   <div class="logo">
+    Hype<span>!</span>
+  </div>
+  <button id="itinerary" class="btn btn-inverse" ng-click="openItinerary()">Itinerary</button>
 
-        </div>
-      </header>
-
-
+</div>
+</header>
 
 
 
 
-      <button class="content_toggle btn toggle" ng-click="contentOpen()"><i class="icon-reorder icon-5x"></i></button> 
-      <!-- animate="down"  Removed -->
 
 
-      <div class="content">
-        <div>
-          <h3 class="fittext">Hype<span>!</span>Hits<span>!</span></h3>
-        </div>
+<button class="content_toggle btn toggle" ng-click="contentOpen()"><i class="icon-reorder icon-5x"></i></button> 
+<!-- animate="down"  Removed -->
 
-        <accordion close-others="oneAtATime">
-          <!-- <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query | selectedFeatureTags" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'" change-icons> -->
-          <!-- <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query" is-open="opt.contentClickAddMarker()" ng-animate="'animate'" change-icons> -->
-           <!-- | distTagFilter  -->
-          <accordion-group  ng-repeat="feat in savedJSON" is-open="opt.contentClickAddMarker()" ng-animate="'animate'" change-icons>
-           <div class="THISHSHOULDBEEASYTOFIND XXXXXXXXXXXXXXX" style="background-color: black;">
-            <accordion-heading>
-            {{feat.properties.district}}
-            {{feat.properties.tags[1]}}
-            {{feat.properties.name}}
-             <i class="icon-chevron-down"></i>
-           </accordion-heading>
-          </div>
-          <div ng-cloak> 
-            <div class="contentAddress">
-              <p>{{feat.properties.address}}</p>
-            </div>
-            <div class="contentImg">
-              <img src="http://placehold.it/350x150">
-            </div>
-            <div class="contentDesc">
-              <p>{{feat.properties.about}}</p>
-            </div>
-            <div class="contentButtons">
-              <button class="btn" open-pop='{{feat.indexOf()}}'>Map!</button>
-              <button class="btn" ng-click="addToIt(feat, 2500)">Save</button>
-              <button class="btn" ng-click="addToIt(feat, 2500)">Contact</button>
-              <button class="btn" ng-click="addToIt(feat, 2500)">Taxi Card</button>
 
-            </div>
-            <div class="contentSocial">
-              <p>{{feat.properties.phone}}</p>
-              <p>{{feat.properties.email}}</p>
-            </div>
+<div class="content">
+  <div>
+    <h3 class="fittext">Hype<span>!</span>Hits<span>!</span></h3>
+  </div>
 
-            <!-- <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p> -->
-            <p>{{feat.properties.tags[1]}} {{feat.properties.district}}</p>
-            <!-- <p>Checked: {{feat.checked}}</p> -->
-          </div>
-        </accordion-group>
-      </accordion>
+  <accordion close-others="oneAtATime">
+    <!-- <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query | selectedFeatureTags" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'" change-icons> -->
+    <!-- <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query" is-open="opt.contentClickAddMarker()" ng-animate="'animate'" change-icons> -->
+    <!-- | distTagFilter  -->
+    <!-- filter:opt.pu | filter:opt.cl  | filter:opt.sp | filter:opt.di | filter:opt.so | filter:opt.ea | filter:opt.we  | filter:opt.wc |filter:opt.ce | filter:opt.sk | filter:opt.tw  | filter:opt.tm |filter:opt.is | -->
+    <accordion-group  ng-repeat="feat in savedJSON | selectedFeatureDistrict" is-open="opt.contentClickAddMarker()" ng-animate="'animate'" change-icons>
+    <div class="THISHSHOULDBEEASYTOFIND XXXXXXXXXXXXXXX" style="background-color: black;">
+      <accordion-heading>
+      {{feat.properties.district}}
+      {{feat.properties.tags[1]}}
+      {{feat.properties.name}}
+      <i class="icon-chevron-down"></i>
+    </accordion-heading>
+  </div>
+  <div ng-cloak> 
+    <div class="contentAddress">
+      <p>{{feat.properties.address}}</p>
+    </div>
+    <div class="contentImg">
+      <img src="http://placehold.it/350x150">
+    </div>
+    <div class="contentDesc">
+      <p>{{feat.properties.about}}</p>
+    </div>
+    <div class="contentButtons">
+      <button class="btn" open-pop='{{feat.indexOf()}}'>Map!</button>
+      <button class="btn" ng-click="addToIt(feat, 2500)">Save</button>
+      <button class="btn" ng-click="addToIt(feat, 2500)">Contact</button>
+      <button class="btn" ng-click="addToIt(feat, 2500)">Taxi Card</button>
+
+    </div>
+    <div class="contentSocial">
+      <p>{{feat.properties.phone}}</p>
+      <p>{{feat.properties.email}}</p>
     </div>
 
+    <!-- <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p> -->
+    <p>{{feat.properties.tags[1]}} {{feat.properties.district}}</p>
+    <!-- <p>Checked: {{feat.checked}}</p> -->
+  </div>
+</accordion-group>
+</accordion>
+</div>
 
 
 
@@ -210,46 +211,47 @@
 
 
 
-    <footer>
+
+<footer>
 
 
-      <div ng-cloak modal="itineraryOpen" close="closeItinerary()" options="opts">
-        <div class="modal-header">
-          <h4>Itinerary</h4>
-        </div>
-        <div class="modal-body">
-          <p ng-show="itinerary == false">Nothing to see here, move along</p>
-          <div ng-repeat="item in itinerary">
-            {{item.properties.name}} [<a href ng-click="removeIt(feat, 2500)">X</a>]
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-info" ng-click="save(itinerary)">Map It!</button>
-          <button class="btn btn-info" ng-click="closeItinerary()">Close</button>
-        </div>
+  <div ng-cloak modal="itineraryOpen" close="closeItinerary()" options="opts">
+    <div class="modal-header">
+      <h4>Itinerary</h4>
+    </div>
+    <div class="modal-body">
+      <p ng-show="itinerary == false">Nothing to see here, move along</p>
+      <div ng-repeat="item in itinerary">
+        {{item.properties.name}} [<a href ng-click="removeIt(feat, 2500)">X</a>]
       </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-info" ng-click="save(itinerary)">Map It!</button>
+      <button class="btn btn-info" ng-click="closeItinerary()">Close</button>
+    </div>
+  </div>
 
-      <div>
-        <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
-        <!-- <button id="alertBtn" class='btn' ng-click="addAlert(250)">Add Alert</button> -->
+  <div>
+    <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+    <!-- <button id="alertBtn" class='btn' ng-click="addAlert(250)">Add Alert</button> -->
+  </div>
+
+  <button id="credits" class="btn btn-medium" ng-click="open()">Credits</button>
+  <div ng-cloak modal="shouldBeOpen" close="close()" options="opts">
+    <div class="modal-header">
+      <h4>Credits</h4>
+    </div>
+    <div class="modal-body">
+      <p>Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,
+        <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
+        Imagery &copy; <a href="http://cloudmade.com">CloudMade</a></p>
       </div>
+      <div class="modal-footer">
+        <button class="btn btn-info" ng-click="close()">Ok!</button>
+      </div>
+    </div>
 
-      <button id="credits" class="btn btn-medium" ng-click="open()">Credits</button>
-      <div ng-cloak modal="shouldBeOpen" close="close()" options="opts">
-        <div class="modal-header">
-          <h4>Credits</h4>
-        </div>
-        <div class="modal-body">
-          <p>Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,
-            <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
-            Imagery &copy; <a href="http://cloudmade.com">CloudMade</a></p>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-info" ng-click="close()">Ok!</button>
-          </div>
-        </div>
-
-      </footer>
+  </footer>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
@@ -261,9 +263,10 @@
 <script src="js/angular-leaflet-directive.js"></script>
 <script src="js/app.js"></script>
 <script src="js/services.js"></script>
-<script src="js/controllers.js"></script>
-<script src="js/filters.js"></script>
 <script src="js/directives.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/controllers.js"></script>
+<!-- <script src="js/last.js"></script> -->
 </div>
 </body>
 </html>

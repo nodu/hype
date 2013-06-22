@@ -127,3 +127,13 @@ Issues
 * And I would also be able to add change-icon directive.  I beilieve this will be accomplished with something like cElement for directives...
 * Add compile attributes for each ng-repeat
 * So adding a attribute directive to a repeated accordion header is quite hard... can't solve
+
+
+* change of content div's repeater from changer to savedJSON breaks the map it! function, also this new implementation doesn't work with beaches...
+
+
+Changed content div input to changer, change district/bar isOpen to savedJson, add correct beach district filter to content div filter
+
+Add toggleClass icon chevron down/up to isOpen, so when user clicks another div it resets up chevron down
+
+Hmmmm something seems fishy, but changed div content repeater back to savedJSON (from changer) and now div content filtering works...

@@ -3,8 +3,11 @@
 
 
 /* Controllers */
-app.controller("appController", [ "$scope", function($scope, $filter) {
-	window.my_scope = $scope 
+app.controller("appController", ['$scope', '$filter', '$timeout', 'barsDB', 'beachesDB', 'newDB', 
+		function($scope, $filter, $timeout, barsDB, beachesDB, newDB){
+
+
+	window.myscope = $scope 
 	// For ng-show/ng-hide
 	$scope.truthy = true;
 	
@@ -96,14 +99,13 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
         }
     });
 
-}]);
 
 
 
-	// Should I separate this into a different controller?
-	app.controller("getJSON_HTTP_Request", ['$scope', '$filter', 'barsDB', 'beachesDB', 'newDB','$timeout', 
-		function($scope, $filter, barsDB, beachesDB, newDB, $timeout){
-			window.my_scope2 = $scope
+
+
+	
+	
 		// Get data from services
 		barsDB.get(function(data){
 			$scope.barsDB = data.data;
@@ -131,7 +133,10 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 
 		// Adding this line below, makes length errors from filter:21 go away...
+		// $scope.changer = JSON.parse(JSON.stringify(newDB));
 		$scope.changer = JSON.parse(JSON.stringify(newDB));
+
+
 
 		// $scope.changer;
 		// console.log($scope.changer)
@@ -173,6 +178,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		$scope.$watch('opt.openBars', function(isOpen){
 			if (isOpen) {
 				console.log('Bars group was opened'); 
+				// $scope.changer = JSON.parse(JSON.stringify($scope.scope));
 				$scope.changer = JSON.parse(JSON.stringify($scope.barsDB));
 				$scope.opt.query = [];
 
@@ -243,6 +249,10 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			$scope.districtFilter3 = $filter('filter')(json, $scope.opt.we)
 			$scope.districtFilter4 = $filter('filter')(json, $scope.opt.wc)
 			$scope.districtFilter5 = $filter('filter')(json, $scope.opt.ce)
+			$scope.districtFilter6 = $filter('filter')(json, $scope.opt.sk)
+			$scope.districtFilter7 = $filter('filter')(json, $scope.opt.tw)
+			$scope.districtFilter8 = $filter('filter')(json, $scope.opt.tm)
+			$scope.districtFilter9 = $filter('filter')(json, $scope.opt.is)
 			// console.log("southern "+$scope.something)
 			// console.log("eastern "+ $scope.something2)
 
@@ -270,6 +280,22 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			if ($scope.districtFilter5.length != json.length) {
 				for (var i = 0; i < $scope.districtFilter5.length; i++) {
 					$scope.totalList.push($scope.districtFilter5[i])};}
+
+			if ($scope.districtFilter6.length != json.length) {
+				for (var i = 0; i < $scope.districtFilter6.length; i++) {
+					$scope.totalList.push($scope.districtFilter6[i])};}
+	
+			if ($scope.districtFilter7.length != json.length) {
+				for (var i = 0; i < $scope.districtFilter7.length; i++) {
+					$scope.totalList.push($scope.districtFilter7[i])};}
+	
+			if ($scope.districtFilter8.length != json.length) {
+				for (var i = 0; i < $scope.districtFilter8.length; i++) {
+					$scope.totalList.push($scope.districtFilter8[i])};}
+	
+			if ($scope.districtFilter9.length != json.length) {
+				for (var i = 0; i < $scope.districtFilter9.length; i++) {
+					$scope.totalList.push($scope.districtFilter9[i])};}
 	
 			$scope.finishedList = [];
 
@@ -283,10 +309,12 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			};
 
 			// console.log("finishedList: "+ $scope.finishedList)
+			//Could probably use angular.equals($scope.finishedTagList[j], $scope.finishedList[i])
 			$scope.newList = [];
 			for (var i = 0; i < $scope.finishedList.length; i++) {
 				for (var j = 0; j < $scope.finishedTagList.length; j++) {
 					if ($scope.finishedTagList[j]==$scope.finishedList[i]) {
+					// if (angular.equals($scope.finishedTagList[j], $scope.finishedList[i])) {
 						$scope.newList.push($scope.finishedTagList[j])
 					};
 				};
@@ -309,14 +337,14 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			// $scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
 
 			//This is the experiment:
-			$scope.savedJSON = $filter('filter')($scope.newList, $scope.opt.query);
+			$scope.distFilter = $filter('selectedFeatureDistrict')($scope.newList)
+			$scope.savedJSON = $filter('filter')($scope.distFilter, $scope.opt.query);
 
 
 
 			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
 			// ng-repeat="feat in featDB | selectedFeatureTags | filter:opt.query"
 			$scope.markerList = [];
-
 			for (var obj in $scope.savedJSON){
 				var marker = L.marker([$scope.savedJSON[obj].geometry.coordinates[1], 
 					$scope.savedJSON[obj].geometry.coordinates[0]]);
@@ -425,6 +453,36 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		$scope.$watch('opt.sp', function (value){
 			$scope.save($scope.changer)
 		})
+		$scope.$watch('opt.sk', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.$watch('opt.tw', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.$watch('opt.tm', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.$watch('opt.is', function (value){
+			$scope.save($scope.changer)
+		})
+		$scope.resetDistricts = function(){
+			$scope.opt.so = "";
+			$scope.opt.ea = "";
+			$scope.opt.we = "";
+			$scope.opt.ce = "";
+			$scope.opt.wc = "";
+			$scope.opt.sk = "";
+			$scope.opt.tw = "";
+			$scope.opt.tm = "";
+			$scope.opt.is = "";
+		}
+		$scope.resetTags = function(){
+			$scope.opt.di = "";
+			$scope.opt.sp = "";
+			$scope.opt.cl = "";
+			$scope.opt.pu = "";
+		}
+		// $scope.save($scope.changer)
 
 		// $scope.$watch("")
 
@@ -441,10 +499,36 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		// }
 		// 	);
 		// $scope.save($scope.changer)
+	
+// at the bottom of your controller
+// var init = function () {
+   // check if there is query in url
+   // and fire search in case its value is not empty
+	// $scope.save($scope.changer)
 
-	}]);
+// };
+// init()
+// and fire it after definition
+// $scope.$on('$viewContentLoaded', function() {
+//     //call it here
+//     console.log("this")
+// 	$scope.save($scope.changer)
+
+// });
+// angular.element(document).ready(function () {
+	// myscope.save(myscope.changer);
+	// $scope.save($scope.changer)
+
+// });
 
 
+}])
+// .run(['$rootScope',function($rootScope) {
+  // Do post-load initialization stuff here
+	// $scope.save($scope.changer)
+	// myscope.save(myscope.changer);
+
+// }]);
 
 
 

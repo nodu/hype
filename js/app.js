@@ -62,8 +62,10 @@ var app = angular.module('myApp', ['ui.unique', 'myApp.filters', 'myApp.services
 })();
 
  fitText(document.getElementsByClassName('fittext'), 1.2)
- // fitText(document.getElementById('fittext'), 1.2)
+
  
+ // fitText(document.getElementById('fittext'), 1.2)
+
 // L.Control.Zoom(position 'bottomleft')
 
 

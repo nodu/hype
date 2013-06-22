@@ -5,7 +5,7 @@
       "properties": {
         "new": "true",
         "category": "new",
-        "district": "Central",
+        "district": "central",
         "picture": "http://placehold.it/32x32",
         "name": "Oldman NEW!",
         "phone": "877-524-36762",
@@ -33,6 +33,7 @@
       "properties": {
         "new": "true",
         "category": "new",
+        "district": "western",
         "picture": "http://placehold.it/32x32",
         "name": "Brooks NEW!",
         "phone": "814-598-30987",
@@ -60,6 +61,7 @@
       "properties": {
         "new": "true",
         "category": "new",
+        "district": "eastern",
         "picture": "http://placehold.it/32x32",
         "name": "Carroll NEW!",
         "phone": "882-554-28078",
@@ -87,6 +89,7 @@
       "properties": {
         "new": "true",
         "category": "new",
+        "district": "southern",
         "picture": "http://placehold.it/32x32",
         "name": "Owen NEW!",
         "phone": "803-504-34733",
@@ -114,6 +117,7 @@
       "properties": {
         "new": "true",
         "category": "new",
+        "district": "wan chai",
         "picture": "http://placehold.it/32x32",
         "name": "Nash NEW!",
         "phone": "832-442-31443",
@@ -141,6 +145,7 @@
       "properties": {
         "new": "true",
         "category": "new",
+        "district": "sai kung",
         "picture": "http://placehold.it/32x32",
         "name": "Higgins NEW!",
         "phone": "887-523-29258",
@@ -168,6 +173,7 @@
       "properties": {
         "new": "true",
         "category": "new",
+        "district": "tsuen wan",
         "picture": "http://placehold.it/32x32",
         "name": "Youmans NEW!",
         "phone": "879-438-25374",
@@ -195,6 +201,7 @@
       "properties": {
         "new": "true",
         "category": "new",
+        "district": "tuen mun",
         "picture": "http://placehold.it/32x32",
         "name": "Brooks NEW!",
         "phone": "864-593-23047",
@@ -222,6 +229,7 @@
       "properties": {
         "new": "true",
         "category": "new",
+        "district": "islands",
         "picture": "http://placehold.it/32x32",
         "name": "Mercer NEW!",
         "phone": "810-508-26589",
@@ -249,6 +257,7 @@
       "properties": {
         "new": "true",
         "category": "new",
+        "district": "central",
         "picture": "http://placehold.it/32x32",
         "name": "Nelson NEW!",
         "phone": "820-425-20022",
