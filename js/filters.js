@@ -3,6 +3,105 @@
 /* Filters */
 
 angular.module('myApp.filters', [])
+// .filter('distTagFilter', function($filter){
+// 	return function(feature, $scope){
+// 		var scope;
+		
+// 		scope.tagFilter = $filter('filter')(feature, $scope.opt.di)
+// 			scope.tagFilter2 = $filter('filter')(feature, $scope.opt.sp)
+// 			scope.tagFilter3 = $filter('filter')(feature, $scope.opt.cl)
+// 			scope.tagFilter4 = $filter('filter')(feature, $scope.opt.pu)
+// 			scope.totalTagList = [];
+// 			if (scope.tagFilter.length != feature.length) {
+// 				for (var i = 0; i < scope.tagFilter.length; i++) {
+// 					scope.totalTagList.push(scope.tagFilter[i])
+// 				};
+// 			};
+// 			if (scope.tagFilter2.length != feature.length) {
+// 				for (var i = 0; i < scope.tagFilter2.length; i++) {
+// 					scope.totalTagList.push(scope.tagFilter2[i])
+// 				};
+// 			};
+// 			if (scope.tagFilter3.length != feature.length) {
+// 				for (var i = 0; i < scope.tagFilter3.length; i++) {
+// 					scope.totalTagList.push(scope.tagFilter3[i])
+// 				};
+// 			};
+// 			if (scope.tagFilter4.length != feature.length) {
+// 				for (var i = 0; i < scope.tagFilter4.length; i++) {
+// 					scope.totalTagList.push(scope.tagFilter4[i])
+// 				};
+// 			};
+// 			scope.finishedTagList = [];
+// 			for (var i = 0; i < scope.totalTagList.length; i++) {
+// 				if (scope.finishedTagList.indexOf(scope.totalTagList[i]) == -1) {
+// 					scope.finishedTagList.push(scope.totalTagList[i]);
+// 				};
+// 			};
+// 			if (!scope.finishedTagList.length) {
+// 				scope.finishedTagList = feature
+// 			};
+
+
+
+
+// 			scope.districtFilter = $filter('filter')(feature, $scope.opt.so)
+// 			scope.districtFilter2 = $filter('filter')(feature, $scope.opt.ea)
+// 			scope.districtFilter3 = $filter('filter')(feature, $scope.opt.we)
+// 			scope.districtFilter4 = $filter('filter')(feature, $scope.opt.wc)
+// 			scope.districtFilter5 = $filter('filter')(feature, $scope.opt.ce)
+// 			// console.log("southern "+$scope.something)
+// 			// console.log("eastern "+ $scope.something2)
+
+
+// 			scope.totalList = [];
+// 			if (scope.districtFilter.length != feature.length) {
+// 				for (var i = 0; i < scope.districtFilter.length; i++) {
+// 					scope.totalList.push(scope.districtFilter[i])
+// 				};
+// 			};
+// 			// alert("Json's Length:  "+json.length)
+// 			if (scope.districtFilter2.length != feature.length) {
+// 				for (var i = 0; i < scope.districtFilter2.length; i++) {
+// 					scope.totalList.push(scope.districtFilter2[i])
+// 				};
+// 			} 
+// 			if (scope.districtFilter3.length != feature.length) {
+// 				for (var i = 0; i < scope.districtFilter3.length; i++) {
+// 					scope.totalList.push(scope.districtFilter3[i])};} 
+			
+// 			if (scope.districtFilter4.length != feature.length) {
+// 				for (var i = 0; i < scope.districtFilter4.length; i++) {
+// 					scope.totalList.push(scope.districtFilter4[i])};}
+
+// 			if (scope.districtFilter5.length != feature.length) {
+// 				for (var i = 0; i < scope.districtFilter5.length; i++) {
+// 					scope.totalList.push(scope.districtFilter5[i])};}
+	
+// 			scope.finishedList = [];
+
+// 			for (var i = 0; i < scope.totalList.length; i++) {
+// 				if (scope.finishedList.indexOf(scope.totalList[i]) == -1) {
+// 					scope.finishedList.push(scope.totalList[i]);
+// 				};
+// 			};
+// 			if (!scope.finishedList.length) {
+// 				scope.finishedList = feature
+// 			};
+
+// 			// console.log("finishedList: "+ $scope.finishedList)
+// 			scope.newList = [];
+// 			for (var i = 0; i < scope.finishedList.length; i++) {
+// 				for (var j = 0; j < scope.finishedTagList.length; j++) {
+// 					if (scope.finishedTagList[j]==scope.finishedList[i]) {
+// 						scope.newList.push(scope.finishedTagList[j])
+// 					};
+// 				};
+				
+// 			};
+// 			return newList;
+// 	}
+// })
 // .filter('distCheckbox', function($filter){
 // 	return function(array){
 // 		var southern = $filter('filter')(array, {properties: {district : 'southern'}})

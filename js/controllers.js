@@ -200,16 +200,6 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		// markerList[2].bindPopup('derp').openPopup()  //works from
 		// $scope.markerList = [];
 		$scope.save = function(json) {
-			// $scope.something = $filter('filter')(json, $scope.opt.so)
-			// $scope.something2 = $filter('filter')($scope.something, $scope.opt.ea)
-			// $scope.something3 = $filter('filter')($scope.something2, $scope.opt.we)
-			// $scope.something4 = $filter('filter')($scope.something3, $scope.opt.wc)
-			// $scope.something5 = $filter('filter')($scope.something4, $scope.opt.ce)
-			// $scope.something6 = $filter('filter')($scope.something5, $scope.opt.di)
-			// $scope.something7 = $filter('filter')($scope.something6, $scope.opt.sp)
-			// $scope.something8 = $filter('filter')($scope.something7, $scope.opt.cl)
-			// $scope.something9 = $filter('filter')($scope.something8, $scope.opt.pu)
-			// $scope.distFilter = $filter('dis')($scope.something9)
 			$scope.tagFilter = $filter('filter')(json, $scope.opt.di)
 			$scope.tagFilter2 = $filter('filter')(json, $scope.opt.sp)
 			$scope.tagFilter3 = $filter('filter')(json, $scope.opt.cl)
@@ -319,9 +309,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			// $scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
 
 			//This is the experiment:
-			// $scope.distFilter = $filter('dis')($scope.newList)
 			$scope.savedJSON = $filter('filter')($scope.newList, $scope.opt.query);
-			// $scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
 
 
 
