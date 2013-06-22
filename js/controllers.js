@@ -205,7 +205,7 @@ app.controller("appController", ['$scope', '$filter', '$timeout', 'barsDB', 'bea
 
 		// markerList[2].bindPopup('derp').openPopup()  //works from
 		// $scope.markerList = [];
-		$scope.save = function(json) {
+		$scope.save = function(json, type) {
 			$scope.tagFilter = $filter('filter')(json, $scope.opt.di)
 			$scope.tagFilter2 = $filter('filter')(json, $scope.opt.sp)
 			$scope.tagFilter3 = $filter('filter')(json, $scope.opt.cl)
@@ -335,6 +335,13 @@ app.controller("appController", ['$scope', '$filter', '$timeout', 'barsDB', 'bea
 			// $scope.distFilter = $filter('dis')($scope.newList)
 			// $scope.textFilter = $filter('filter')($scope.distFilter, $scope.opt.query);
 			// $scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
+
+			if (type == "itinerary") {
+				$scope.resetDistricts();
+				$scope.resetTags();
+				$scope.newList = json;
+
+			};
 
 			//This is the experiment:
 			$scope.distFilter = $filter('selectedFeatureDistrict')($scope.newList)
