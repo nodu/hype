@@ -248,12 +248,18 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			// 	$scope.totalList.push($scope.something5[i])
 			// };
 			$scope.finishedList = [];
+
 			for (var i = 0; i < $scope.totalList.length; i++) {
 				if ($scope.finishedList.indexOf($scope.totalList[i]) == -1) {
 
 					$scope.finishedList.push($scope.totalList[i]);
 				};
 			};
+			if (!$scope.finishedList.length) {
+				$scope.finishedList = json
+			};
+
+			// console.log("finishedList: "+ $scope.finishedList)
 
 			$scope.distFilter = $filter('dis')($scope.finishedList)
 			// $scope.distFilter = $filter('dis')($scope.something5)
