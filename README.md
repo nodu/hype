@@ -126,3 +126,4 @@ Issues
 * Find a way to add is-open attributes on accordion headers inside ng-repeat, that way I can add click to open popup
 * And I would also be able to add change-icon directive.  I beilieve this will be accomplished with something like cElement for directives...
 * Add compile attributes for each ng-repeat
+* So adding a attribute directive to a repeated accordion header is quite hard... can't solve

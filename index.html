@@ -59,7 +59,7 @@
         <div>  
          <accordion close-others="oneAtATime">
           <accordion-group id="districtAccordion" is-open="opt.openBars" change-icons>
-          <accordion-heading >
+          <accordion-heading>
             District <i class="icon-chevron-down" ></i>
           </accordion-heading>
           <input type="checkbox" ng-true-value="southern" ng-false-value="" ng-model="opt.so"> Southern:{{opt.so}}<br>
@@ -162,13 +162,15 @@
 
         <accordion close-others="oneAtATime">
           <!-- <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query | selectedFeatureTags" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'" change-icons> -->
-          <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'" change-icons>
-           <accordion-heading>
+          <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query" is-open="opt.contentClickAddMarker()" ng-animate="'animate'" change-icons>
+           <div class="THISHSHOULDBEEASYTOFIND XXXXXXXXXXXXXXX" style="background-color: black;">
+            <accordion-heading>
             {{feat.properties.district}}
             {{feat.properties.tags[1]}}
-            <!-- {{feat.properties.name}} -->
+            {{feat.properties.name}}
              <i class="icon-chevron-down"></i>
            </accordion-heading>
+          </div>
           <div ng-cloak> 
             <div class="contentAddress">
               <p>{{feat.properties.address}}</p>
@@ -180,8 +182,8 @@
               <p>{{feat.properties.about}}</p>
             </div>
             <div class="contentButtons">
+              <button class="btn" open-pop='{{feat.indexOf()}}'>Map!</button>
               <button class="btn" ng-click="addToIt(feat, 2500)">Save</button>
-              <button class="btn" ng-click="addToIt(feat, 2500)">Share</button>
               <button class="btn" ng-click="addToIt(feat, 2500)">Contact</button>
               <button class="btn" ng-click="addToIt(feat, 2500)">Taxi Card</button>
 

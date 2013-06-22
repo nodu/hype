@@ -2143,7 +2143,7 @@
         "about": "Fugiat irure officia quis ut veniam. Aute aute voluptate esse et qui consequat. Eiusmod amet sit eu ullamco minim. Id proident cillum ex deserunt consectetur. Adipisicing magna ut non elit nisi sunt quis esse consequat amet.\r\n",
         "tags": [
           "bar",
-          "pub"
+          "disco"
         ]
       },
       "geometry": {

@@ -142,15 +142,24 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		// 	console.log($scope.changer)
 		// };
 
+		// $scope.$watch('opt.contentClickAddMarker', function(isOpen){
+		// 	// (feat)
+		// 	if(isOpen){
+		// 		console.log("This: ")
+		// 		// feat.openPopup(map)
+
+		// 	}
+		// });
 		$scope.$watch('opt.contentClickAddMarker', function(isOpen){
-			// (feat)
-			if(isOpen){
-				console.log("This: ")
-				feat.openPopup(map)
+			if (isOpen) {
+				console.log('Accordion heading was opened'); 
+				// $scope.changer = JSON.parse(JSON.stringify($scope.beachesDB));
+				// $scope.opt.query = [];
 
-			}
-		})
 
+			}    
+		});
+	
 
 		$scope.$watch('opt.openBeaches', function(isOpen){
 			if (isOpen) {
@@ -188,7 +197,8 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		});
 
 
-
+		// markerList[2].bindPopup('derp').openPopup()  //works from
+		// $scope.markerList = [];
 		$scope.save = function(json) {
 			// $scope.something = $filter('filter')(json, $scope.opt.so)
 			// $scope.something2 = $filter('filter')($scope.something, $scope.opt.ea)
@@ -200,58 +210,81 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			// $scope.something8 = $filter('filter')($scope.something7, $scope.opt.cl)
 			// $scope.something9 = $filter('filter')($scope.something8, $scope.opt.pu)
 			// $scope.distFilter = $filter('dis')($scope.something9)
-
-			$scope.something = $filter('filter')(json, $scope.opt.so)
-			console.log("southern "+$scope.something)
-			$scope.something2 = $filter('filter')(json, $scope.opt.ea)
-			console.log("eastern "+ $scope.something2)
-			$scope.something3 = $filter('filter')(json, $scope.opt.we)
-			$scope.something4 = $filter('filter')(json, $scope.opt.wc)
-			$scope.something5 = $filter('filter')(json, $scope.opt.ce)
-
-
-			$scope.totalList = json;
-			$scope.totalList = [];
-			if ($scope.something.length != json.length) {
-
-				for (var i = 0; i < $scope.something.length; i++) {
-					$scope.totalList.push($scope.something[i])
+			$scope.tagFilter = $filter('filter')(json, $scope.opt.di)
+			$scope.tagFilter2 = $filter('filter')(json, $scope.opt.sp)
+			$scope.tagFilter3 = $filter('filter')(json, $scope.opt.cl)
+			$scope.tagFilter4 = $filter('filter')(json, $scope.opt.pu)
+			$scope.totalTagList = [];
+			if ($scope.tagFilter.length != json.length) {
+				for (var i = 0; i < $scope.tagFilter.length; i++) {
+					$scope.totalTagList.push($scope.tagFilter[i])
 				};
-				// $scope.totalList.push($scope.something[i])
+			};
+			if ($scope.tagFilter2.length != json.length) {
+				for (var i = 0; i < $scope.tagFilter2.length; i++) {
+					$scope.totalTagList.push($scope.tagFilter2[i])
+				};
+			};
+			if ($scope.tagFilter3.length != json.length) {
+				for (var i = 0; i < $scope.tagFilter3.length; i++) {
+					$scope.totalTagList.push($scope.tagFilter3[i])
+				};
+			};
+			if ($scope.tagFilter4.length != json.length) {
+				for (var i = 0; i < $scope.tagFilter4.length; i++) {
+					$scope.totalTagList.push($scope.tagFilter4[i])
+				};
+			};
+			$scope.finishedTagList = [];
+			for (var i = 0; i < $scope.totalTagList.length; i++) {
+				if ($scope.finishedTagList.indexOf($scope.totalTagList[i]) == -1) {
+					$scope.finishedTagList.push($scope.totalTagList[i]);
+				};
+			};
+			if (!$scope.finishedTagList.length) {
+				$scope.finishedTagList = json
+			};
+
+
+
+
+			$scope.districtFilter = $filter('filter')(json, $scope.opt.so)
+			$scope.districtFilter2 = $filter('filter')(json, $scope.opt.ea)
+			$scope.districtFilter3 = $filter('filter')(json, $scope.opt.we)
+			$scope.districtFilter4 = $filter('filter')(json, $scope.opt.wc)
+			$scope.districtFilter5 = $filter('filter')(json, $scope.opt.ce)
+			// console.log("southern "+$scope.something)
+			// console.log("eastern "+ $scope.something2)
+
+
+			$scope.totalList = [];
+			if ($scope.districtFilter.length != json.length) {
+				for (var i = 0; i < $scope.districtFilter.length; i++) {
+					$scope.totalList.push($scope.districtFilter[i])
+				};
 			};
 			// alert("Json's Length:  "+json.length)
-			if ($scope.something2.length != json.length) {
-				for (var i = 0; i < $scope.something2.length; i++) {
-					$scope.totalList.push($scope.something2[i])
+			if ($scope.districtFilter2.length != json.length) {
+				for (var i = 0; i < $scope.districtFilter2.length; i++) {
+					$scope.totalList.push($scope.districtFilter2[i])
 				};
 			} 
-			if ($scope.something3.length != json.length) {
-				for (var i = 0; i < $scope.something3.length; i++) {
-					$scope.totalList.push($scope.something3[i])};} 
+			if ($scope.districtFilter3.length != json.length) {
+				for (var i = 0; i < $scope.districtFilter3.length; i++) {
+					$scope.totalList.push($scope.districtFilter3[i])};} 
 			
-			if ($scope.something4.length != json.length) {
-				for (var i = 0; i < $scope.something4.length; i++) {
-					$scope.totalList.push($scope.something4[i])};}
+			if ($scope.districtFilter4.length != json.length) {
+				for (var i = 0; i < $scope.districtFilter4.length; i++) {
+					$scope.totalList.push($scope.districtFilter4[i])};}
 
-			if ($scope.something5.length != json.length) {
-				for (var i = 0; i < $scope.something5.length; i++) {
-					$scope.totalList.push($scope.something5[i])};}
-			// else {alert("100 yo, that's all of em.  It would've added ALL bars.")}
-
-			// for (var i = 0; i < $scope.something3.length; i++) {
-			// 	$scope.totalList.push($scope.something3[i])
-			// };
-			// for (var i = 0; i < $scope.something4.length; i++) {
-			// 	$scope.totalList.push($scope.something4[i])
-			// };
-			// for (var i = 0; i < $scope.something5.length; i++) {
-			// 	$scope.totalList.push($scope.something5[i])
-			// };
+			if ($scope.districtFilter5.length != json.length) {
+				for (var i = 0; i < $scope.districtFilter5.length; i++) {
+					$scope.totalList.push($scope.districtFilter5[i])};}
+	
 			$scope.finishedList = [];
 
 			for (var i = 0; i < $scope.totalList.length; i++) {
 				if ($scope.finishedList.indexOf($scope.totalList[i]) == -1) {
-
 					$scope.finishedList.push($scope.totalList[i]);
 				};
 			};
@@ -260,23 +293,41 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 			};
 
 			// console.log("finishedList: "+ $scope.finishedList)
+			$scope.newList = [];
+			for (var i = 0; i < $scope.finishedList.length; i++) {
+				for (var j = 0; j < $scope.finishedTagList.length; j++) {
+					if ($scope.finishedTagList[j]==$scope.finishedList[i]) {
+						$scope.newList.push($scope.finishedTagList[j])
+					};
+				};
+				
+			};
 
-			$scope.distFilter = $filter('dis')($scope.finishedList)
+
+			// $scope.distFilter = $filter('dis')($scope.finishedTagList)
 			// $scope.distFilter = $filter('dis')($scope.something5)
-
 			// $scope.distFilter = $filter('distCheckbox')(json)
 			// $scope.savedJSON = $filter('dis')(json)
 			// console.log("DistFilter: "+$scope.distFilter)
-
-			$scope.textFilter = $filter('filter')($scope.yeah, $scope.opt.query);
-
+			// $scope.textFilter = $filter('filter')($scope.yeah, $scope.opt.query);
 
 
-			$scope.textFilter = $filter('filter')($scope.distFilter, $scope.opt.query);
-			$scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
+
+			//These are the working filters:
+			// $scope.distFilter = $filter('dis')($scope.newList)
+			// $scope.textFilter = $filter('filter')($scope.distFilter, $scope.opt.query);
+			// $scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
+
+			//This is the experiment:
+			// $scope.distFilter = $filter('dis')($scope.newList)
+			$scope.savedJSON = $filter('filter')($scope.newList, $scope.opt.query);
+			// $scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
+
+
+
 			// $scope.savedJSON = $filter('filter')(json, $scope.opt.query);
 			// ng-repeat="feat in featDB | selectedFeatureTags | filter:opt.query"
-			var markerList = [];
+			$scope.markerList = [];
 
 			for (var obj in $scope.savedJSON){
 				var marker = L.marker([$scope.savedJSON[obj].geometry.coordinates[1], 
@@ -289,11 +340,11 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 
 				// .openPopup();
 				// Add other wanted properties here, popups, mouseover effects...
-				markerList.push(marker);
+				$scope.markerList.push(marker);
 				console.log(marker);
 			};
 			markerLayer.clearLayers();
-			markerLayer = L.layerGroup(markerList)
+			markerLayer = L.layerGroup($scope.markerList)
 
 			markerLayer.addTo(map);
 		};
@@ -358,6 +409,7 @@ app.controller("appController", [ "$scope", function($scope, $filter) {
 		}
 		);
 
+		// rewrite using $watchCollection to cut down on code
 		$scope.$watch('opt.so', function (value){
 			$scope.save($scope.changer)
 		})

@@ -4,6 +4,35 @@
 
 
 angular.module('myApp.directives', [])
+.directive('openPop', function(){
+	return function($scope, element, attrs){
+		element.bind('click', function(){
+			console.log(attrs)
+			console.log($scope.markerList[0])
+			$scope.markerList[0].openPopup();
+
+			console.log("savedJson: ", $scope.savedJSON)
+			// console.log(attrs.id)
+			// var x;
+			// attrs.$observe('attrs.openPop', function(value) {
+			// 	console.log('openPop has changed value to ' + value);
+			// 	value.openPopup();
+			// 	// x = value;
+				
+			// })
+			// console.log("This: ", x)
+
+			// L.marker(attrs.openPopup.geometry.coordinates[1], attrs.openPopup.geometry.coordinates[0]).openPopup();
+
+			
+			// element.find('div').attr('open-pop')
+			// var id = 
+		// my_scope2.markerList[].openPopup()
+
+		})
+
+	}
+})
 .directive('changeIcon', function(){
 	var linkFN;
 	linkFN = function(scope, element, attrs){
