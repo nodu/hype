@@ -61,7 +61,6 @@ leafletDirective.directive("leaflet", ["$http", "$log", function ($http, $log) {
             L.control.locate({
                 position: "bottomleft",
                 'setView': false
-                // setView doesn't seem to be working
                 }).addTo(map);
 
             setupCenter();

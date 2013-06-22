@@ -35,10 +35,10 @@
 
       <button class="nav_toggle btn toggle" ng-click="navOpen()" ><i class="icon-search icon-5x"></i></button> 
       <nav class="nav" ng-animate="'animate'">
-          <!-- <div class="logoDiv" > -->
-          <div class="logoDiv logo">
-            Hype<span>!</span>
-          </div>
+        <!-- <div class="logoDiv" > -->
+        <div class="logoDiv logo">
+          Hype<span>!</span>
+        </div>
         <div id="buttons">
           <!-- <button class="btn btn-primary" ng-click="">Log In</button>  -->
           <div data-facebook='<%= Figaro.env.facebook_key %>'>
@@ -72,13 +72,13 @@
 
         <!-- <div ng-repeat="dist in districts"> -->
         <!-- <div ng-repeat="dist in changer| unique:'properties.district'"> -->
-          <!-- <label class="checkbox" for="{{dist}}">              -->
-            <!-- <input type="checkbox" ng-model="dist.dist" ng-true-value="{{dist.properties.district}}" name="group" id="{{dist}}" />{{dist.properties.district}} -->
-            <!-- ng-true-value="dist" -->
-            <!-- ng-model="districtSelect[dist]" -->
-            <!-- {{districtSelect[dist]}} -->
-          <!-- </label> -->
-          <!-- {{districtSelect}} -->
+        <!-- <label class="checkbox" for="{{dist}}">              -->
+        <!-- <input type="checkbox" ng-model="dist.dist" ng-true-value="{{dist.properties.district}}" name="group" id="{{dist}}" />{{dist.properties.district}} -->
+        <!-- ng-true-value="dist" -->
+        <!-- ng-model="districtSelect[dist]" -->
+        <!-- {{districtSelect[dist]}} -->
+        <!-- </label> -->
+        <!-- {{districtSelect}} -->
         <!-- </div> -->
       </accordion-group>
       <accordion-group id="navTop" is-open="opt.openNew">
@@ -98,13 +98,13 @@
         {{districtSelect}} -->
         <!-- <br> -->
         <!-- <div ng-repeat="dist in changer| unique:'properties.district'"> -->
-          <!-- <label class="checkbox" for="{{dist}}">              -->
-            <!-- <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" ng-true-value="dist"/>{{dist.properties.district}} -->
+        <!-- <label class="checkbox" for="{{dist}}">              -->
+        <!-- <input type="checkbox" ng-model="dist.dist" name="group" id="{{dist}}" ng-true-value="dist"/>{{dist.properties.district}} -->
 
-            <!-- ng-model="districtSelect[dist]" -->
-            <!-- {{districtSelect[dist]}} -->
-          <!-- </label> -->
-          <!-- {{districtSelect}} -->
+        <!-- ng-model="districtSelect[dist]" -->
+        <!-- {{districtSelect[dist]}} -->
+        <!-- </label> -->
+        <!-- {{districtSelect}} -->
         <!-- </div> -->
         <div>
           <!-- <div ng-repeat="bar in changer | unique:'properties.tags[1]'"> -->
@@ -127,14 +127,14 @@
     Beaches <i class="icon-chevron-down"></i>
   </accordion-heading>
   <!-- <div ng-repeat="beach in changer | unique:'properties.district'"> -->
-    <!-- <input type="checkbox" ng-checked="beach.checked" ng-model="beach.checked"> -->
-    <!-- {{beach.properties.district | lowercase | capArray}} -->
+  <!-- <input type="checkbox" ng-checked="beach.checked" ng-model="beach.checked"> -->
+  <!-- {{beach.properties.district | lowercase | capArray}} -->
   <!-- </div> -->
   <label><input type="checkbox" ng-true-value="southern" ng-false-value="" ng-model="opt.so"> Southern</label>
-        <label><input type="checkbox" ng-true-value="sai kung" ng-false-value="" ng-model="opt.sk"> Sai Kung</label>
-        <label><input type="checkbox" ng-true-value="tsuen wan" ng-false-value="" ng-model="opt.tw"> Tsuen Wan</label>
-        <label><input type="checkbox" ng-true-value="tuen mun" ng-false-value="" ng-model="opt.tm"> Tuen Mun</label>
-        <label><input type="checkbox" ng-true-value="islands" ng-false-value="" ng-model="opt.is"> Islands</label>
+  <label><input type="checkbox" ng-true-value="sai kung" ng-false-value="" ng-model="opt.sk"> Sai Kung</label>
+  <label><input type="checkbox" ng-true-value="tsuen wan" ng-false-value="" ng-model="opt.tw"> Tsuen Wan</label>
+  <label><input type="checkbox" ng-true-value="tuen mun" ng-false-value="" ng-model="opt.tm"> Tuen Mun</label>
+  <label><input type="checkbox" ng-true-value="islands" ng-false-value="" ng-model="opt.is"> Islands</label>
 
   <!-- <input id="beachSubmit" type="button" class="btn small" value="Submit" ng-click="save(changer)"> -->
 
@@ -167,47 +167,47 @@
     <h3 >Hype<span>!</span>Hits<span>!</span></h3>
   </div>
   <div class="con_accordion_container">
-  <accordion close-others="oneAtATime">
-    <!-- <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query | selectedFeatureTags" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'" change-icons> -->
-    <!-- <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query" is-open="opt.contentClickAddMarker()" ng-animate="'animate'" change-icons> -->
-    <!-- | distTagFilter  -->
-    <!-- filter:opt.pu | filter:opt.cl  | filter:opt.sp | filter:opt.di | filter:opt.so | filter:opt.ea | filter:opt.we  | filter:opt.wc |filter:opt.ce | filter:opt.sk | filter:opt.tw  | filter:opt.tm |filter:opt.is | -->
-    <accordion-group  ng-repeat="feat in savedJSON | selectedFeatureDistrict" is-open="opt.contentClickAddMarker()" ng-animate="'animate'" change-icons>
-    <div class="THISHSHOULDBEEASYTOFIND XXXXXXXXXXXXXXX" style="background-color: black;">
-      <accordion-heading>
-      {{feat.properties.district}}
-      {{feat.properties.tags[1]}}
-      {{feat.properties.name}}
-      <i class="icon-chevron-down"></i>
-    </accordion-heading>
-  </div>
-  <div ng-cloak> 
-    <div class="contentAddress">
-      <p>{{feat.properties.address}}</p>
+    <accordion close-others="oneAtATime">
+      <!-- <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query | selectedFeatureTags" is-open="opt.contentClickAddMarker(feat)" ng-animate="'animate'" change-icons> -->
+      <!-- <accordion-group  ng-repeat="feat in changer | filter:opt.so | filter:opt.di | filter:opt.ea | filter:opt.we | filter:opt.wc | filter:opt.ce | filter:opt.sp | filter:opt.cl | filter:opt.pu | dis | filter:opt.query" is-open="opt.contentClickAddMarker()" ng-animate="'animate'" change-icons> -->
+      <!-- | distTagFilter  -->
+      <!-- filter:opt.pu | filter:opt.cl  | filter:opt.sp | filter:opt.di | filter:opt.so | filter:opt.ea | filter:opt.we  | filter:opt.wc |filter:opt.ce | filter:opt.sk | filter:opt.tw  | filter:opt.tm |filter:opt.is | -->
+      <accordion-group  ng-repeat="feat in savedJSON | selectedFeatureDistrict" is-open="opt.contentClickAddMarker()" ng-animate="'animate'" change-icons>
+      <div class="THISHSHOULDBEEASYTOFIND XXXXXXXXXXXXXXX" style="background-color: black;">
+        <accordion-heading>
+        <!-- {{feat.properties.district}} -->
+        <!-- {{feat.properties.tags[1]}} -->
+        {{feat.properties.name}}
+        <i class="icon-chevron-down"></i>
+      </accordion-heading>
     </div>
-    <div class="contentImg">
-      <img src="http://placehold.it/350x150">
-    </div>
-    <div class="contentDesc">
-      <p>{{feat.properties.about}}</p>
-    </div>
-    <div class="contentButtons">
-      <button class="btn" open-pop='{{feat.indexOf()}}'>Map!</button>
-      <button class="btn" ng-click="addToIt(feat, 2500)">Save</button>
-      <button class="btn" ng-click="addToIt(feat, 2500)">Contact</button>
-      <button class="btn" ng-click="addToIt(feat, 2500)">Taxi Card</button>
+    <div ng-cloak> 
+      <div class="contentAddress">
+        <p>{{feat.properties.address}}</p>
+      </div>
+      <div class="contentImg">
+        <img src="http://placehold.it/350x150">
+      </div>
+      <div class="contentDesc">
+        <p>{{feat.properties.about}}</p>
+      </div>
+      <div class="contentButtons">
+        <button class="btn" open-pop='{{feat.indexOf()}}'>Map!</button>
+        <button class="btn" ng-click="addToIt(feat, 2500)">Save</button>
+        <button class="btn" ng-click="addToIt(feat, 2500)">Contact</button>
+        <button class="btn" ng-click="addToIt(feat, 2500)">Taxi Card</button>
 
-    </div>
-    <div class="contentSocial">
-      <p>{{feat.properties.phone}}</p>
-      <p>{{feat.properties.email}}</p>
-    </div>
+      </div>
+      <div class="contentSocial">
+        <p>{{feat.properties.phone}}</p>
+        <p>{{feat.properties.email}}</p>
+      </div>
 
-    <!-- <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p> -->
-    <p>{{feat.properties.tags[1]}} {{feat.properties.district}}</p>
-    <!-- <p>Checked: {{feat.checked}}</p> -->
-  </div>
-</accordion-group>
+      <!-- <p>{{feat.id}} {{feat.properties.district}} {{feat.properties.tags}}</p> -->
+      <p>{{feat.properties.tags[1]}} {{feat.properties.district}}</p>
+      <!-- <p>Checked: {{feat.checked}}</p> -->
+    </div>
+  </accordion-group>
 </accordion>
 </div>
 </div>

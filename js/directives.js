@@ -10,6 +10,11 @@ angular.module('myApp.directives', [])
 			console.log(attrs)
 			console.log($scope.markerList[0])
 			$scope.markerList[0].openPopup();
+			
+
+			// Once I figure out how to link the id's this should open the popup
+			// map._layers[id].openPopup()
+			
 
 			console.log("savedJson: ", $scope.savedJSON)
 			// console.log(attrs.id)
