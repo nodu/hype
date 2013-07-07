@@ -336,7 +336,7 @@ $scope.$watch('opt.openBars', function(isOpen){
 			// $scope.textFilter = $filter('filter')($scope.distFilter, $scope.opt.query);
 			// $scope.savedJSON = $filter('selectedFeatureTags')($scope.textFilter);
 
-			if (type == "itinerary") {
+			if (type == 1) {
 				$scope.resetDistricts();
 				$scope.resetTags();
 				$scope.newList = json;

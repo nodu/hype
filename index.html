@@ -67,8 +67,10 @@
         <label><input type="checkbox" ng-true-value="islands" ng-false-value="" ng-model="opt.is"> Islands</label>
         <button class="btn reset btn-small" ng-click="resetDistricts()">Reset</button>
 
-
-
+        <div ng-repeat="district in districts">
+          <label><input type="checkbox" ng-true-value="{{district}}" ng-false-value="" ng-model="opt.[district]">{{district}} opt.district</label>
+        </div>
+        <!-- Need a way to bind it to a new ngModel on each repeat... -->
 
         <!-- <div ng-repeat="dist in districts"> -->
         <!-- <div ng-repeat="dist in changer| unique:'properties.district'"> -->
@@ -233,7 +235,7 @@
       </div>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-info" ng-click="save(itinerary, itinerary)">Map It!</button>
+      <button class="btn btn-info" ng-click="save(itinerary, 1)">Map It!</button>
       <button class="btn btn-info" ng-click="closeItinerary()">Close</button>
     </div>
   </div>
