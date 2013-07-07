@@ -15,55 +15,57 @@ var app = angular.module('myApp', ['ui.unique', 'myApp.filters', 'myApp.services
 *
 * Date: Tue Aug 09 2011 10:45:54 GMT+0200 (CEST)
 */
-(function(){
-  var css = function (el, prop) {
-    return window.getComputedStyle ? getComputedStyle(el).getPropertyValue(prop) : el.currentStyle[prop];
-  };
+// (function(){
+//   var css = function (el, prop) {
+//     return window.getComputedStyle ? getComputedStyle(el).getPropertyValue(prop) : el.currentStyle[prop];
+//   };
   
-  var addEvent = function (el, type, fn) {
-    if (el.addEventListener)
-      el.addEventListener(type, fn, false);
-		else
-			el.attachEvent('on'+type, fn);
-  };
+//   var addEvent = function (el, type, fn) {
+//     if (el.addEventListener)
+//       el.addEventListener(type, fn, false);
+// 		else
+// 			el.attachEvent('on'+type, fn);
+//   };
 
-  window.fitText = function (el, kompressor) {
+//   window.fitText = function (el, kompressor) {
 
-    var settings = {
-      'minFontSize' : -1/0,
-      'maxFontSize' : 1/0
-    };
+//     var settings = {
+//       'minFontSize' : -1/0,
+//       'maxFontSize' : 1/0
+//     };
 
-    var fit = function (el) {
-      var compressor = kompressor || 1;
+//     var fit = function (el) {
+//       var compressor = kompressor || 1;
 
-      var resizer = function () {
-        el.style.fontSize = Math.max(Math.min(el.clientWidth / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)) + 'px';
-      };
+//       var resizer = function () {
+//         el.style.fontSize = Math.max(Math.min(el.clientWidth / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)) + 'px';
+//       };
 
-      // Call once to set.
-      resizer();
+//       // Call once to set.
+//       resizer();
 
-      // Bind events
-      // If you have any js library which support Events, replace this part
-      // and remove addEvent function (or use original jQuery version)
-      addEvent(window, 'resize', resizer);
-    };
+//       // Bind events
+//       // If you have any js library which support Events, replace this part
+//       // and remove addEvent function (or use original jQuery version)
+//       addEvent(window, 'resize', resizer);
+//     };
 
-    if (el.length)
-      for(var i=0; i<el.length; i++)
-        fit(el[i]);
-    else
-      fit(el);
+//     if (el.length)
+//       for(var i=0; i<el.length; i++)
+//         fit(el[i]);
+//     else
+//       fit(el);
 
-    // return set of elements
-    return el;
-  };
-})();
+//     // return set of elements
+//     return el;
+//   };
+// })();
 
- fitText(document.getElementsByClassName('fittext'), 1.2)
- // fitText(document.getElementById('fittext'), 1.2)
+//  fitText(document.getElementsByClassName('fittext'), 1.2)
+
  
+ // fitText(document.getElementById('fittext'), 1.2)
+
 // L.Control.Zoom(position 'bottomleft')
 
 
