@@ -147,3 +147,11 @@ remove from itinerary does not work, removes the last element in the list, not c
 Add cookie for user tutorial on first page load?
 http://blog.mograbi.info/2013/05/angularjs-cookies-example.html
 http://stackoverflow.com/questions/10961963/how-to-access-cookies-in-angularjs
+
+
+
+git checkout better_branch
+git merge --strategy=ours --no-commit master    # keep the content of this branch, but record a merge
+git commit -m "Changing branch to master"
+git checkout master
+git merge better_branch             # fast-forward master up to the merge
